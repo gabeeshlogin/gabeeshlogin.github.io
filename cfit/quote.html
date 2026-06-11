@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Free Consultation | C-FIT Personal Training & Pilates</title>
+<meta name="description" content="Book a free, no-obligation consultation with Christina at C-FIT. Personal training and Reformer Pilates in Chessington, Surrey.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #FDFCF9;
+    --charcoal: #1A1A2E;
+    --coral: #E8552D;
+    --coral-light: #F4784A;
+    --green: #16A34A;
+    --cream: #F7F3EE;
+    --muted: #6B6B80;
+    --border: #E8E4DC;
+    --white: #FFFFFF;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; line-height: 1.15; }
+  a { color: inherit; text-decoration: none; }
+
+  /* Header */
+  .q-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 22px; color: var(--charcoal); }
+  .logo span { color: var(--coral); }
+  .back-link { font-size: 14px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+  .back-link:hover { color: var(--charcoal); }
+
+  /* Layout */
+  .q-main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 480px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    gap: 64px;
+    width: 100%;
+  }
+
+  /* Left side */
+  .q-info h1 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -1px; margin-bottom: 16px; }
+  .q-info h1 em { font-style: italic; color: var(--coral); }
+  .q-info p { font-size: 17px; color: var(--muted); line-height: 1.7; margin-bottom: 32px; }
+  .trust-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
+  .trust-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--charcoal);
+  }
+  .trust-check {
+    width: 24px;
+    height: 24px;
+    background: rgba(22,163,74,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--green);
+    flex-shrink: 0;
+    font-weight: 700;
+    margin-top: 1px;
+  }
+  .phone-fallback {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .phone-fallback p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  .phone-fallback a { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 800; color: var(--charcoal); }
+  .phone-fallback a:hover { color: var(--coral); }
+
+  /* Form card */
+  .form-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 32px;
+    box-shadow: 0 8px 32px rgba(26,26,46,0.07);
+  }
+  .form-card h2 { font-size: 22px; margin-bottom: 6px; }
+  .form-card > p { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--charcoal);
+    background: var(--bg);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--coral);
+    box-shadow: 0 0 0 3px rgba(232,85,45,0.1);
+  }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .radio-group { display: flex; flex-direction: column; gap: 8px; }
+  .radio-opt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    font-size: 15px;
+  }
+  .radio-opt:has(input:checked) {
+    border-color: var(--coral);
+    background: rgba(232,85,45,0.05);
+  }
+  .radio-opt input { accent-color: var(--coral); width: 16px; height: 16px; }
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--coral);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .submit-btn:hover { background: var(--coral-light); transform: translateY(-1px); }
+  .form-legal { text-align: center; font-size: 12px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+
+  /* Footer */
+  .q-footer {
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 768px) {
+    .q-main { grid-template-columns: 1fr; gap: 40px; padding: 32px 16px; }
+    .form-card { padding: 24px 20px; }
+    .q-info h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="q-header">
+  <a href="index.html" class="logo">C<span>-</span>FIT</a>
+  <a href="index.html" class="back-link">← Back to home</a>
+</header>
+
+<main class="q-main">
+  <div class="q-info">
+    <h1>Let's talk about<br><em>your goals.</em></h1>
+    <p>Fill in the form and Christina will be in touch personally — usually within a few hours. No call centres, no scripts, just a real conversation about what you want to achieve.</p>
+
+    <ul class="trust-list">
+      <li><span class="trust-check">✓</span><span><strong>Completely free</strong> — no obligation, no cost, no pressure</span></li>
+      <li><span class="trust-check">✓</span><span><strong>Christina responds personally</strong> — not an assistant or booking system</span></li>
+      <li><span class="trust-check">✓</span><span><strong>Tailored from day one</strong> — your programme is built around your body and life</span></li>
+      <li><span class="trust-check">✓</span><span><strong>Medical conditions welcome</strong> — Christina researches your needs before your first session</span></li>
+      <li><span class="trust-check">✓</span><span><strong>5.0 ★★★★★ on Google</strong> — 14 verified five-star reviews</span></li>
+    </ul>
+
+    <div class="phone-fallback">
+      <p>Prefer to call? Speak to Christina directly:</p>
+      <a href="tel:07XXXXXXXXX">07XXX XXXXXX</a>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <h2>Book Your Free Consultation</h2>
+    <p>Takes less than 2 minutes to fill in.</p>
+
+    <form action="https://formsubmit.co/christina@c-fit.co.uk" method="POST" onsubmit="handleSubmit(event)">
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_subject" value="New consultation request — C-FIT website">
+      <input type="hidden" name="_next" value="thank-you.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" name="name" placeholder="Your full name" required id="prefillName">
+      </div>
+      <div class="form-group">
+        <label>Phone Number *</label>
+        <input type="tel" name="phone" placeholder="07XXX XXXXXX" required id="prefillPhone">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>What are you most interested in? *</label>
+        <select name="interest" required id="prefillGoal">
+          <option value="">Please select...</option>
+          <option>Reformer Pilates</option>
+          <option>Personal Training</option>
+          <option>Injury Rehabilitation</option>
+          <option>Weight Loss & General Fitness</option>
+          <option>A mix of PT and Pilates</option>
+          <option>I'm not sure yet — happy to chat</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tell Christina a little about your goals or situation</label>
+        <textarea name="message" placeholder="E.g. I've had a knee injury and want to get back to exercise, or I'm looking to lose weight and get stronger…"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Best way to contact you</label>
+        <div class="radio-group">
+          <label class="radio-opt"><input type="radio" name="contact_pref" value="Phone call"> Phone call</label>
+          <label class="radio-opt"><input type="radio" name="contact_pref" value="Text / WhatsApp" checked> Text / WhatsApp</label>
+          <label class="radio-opt"><input type="radio" name="contact_pref" value="Email"> Email</label>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">Send My Request →</button>
+      <p class="form-legal">Your details are only used to get back to you about your consultation. Christina responds personally — usually within a few hours.</p>
+    </form>
+  </div>
+</main>
+
+<footer class="q-footer">
+  <strong>C-FIT Personal Training and Pilates</strong> · Chessington, Surrey ·
+  <a href="tel:07XXXXXXXXX" style="color:var(--coral)">07XXX XXXXXX</a>
+</footer>
+
+<script>
+  // Pre-fill from hero form params
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('name')) document.getElementById('prefillName').value = params.get('name');
+  if (params.get('phone')) document.getElementById('prefillPhone').value = params.get('phone');
+  if (params.get('goal')) {
+    const sel = document.getElementById('prefillGoal');
+    for (let opt of sel.options) {
+      if (opt.value === params.get('goal')) { opt.selected = true; break; }
+    }
+  }
+
+  function handleSubmit(e) {
+    // FormSubmit handles real submission; this just adds a loading state
+    const btn = document.querySelector('.submit-btn');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+  }
+</script>
+</body>
+</html>

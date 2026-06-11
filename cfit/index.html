@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C-FIT Personal Training & Pilates | Chessington | Christina</title>
+<meta name="description" content="Personal training and Reformer Pilates in Chessington with Christina. Tailored sessions for all levels — injury rehab, weight loss, strength. Book your free consultation.">
+<meta property="og:title" content="C-FIT Personal Training & Pilates | Chessington">
+<meta property="og:description" content="Reformer Pilates & personal training sessions tailored to you. Real results, real care. Book a free consultation with Christina today.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "C-FIT Personal Training and Pilates",
+  "description": "Personal training and Reformer Pilates in Chessington with Christina",
+  "telephone": "07XXX XXXXXX",
+  "email": "christina@c-fit.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chessington",
+    "addressRegion": "Surrey",
+    "addressCountry": "GB"
+  },
+  "priceRange": "££",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "14"
+  }
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #FDFCF9;
+    --charcoal: #1A1A2E;
+    --warm: #2C2C4A;
+    --coral: #E8552D;
+    --coral-light: #F4784A;
+    --green: #16A34A;
+    --cream: #F7F3EE;
+    --muted: #6B6B80;
+    --border: #E8E4DC;
+    --white: #FFFFFF;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(26,26,46,0.08);
+    --shadow-lg: 0 12px 48px rgba(26,26,46,0.14);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.15;
+    font-weight: 800;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    flex-wrap: wrap;
+  }
+  .trust-bar-items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .trust-bar-items span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.95;
+  }
+  .trust-bar-items span::before {
+    content: '✓';
+    color: #4ADE80;
+    font-size: 12px;
+  }
+  .trust-bar a {
+    color: #FCD34D;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(253,252,249,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    gap: 24px;
+  }
+  .logo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--charcoal);
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--coral); }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .nav-links a {
+    color: var(--muted);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--charcoal); }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--coral);
+    color: var(--white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 11px 22px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  .btn-primary:hover { background: var(--coral-light); transform: translateY(-1px); }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--coral);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 11px 22px;
+    border-radius: 8px;
+    border: 2px solid var(--coral);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  .btn-outline:hover { background: var(--coral); color: white; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--charcoal);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 24px 90px;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(232,85,45,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 60% at 20% 80%, rgba(74,222,128,0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 64px;
+    align-items: center;
+    position: relative;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(232,85,45,0.15);
+    border: 1px solid rgba(232,85,45,0.3);
+    color: #FBA47A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    color: var(--white);
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--coral-light);
+  }
+  .hero-sub {
+    font-size: 19px;
+    color: rgba(255,255,255,0.72);
+    max-width: 520px;
+    margin-bottom: 32px;
+    line-height: 1.65;
+  }
+  .hero-trust {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+  .hero-trust span {
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-trust span::before {
+    content: '✓';
+    color: #4ADE80;
+    font-size: 13px;
+  }
+
+  /* Hero form card */
+  .hero-form-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  .hero-form-card h3 {
+    font-size: 20px;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+  .hero-form-card p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 14px;
+  }
+  .form-group label {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--charcoal);
+    background: var(--bg);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--coral);
+    box-shadow: 0 0 0 3px rgba(232,85,45,0.12);
+  }
+  .hero-form-card .btn-primary {
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+    padding: 14px;
+    margin-top: 6px;
+  }
+  .form-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+
+  /* ── STARS STRIP ── */
+  .stars-strip {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    padding: 24px;
+  }
+  .stars-strip-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .stars-large {
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #F59E0B;
+  }
+  .stars-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--charcoal);
+  }
+  .stars-sub {
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .divider-dot { color: var(--border); font-size: 20px; }
+
+  /* ── SECTION DEFAULTS ── */
+  section { padding: 80px 24px; }
+  .section-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: clamp(28px, 4vw, 44px);
+    letter-spacing: -1px;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+  }
+  .section-sub {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 560px;
+    line-height: 1.65;
+  }
+  .section-head { margin-bottom: 48px; }
+  .section-head.centered {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ── REVIEWS CAROUSEL ── */
+  .reviews-section { background: var(--white); }
+  .reviews-track-wrap {
+    overflow: hidden;
+    position: relative;
+    margin: 0 -24px;
+  }
+  .reviews-track-wrap::before,
+  .reviews-track-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .reviews-track-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, var(--white), transparent);
+  }
+  .reviews-track-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, var(--white), transparent);
+  }
+  .reviews-track {
+    display: flex;
+    gap: 20px;
+    padding: 8px 40px;
+    animation: scroll-reviews 40s linear infinite;
+    width: max-content;
+  }
+  .reviews-track:hover { animation-play-state: paused; }
+  @keyframes scroll-reviews {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .review-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    width: 300px;
+    flex-shrink: 0;
+  }
+  .review-stars { color: #F59E0B; font-size: 14px; margin-bottom: 12px; letter-spacing: 1px; }
+  .review-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .review-author {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--charcoal);
+  }
+  .review-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* ── WHY US ── */
+  .why-section { background: var(--cream); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .why-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .why-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+  .why-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(232,85,45,0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .why-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--charcoal);
+  }
+  .why-card p { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+  /* ── WHO WE HELP ── */
+  .help-section { background: var(--white); }
+  .help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .help-card {
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .help-card:hover {
+    border-color: var(--coral);
+    box-shadow: 0 0 0 3px rgba(232,85,45,0.08);
+  }
+  .help-card-tag {
+    display: inline-block;
+    background: rgba(232,85,45,0.1);
+    color: var(--coral);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    width: fit-content;
+  }
+  .help-card h3 { font-size: 22px; }
+  .help-card p { font-size: 16px; color: var(--muted); line-height: 1.65; flex: 1; }
+  .help-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .help-list li {
+    font-size: 15px;
+    color: var(--charcoal);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .help-list li::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .how-section { background: var(--cream); }
+  .steps-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    position: relative;
+    margin-top: 48px;
+  }
+  .steps-row::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: calc(16.66% + 16px);
+    right: calc(16.66% + 16px);
+    height: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px;
+    position: relative;
+  }
+  .step-num {
+    width: 64px;
+    height: 64px;
+    background: var(--coral);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 16px rgba(232,85,45,0.35);
+  }
+  .step h3 { font-size: 18px; margin-bottom: 8px; }
+  .step p { font-size: 15px; color: var(--muted); }
+  .steps-cta {
+    text-align: center;
+    margin-top: 48px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .phone-link {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--charcoal);
+  }
+  .phone-link:hover { color: var(--coral); }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--white); }
+  .faq-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    margin-top: 48px;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 22px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--charcoal);
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--coral); }
+  .faq-icon {
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--coral);
+    flex-shrink: 0;
+    transition: transform 0.25s;
+    line-height: 1;
+  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.25s;
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding-bottom: 20px;
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: var(--charcoal);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(232,85,45,0.2) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .final-cta h2 {
+    font-size: clamp(30px, 4.5vw, 52px);
+    color: white;
+    letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .final-cta p { color: rgba(255,255,255,0.7); font-size: 18px; margin-bottom: 40px; position: relative; }
+  .final-cta-form {
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .final-cta-form input {
+    padding: 14px 18px;
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.07);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .final-cta-form input::placeholder { color: rgba(255,255,255,0.4); }
+  .final-cta-form input:focus { border-color: var(--coral); }
+  .final-cta-form .btn-primary {
+    justify-content: center;
+    padding: 15px;
+    font-size: 17px;
+    margin-top: 4px;
+  }
+  .cta-or {
+    color: rgba(255,255,255,0.45);
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  .big-phone {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.5px;
+    display: block;
+    margin-top: 28px;
+    position: relative;
+  }
+  .big-phone:hover { color: var(--coral-light); }
+  .big-phone-sub { color: rgba(255,255,255,0.5); font-size: 14px; margin-top: 4px; position: relative; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0F0F1E;
+    color: rgba(255,255,255,0.65);
+    padding: 48px 24px 32px;
+    font-size: 14px;
+  }
+  .footer-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-logo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 12px;
+  }
+  .footer-logo span { color: var(--coral); }
+  .footer-desc { line-height: 1.7; margin-bottom: 16px; }
+  .footer-nap { line-height: 1.9; }
+  .footer-col h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 14px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
+  .footer-links a:hover { color: white; }
+  .footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ── STICKY MOBILE BAR ── */
+  .mobile-cta-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: white;
+    border-top: 1px solid var(--border);
+    padding: 12px 16px;
+    gap: 10px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  }
+  .mobile-cta-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 13px;
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .mobile-btn-call {
+    background: #16A34A;
+    color: white;
+  }
+  .mobile-btn-quote {
+    background: var(--coral);
+    color: white;
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero { padding: 56px 24px 72px; }
+    .steps-row { grid-template-columns: 1fr; gap: 32px; }
+    .steps-row::before { display: none; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .nav-links { display: none; }
+    .mobile-cta-bar { display: flex; }
+    body { padding-bottom: 72px; }
+    .trust-bar-items { gap: 12px; }
+    .trust-bar { font-size: 12px; }
+    .help-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .why-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-items">
+    <span>Reformer Pilates Specialist</span>
+    <span>Injury Rehabilitation</span>
+    <span>Fully Qualified & Insured</span>
+  </div>
+  <a href="tel:07XXXXXXXXX">📞 Call Christina</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">C<span>-</span>FIT</div>
+    <ul class="nav-links">
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="quote.html" class="btn-primary">Book Free Consult →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">🏋️ Chessington's Pilates & PT Specialist</div>
+      <h1>Transform Your Body.<br><em>Enjoy Every Session.</em></h1>
+      <p class="hero-sub">Personal Training & Reformer Pilates with Christina — tailored to your body, your goals, and your life. Whether you're rebuilding after injury or pushing past a plateau, I'll get you there.</p>
+      <div class="hero-trust">
+        <span>Free consultation</span>
+        <span>Injury rehab expertise</span>
+        <span>Real, lasting results</span>
+      </div>
+    </div>
+    <div class="hero-form-card">
+      <h3>Book Your Free Consultation</h3>
+      <p>No obligation — let's talk about your goals.</p>
+      <form action="quote.html" method="get" onsubmit="return handleHeroForm(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="First name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="07XXX XXXXXX" required>
+        </div>
+        <div class="form-group">
+          <label>What are you looking for?</label>
+          <select name="goal">
+            <option value="">Select a goal...</option>
+            <option>Reformer Pilates</option>
+            <option>Personal Training</option>
+            <option>Injury Rehabilitation</option>
+            <option>Weight Loss & Fitness</option>
+            <option>I'm not sure yet</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">Get My Free Consultation →</button>
+      </form>
+      <p class="form-note">✓ Christina replies personally within 24 hours</p>
+    </div>
+  </div>
+</section>
+
+<!-- STARS STRIP -->
+<div class="stars-strip">
+  <div class="stars-strip-inner">
+    <div class="stars-large">★★★★★</div>
+    <div>
+      <div class="stars-text">Rated 5.0 out of 5</div>
+      <div class="stars-sub">14 five-star reviews on Google</div>
+    </div>
+    <div class="divider-dot">·</div>
+    <div class="stars-sub">"The best PT I've ever had." — Rebecca, 5 years a client</div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <div class="section-label">What clients say</div>
+      <h2 class="section-title">Real people. Real results.</h2>
+    </div>
+  </div>
+  <div class="reviews-track-wrap">
+    <div class="reviews-track" id="reviewsTrack">
+      <!-- Reviews duplicated for infinite scroll -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The BEST personal trainer. I have been going to see Christina for 5 years now, she is so person centred and really pushes you to reach your potential. Just recently I have started having sessions on the reformer and it is amazing!"</p>
+        <div class="review-author">Rebecca Dunning</div>
+        <div class="review-meta">5-year client · Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"It has been such a pleasure to have Christina as my Pilates Reformer instructor. Not only did she manage to fix my knee injury, she's taken my training to another level and strengthened my whole body. I feel many years younger."</p>
+        <div class="review-author">Cristina West</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I have been seeing Christina for a little over a year following a referral due to low back issues. After several months of Reformer Pilates to strengthen the core I can honestly say I've had no back issues since."</p>
+        <div class="review-author">Michael Eddleston</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Christina is absolutely amazing in how she trains me. She is very knowledgeable and does her own research on my medical conditions and needs before she comes up with a plan. Going twice a week and seeing amazing results."</p>
+        <div class="review-author">Nilam Khan</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Christina is amazing! I have never been able to keep to any sort of exercise routine but since starting with Christina I am thoroughly enjoying it. She is super friendly, really encouraging and very knowledgeable."</p>
+        <div class="review-author">Sharon Akyuz</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The best PT around. Thank you for assisting me to get back on my feet following my back injury, tailoring our workouts to support my spine. Never did I imagine I would actually enjoy working out, and now I do!!"</p>
+        <div class="review-author">Byron Foster</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Could not recommend C-FIT enough — she has made me feel so much more confident and better within myself! Not just my personal trainer at this point, have definitely made a friend for life."</p>
+        <div class="review-author">Alisha Khan</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"As someone who has always struggled to find an exercise routine that I enjoy, working with Christina has been quite a revelation! The sessions on the reformer are great, they're tailored to my needs and I always feel challenged."</p>
+        <div class="review-author">Pip Steers</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Not only are the sessions amazing but full of fun and energy. Christina is professional and committed and I would recommend her to everyone. Thank you for all your encouragement over the years."</p>
+        <div class="review-author">Ian Waller</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Great session. Christina is very knowledgeable, motivating, with lots of guidance and support. I would recommend her PT services to anyone!"</p>
+        <div class="review-author">Alexander Sarafian</div>
+        <div class="review-meta">Local Guide · Google Review</div>
+      </div>
+      <!-- Duplicates for seamless loop -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The BEST personal trainer. I have been going to see Christina for 5 years now, she is so person centred and really pushes you to reach your potential. Just recently I have started having sessions on the reformer and it is amazing!"</p>
+        <div class="review-author">Rebecca Dunning</div>
+        <div class="review-meta">5-year client · Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"It has been such a pleasure to have Christina as my Pilates Reformer instructor. Not only did she manage to fix my knee injury, she's taken my training to another level and strengthened my whole body. I feel many years younger."</p>
+        <div class="review-author">Cristina West</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I have been seeing Christina for a little over a year following a referral due to low back issues. After several months of Reformer Pilates to strengthen the core I can honestly say I've had no back issues since."</p>
+        <div class="review-author">Michael Eddleston</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Christina is amazing! I have never been able to keep to any sort of exercise routine but since starting with Christina I am thoroughly enjoying it. She is super friendly, really encouraging and very knowledgeable."</p>
+        <div class="review-author">Sharon Akyuz</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Excellent motivational sessions, full of encouragement and makes the experience enjoyable and really starting to see the results."</p>
+        <div class="review-author">Michelle Bennett</div>
+        <div class="review-meta">Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-label">Why choose C-FIT</div>
+      <h2 class="section-title">Training that actually works.<br>Because it's built around <em style="font-style:italic;color:var(--coral)">you.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🎯</div>
+        <h3>Tailored to Your Body</h3>
+        <p>Every session is designed around your goals, fitness level, and any injuries or conditions. No generic programmes — ever.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🦴</div>
+        <h3>Injury Rehab Expertise</h3>
+        <p>Knee pain, bad back, post-surgery? Christina specialises in building you back stronger using Reformer Pilates and targeted training.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🔥</div>
+        <h3>Reformer Pilates on a Real Machine</h3>
+        <p>Not a mat class. Full Reformer apparatus sessions that deliver results you simply can't get any other way — clients feel it from session one.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">💚</div>
+        <h3>You'll Actually Enjoy It</h3>
+        <p>"Never did I imagine I would enjoy working out — and now I do!" — Byron. Christina brings energy, fun, and real encouragement every time.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="quote.html" class="btn-primary">Book a Free Consultation →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE HELP -->
+<section class="help-section">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <div class="section-label">Who I work with</div>
+      <h2 class="section-title">Everyone deserves a trainer<br>who truly listens.</h2>
+    </div>
+    <div class="help-grid">
+      <div class="help-card reveal">
+        <div class="help-card-tag">Injury Recovery</div>
+        <h3>Rebuilding After Injury</h3>
+        <p>Bad back, knee problems, post-surgery recovery — Reformer Pilates is one of the safest and most effective tools for rehabilitation.</p>
+        <ul class="help-list">
+          <li>Lower back pain & sciatica</li>
+          <li>Knee & hip rehabilitation</li>
+          <li>Core strengthening & stability</li>
+          <li>Post-surgical return to movement</li>
+        </ul>
+        <a href="quote.html" class="btn-outline" style="margin-top:8px;">Get Started →</a>
+      </div>
+      <div class="help-card reveal">
+        <div class="help-card-tag">Fitness & Strength</div>
+        <h3>Getting Stronger & Fitter</h3>
+        <p>Whether you've never exercised or you've hit a plateau, Christina tailors a programme that challenges you at exactly the right level.</p>
+        <ul class="help-list">
+          <li>Full-body strength training</li>
+          <li>Weight loss & body composition</li>
+          <li>Endurance & stamina building</li>
+          <li>Hybrid Reformer + PT sessions</li>
+        </ul>
+        <a href="quote.html" class="btn-outline" style="margin-top:8px;">Get Started →</a>
+      </div>
+      <div class="help-card reveal">
+        <div class="help-card-tag">Lifestyle & Confidence</div>
+        <h3>Finding Something You Love</h3>
+        <p>"I've never been able to keep to any exercise routine until Christina." Sessions that are genuinely fun — and results that stick.</p>
+        <ul class="help-list">
+          <li>First-time exercisers welcome</li>
+          <li>Confidence & body positivity</li>
+          <li>Flexible scheduling around you</li>
+          <li>Friend-for-life relationship</li>
+        </ul>
+        <a href="quote.html" class="btn-outline" style="margin-top:8px;">Get Started →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <div class="section-label">Getting started</div>
+      <h2 class="section-title">Three steps to a better you.</h2>
+    </div>
+    <div class="steps-row">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Free Consultation</h3>
+        <p>Tell Christina your goals, history, and any concerns. No pressure, no obligation — just an honest conversation.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>Your Personal Plan</h3>
+        <p>Christina designs a programme specifically for your body and goals — not a template, a real tailored plan.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>Train & Transform</h3>
+        <p>Show up, give your best, and enjoy it. Christina handles the rest — and you'll see results from the very first session.</p>
+      </div>
+    </div>
+    <div class="steps-cta reveal">
+      <a href="quote.html" class="btn-primary">Book My Free Consultation →</a>
+      <span style="color:var(--muted);font-size:15px;">or call</span>
+      <a href="tel:07XXXXXXXXX" class="phone-link">07XXX XXXXXX</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <div class="section-label">Questions</div>
+      <h2 class="section-title">Everything you need to know.</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What is Reformer Pilates and how is it different from mat Pilates?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Reformer Pilates uses a specialised machine with a sliding carriage, springs, and straps to create resistance and support. It's far more versatile than mat work — you can do hundreds of exercises targeting every muscle group, with resistance you can adjust precisely. It's particularly effective for rehabilitation because the machine supports your body while still challenging it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          I've never exercised before / I'm very unfit. Can I still come?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Absolutely — in fact, beginners often see the most dramatic results. Christina has worked with people of all fitness levels and backgrounds. Every programme starts where you are, not where you think you should be. Several clients say they'd never managed to stick with exercise until they started with Christina.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          I have a medical condition / recent injury. Can you work with me?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Yes, and this is one of Christina's core strengths. She researches your specific medical conditions and needs before designing your plan. Clients have seen remarkable results recovering from knee injuries, chronic back pain, and post-surgical rehab. Always mention any conditions when you book — this helps Christina prepare properly.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Where are sessions held?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Sessions are held in Chessington, Surrey. Contact Christina directly when booking to confirm exact location details and to discuss whether in-home or outdoor sessions may also be available for you.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How quickly will I see results?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Many clients notice changes within the first few sessions — improved posture, less pain, more energy. Visible physical results typically develop over 4–8 weeks of consistent training. Christina tracks your progress and adjusts your programme to keep you moving forward the whole time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Ready to feel the difference?</h2>
+    <p>Book a free, no-obligation consultation with Christina today.</p>
+    <div class="final-cta-form">
+      <input type="text" placeholder="Your name">
+      <input type="tel" placeholder="Your phone number">
+      <a href="quote.html" class="btn-primary" style="text-align:center;display:block;padding:15px;font-size:17px;">Book My Free Consultation →</a>
+    </div>
+    <div class="cta-or">or call directly</div>
+    <a href="tel:07XXXXXXXXX" class="big-phone">07XXX XXXXXX</a>
+    <p class="big-phone-sub">Christina replies personally — usually within a few hours</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">C<span>-</span>FIT</div>
+      <p class="footer-desc">Personal Training & Reformer Pilates in Chessington, Surrey. Tailored sessions for injury rehab, strength, fitness, and everything in between.</p>
+      <div class="footer-nap">
+        📍 Chessington, Surrey, KT9<br>
+        📞 <a href="tel:07XXXXXXXXX" style="color:rgba(255,255,255,0.65)">07XXX XXXXXX</a><br>
+        ✉️ <a href="mailto:christina@c-fit.co.uk" style="color:rgba(255,255,255,0.65)">christina@c-fit.co.uk</a>
+      </div>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="#services">Reformer Pilates</a></li>
+        <li><a href="#services">Personal Training</a></li>
+        <li><a href="#services">Injury Rehabilitation</a></li>
+        <li><a href="#services">Strength & Conditioning</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#reviews">Client Reviews</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="quote.html">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 C-FIT Personal Training and Pilates. All rights reserved.</span>
+    <span>Chessington, Surrey · Fully Qualified & Insured</span>
+  </div>
+</footer>
+
+<!-- MOBILE CTA BAR -->
+<div class="mobile-cta-bar" id="mobileCta">
+  <a href="tel:07XXXXXXXXX" class="mobile-btn-call">📞 Call Now</a>
+  <a href="quote.html" class="mobile-btn-quote">Book Free Consult</a>
+</div>
+
+<script>
+  // Scroll reveals
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Hero form — carry name/phone to quote page
+  function handleHeroForm(e) {
+    e.preventDefault();
+    const form = e.target;
+    const params = new URLSearchParams({
+      name: form.name.value,
+      phone: form.phone.value,
+      goal: form.goal.value
+    });
+    window.location.href = 'quote.html?' + params.toString();
+    return false;
+  }
+
+  // Duplicate reviews track for seamless loop
+  const track = document.getElementById('reviewsTrack');
+  track.innerHTML += track.innerHTML;
+</script>
+</body>
+</html>
