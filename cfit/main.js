@@ -124,11 +124,14 @@
     /* ============================================================
        MOTION — only when GSAP present and motion allowed
        ============================================================ */
-    if (!hasGSAP || reduceMotion) {
-      // Make sure nothing is left hidden.
+    if (reduceMotion || !hasGSAP) {
+      /* Make sure nothing is left hidden. */
       document.documentElement.classList.add("no-gsap");
       return;
     }
+
+    /* Signal to CSS: GSAP is active — cancel CSS fallback animations */
+    document.documentElement.classList.add("gsap-active");
 
     var gsap = window.gsap;
     if (window.ScrollTrigger) gsap.registerPlugin(window.ScrollTrigger);
