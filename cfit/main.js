@@ -133,21 +133,15 @@
     var gsap = window.gsap;
     if (window.ScrollTrigger) gsap.registerPlugin(window.ScrollTrigger);
 
-    /* ---- Hero load timeline ---- */
-    var hero = document.querySelector("[data-hero]");
-    if (hero) {
-      var lines = hero.querySelectorAll("[data-hero-line] > span");
-      gsap.set(lines, { yPercent: 110 });
-      gsap.set("[data-hero-sub]", { opacity: 0, y: 20 });
-      gsap.set("[data-hero-media]", { opacity: 0, scale: 1.04 });
-      gsap.set("[data-hero-circle]", { opacity: 0 });
-
-      var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
-      tl.from("[data-load-fade]", { opacity: 0, duration: 0.5, stagger: 0.08 }, 0);
-      tl.to(lines, { yPercent: 0, duration: 0.95, stagger: 0.12 }, 0.3);
-      tl.to("[data-hero-sub]", { opacity: 1, y: 0, duration: 0.8 }, 0.6);
-      tl.to("[data-hero-media]", { opacity: 1, scale: 1, duration: 0.8 }, 0.7);
-      tl.to("[data-hero-circle]", { opacity: 0.3, duration: 0.8 }, 0.9);
+    /* ---- Hero entrance is handled in CSS (resilient, never stranded).
+       Here we only add a gentle scroll parallax on the hero photo. ---- */
+    if (window.ScrollTrigger) {
+      gsap.utils.toArray("[data-hero-parallax]").forEach(function (img) {
+        gsap.to(img, {
+          yPercent: 6, ease: "none",
+          scrollTrigger: { trigger: img, start: "top top", end: "bottom top", scrub: true }
+        });
+      });
     }
 
     /* ---- Generic scroll reveals ---- */
