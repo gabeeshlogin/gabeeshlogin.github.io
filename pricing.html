@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build Your Package — Instant Website Quote | SitePilots</title>
+    <meta
+      name="description"
+      content="Build your own website package and see the price update live. Pick your pages, add SEO, booking, online shop and more. Fast, conversion-focused web design in Surrey from £400."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="icon" type="image/png" href="/sitepilotslogo.png" />
+    <link rel="apple-touch-icon" href="/sitepilotslogo.png" />
+    <link rel="canonical" href="https://sitepilots.co.uk/pricing.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SitePilots" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="https://sitepilots.co.uk/pricing.html" />
+    <meta property="og:title" content="Build Your Package — Instant Website Quote | SitePilots" />
+    <meta
+      property="og:description"
+      content="Build your own website package and watch the price update live. Pages, SEO, booking, online shop and more — from £400."
+    />
+    <meta property="og:image" content="https://sitepilots.co.uk/sitepilotslogo.png" />
+    <meta name="theme-color" content="#050507" />
+
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #050507;
+        --bg-elevated: #0c0d12;
+        --chrome-light: #f4f4f6;
+        --chrome-mid: #c7c9d1;
+        --chrome-dark: #7e8089;
+        --accent: #5b8cff;
+        --line: #ffffff14;
+        --font-body: "Satoshi", "Helvetica Neue", sans-serif;
+        --font-display: "Clash Display", "Arial Narrow", sans-serif;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--chrome-mid);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        overflow-x: clip;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      @media (min-width: 1024px) {
+        .wrap {
+          padding: 0 2.5rem;
+        }
+      }
+
+      /* ---------- chrome text + button (matched to main site) ---------- */
+      .text-chrome {
+        color: transparent;
+        background-image: linear-gradient(#fff, #c7c9d1 45%, #7e8089 55%, #e8e8ec);
+        -webkit-background-clip: text;
+        background-clip: text;
+        display: inline-block;
+        position: relative;
+        font-family: var(--font-display);
+        font-weight: 600;
+      }
+      .text-chrome[data-text]::after {
+        content: attr(data-text);
+        color: transparent;
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(105deg, transparent 38%, #ffffffd9, transparent 62%);
+        background-size: 280% 100%;
+        background-position: 120% 0;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: sheen-load 2.4s var(--ease) 0.6s 1 both;
+      }
+      @keyframes sheen-load {
+        to {
+          background-position: -40% 0;
+        }
+      }
+
+      .btn-chrome {
+        color: #050507;
+        background-image: linear-gradient(#fff, #d4d6dd 48%, #9a9ca6 52%, #e8e8ec);
+        border: 0;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.35s var(--ease), box-shadow 0.35s;
+        will-change: transform;
+        text-decoration: none;
+      }
+      .btn-chrome::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(105deg, transparent 35%, #ffffffe6, transparent 65%);
+        transform: translateX(-120%);
+        transition: transform 0.7s var(--ease);
+      }
+      .btn-chrome:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 40px #5b8cff40;
+      }
+      .btn-chrome:hover::after {
+        transform: translateX(120%);
+      }
+
+      /* ---------- top bar ---------- */
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        backdrop-filter: blur(14px);
+        background: #05050799;
+        border-bottom: 1px solid var(--line);
+      }
+      .topbar .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4.25rem;
+      }
+      .brand {
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: var(--chrome-light);
+        text-decoration: none;
+        font-size: 1.05rem;
+      }
+      .brand span {
+        color: var(--accent);
+      }
+      .back {
+        font-size: 0.85rem;
+        color: var(--chrome-dark);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .back:hover {
+        color: var(--chrome-light);
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative;
+        padding: 4.5rem 0 1rem;
+        overflow: hidden;
+      }
+      .hero .glow {
+        position: absolute;
+        top: -8rem;
+        right: -6rem;
+        width: 26rem;
+        height: 26rem;
+        border-radius: 50%;
+        background: radial-gradient(circle, #5b8cff 0%, transparent 70%);
+        opacity: 0.18;
+        filter: blur(40px);
+        pointer-events: none;
+      }
+      .eyebrow {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.3em;
+        color: var(--chrome-dark);
+        text-transform: uppercase;
+        margin: 0 0 1rem;
+      }
+      .hero h1 {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        line-height: 1.02;
+        font-size: clamp(2.6rem, 7vw, 5.5rem);
+      }
+      .hero p.lead {
+        margin: 1.25rem 0 0;
+        max-width: 34rem;
+        font-size: 1.15rem;
+        color: var(--chrome-mid);
+      }
+
+      /* ---------- layout ---------- */
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        padding: 2.5rem 0 5rem;
+        align-items: start;
+      }
+      @media (min-width: 1024px) {
+        .grid {
+          grid-template-columns: 1fr 22rem;
+          gap: 2.5rem;
+        }
+      }
+
+      .panel {
+        background: var(--bg-elevated);
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1.75rem;
+      }
+      @media (min-width: 768px) {
+        .panel {
+          padding: 2.25rem;
+        }
+      }
+      .panel + .panel {
+        margin-top: 1.75rem;
+      }
+
+      .panel-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 0.35rem;
+      }
+      .panel-title {
+        font-family: var(--font-display);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: var(--chrome-light);
+        font-size: 1.25rem;
+        margin: 0;
+      }
+      .panel-note {
+        font-size: 0.85rem;
+        color: var(--chrome-dark);
+        margin: 0 0 1.5rem;
+      }
+
+      /* ---------- custom slider ---------- */
+      .slider-wrap {
+        margin-top: 1.75rem;
+      }
+      .slider-top {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 1.1rem;
+      }
+      .slider-value {
+        font-family: var(--font-display);
+        font-weight: 600;
+        color: var(--chrome-light);
+        font-size: 2.4rem;
+        line-height: 1;
+      }
+      .slider-value small {
+        font-size: 1rem;
+        color: var(--chrome-dark);
+        font-weight: 500;
+        margin-left: 0.4rem;
+      }
+      .slider-cost {
+        font-size: 0.9rem;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .range {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 6px;
+        border-radius: 999px;
+        background: linear-gradient(
+          90deg,
+          var(--accent) 0 var(--pct, 0%),
+          rgba(255, 255, 255, 0.09) var(--pct, 0%) 100%
+        );
+        outline: none;
+        cursor: pointer;
+        margin: 0;
+      }
+      .range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: linear-gradient(#fff, #d4d6dd 48%, #9a9ca6 52%, #e8e8ec);
+        border: 2px solid #050507;
+        box-shadow: 0 0 0 4px rgba(91, 140, 255, 0.18), 0 4px 14px rgba(0, 0, 0, 0.55);
+        cursor: grab;
+        transition: box-shadow 0.25s, transform 0.15s;
+      }
+      .range:active::-webkit-slider-thumb {
+        transform: scale(1.1);
+        cursor: grabbing;
+        box-shadow: 0 0 0 6px rgba(91, 140, 255, 0.3), 0 0 26px rgba(91, 140, 255, 0.55);
+      }
+      .range::-moz-range-thumb {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: linear-gradient(#fff, #d4d6dd 48%, #9a9ca6 52%, #e8e8ec);
+        border: 2px solid #050507;
+        box-shadow: 0 0 0 4px rgba(91, 140, 255, 0.18), 0 4px 14px rgba(0, 0, 0, 0.55);
+        cursor: grab;
+      }
+      .range::-moz-range-track {
+        background: transparent;
+        height: 6px;
+      }
+      .range:focus-visible {
+        box-shadow: 0 0 0 2px var(--accent);
+      }
+      .ticks {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.75rem;
+        font-size: 0.72rem;
+        color: var(--chrome-dark);
+      }
+
+      /* ---------- feature toggles ---------- */
+      .feats {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+        margin-top: 1.5rem;
+      }
+      @media (min-width: 560px) {
+        .feats {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .feat {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        text-align: left;
+        background: #ffffff05;
+        border: 1px solid var(--line);
+        border-radius: 0.85rem;
+        padding: 1rem 1.1rem;
+        cursor: pointer;
+        color: inherit;
+        font: inherit;
+        transition: border-color 0.3s, background 0.3s, transform 0.2s var(--ease);
+      }
+      .feat:hover {
+        border-color: var(--chrome-dark);
+        transform: translateY(-2px);
+      }
+      .feat.is-active {
+        border-color: var(--accent);
+        background: #5b8cff14;
+        box-shadow: 0 0 30px rgba(91, 140, 255, 0.1);
+      }
+      .feat-check {
+        flex: 0 0 auto;
+        width: 22px;
+        height: 22px;
+        border-radius: 7px;
+        border: 1.5px solid var(--chrome-dark);
+        position: relative;
+        transition: background 0.25s, border-color 0.25s;
+      }
+      .feat.is-active .feat-check {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+      .feat-check::after {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 3px;
+        width: 5px;
+        height: 10px;
+        border: solid #050507;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg) scale(0);
+        transition: transform 0.2s var(--ease);
+      }
+      .feat.is-active .feat-check::after {
+        transform: rotate(45deg) scale(1);
+      }
+      .feat-body {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .feat-name {
+        display: block;
+        color: var(--chrome-light);
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .feat-desc {
+        display: block;
+        color: var(--chrome-dark);
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+      .feat-price {
+        flex: 0 0 auto;
+        color: var(--chrome-mid);
+        font-weight: 600;
+        font-size: 0.9rem;
+        font-family: var(--font-display);
+      }
+      .feat.is-active .feat-price {
+        color: var(--accent);
+      }
+
+      /* ---------- care plans ---------- */
+      .plans {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+        margin-top: 1.5rem;
+      }
+      @media (min-width: 560px) {
+        .plans {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .plan {
+        position: relative;
+        text-align: left;
+        background: #ffffff05;
+        border: 1px solid var(--line);
+        border-radius: 0.85rem;
+        padding: 1.25rem 1.1rem;
+        cursor: pointer;
+        color: inherit;
+        font: inherit;
+        transition: border-color 0.3s, background 0.3s, transform 0.2s var(--ease);
+      }
+      .plan:hover {
+        border-color: var(--chrome-dark);
+        transform: translateY(-2px);
+      }
+      .plan.is-active {
+        border-color: var(--accent);
+        background: #5b8cff14;
+        box-shadow: 0 0 30px rgba(91, 140, 255, 0.12);
+      }
+      .plan-name {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        color: var(--chrome-dark);
+      }
+      .plan.is-active .plan-name {
+        color: var(--accent);
+      }
+      .plan-price {
+        font-family: var(--font-display);
+        font-weight: 600;
+        color: var(--chrome-light);
+        font-size: 1.85rem;
+        line-height: 1.2;
+        margin-top: 0.4rem;
+      }
+      .plan-price small {
+        font-size: 0.85rem;
+        color: var(--chrome-dark);
+        font-weight: 500;
+      }
+      .plan-desc {
+        font-size: 0.78rem;
+        color: var(--chrome-dark);
+        margin-top: 0.35rem;
+        line-height: 1.45;
+      }
+      .plan-pop {
+        position: absolute;
+        top: -0.7rem;
+        right: 0.9rem;
+        background: var(--accent);
+        color: #050507;
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        padding: 0.25rem 0.55rem;
+        border-radius: 999px;
+      }
+
+      /* ---------- summary ---------- */
+      .summary {
+        position: relative;
+      }
+      @media (min-width: 1024px) {
+        .summary {
+          position: sticky;
+          top: 5.5rem;
+        }
+      }
+      .summary-card {
+        position: relative;
+        overflow: hidden;
+        background: var(--bg-elevated);
+        border: 1px solid #5b8cff40;
+        border-radius: 1rem;
+        padding: 1.75rem;
+        box-shadow: 0 0 50px rgba(91, 140, 255, 0.1);
+      }
+      .summary-card .glow {
+        position: absolute;
+        top: -7rem;
+        right: -7rem;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 50%;
+        background: radial-gradient(circle, #5b8cff 0%, transparent 70%);
+        opacity: 0.18;
+        filter: blur(40px);
+        pointer-events: none;
+      }
+      .lines {
+        list-style: none;
+        margin: 1.25rem 0 0;
+        padding: 0;
+        position: relative;
+      }
+      .lines li {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: 0.9rem;
+        padding: 0.55rem 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .lines li span:first-child {
+        color: var(--chrome-mid);
+      }
+      .lines li span:last-child {
+        color: var(--chrome-light);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .lines li.muted span {
+        color: var(--chrome-dark);
+        font-weight: 500;
+      }
+      .totals {
+        margin-top: 1.4rem;
+      }
+      .total-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .total-row .label {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--chrome-dark);
+      }
+      .total-row .big {
+        font-size: clamp(2.4rem, 7vw, 3rem);
+        line-height: 1;
+      }
+      .total-row.sub {
+        margin-top: 0.9rem;
+        font-size: 0.95rem;
+        color: var(--chrome-mid);
+      }
+      .total-row.sub .val {
+        color: var(--chrome-light);
+        font-weight: 600;
+        font-family: var(--font-display);
+      }
+      .cta {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-radius: 999px;
+        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-top: 1.6rem;
+      }
+      .fineprint {
+        font-size: 0.74rem;
+        color: var(--chrome-dark);
+        margin: 1rem 0 0;
+        line-height: 1.5;
+      }
+
+      /* ---------- footer ---------- */
+      .foot {
+        border-top: 1px solid var(--line);
+        padding: 2.5rem 0;
+        font-size: 0.82rem;
+        color: var(--chrome-dark);
+      }
+      .foot .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .foot a {
+        color: var(--chrome-dark);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .foot a:hover {
+        color: var(--chrome-light);
+      }
+      .foot nav {
+        display: flex;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap row">
+        <a class="brand" href="/">SITE<span>PILOTS</span></a>
+        <a class="back" href="/#pricing">← Back to site</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="eyebrow">Build your package</p>
+        <h1 class="text-chrome" data-text="PRICE IT YOURSELF.">PRICE IT YOURSELF.</h1>
+        <p class="lead">
+          Slide, tick, done. Choose your pages and the features you actually need —
+          your price updates live. No waiting around for a quote.
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="grid">
+        <!-- ============ CONFIGURATOR ============ -->
+        <div>
+          <!-- Pages -->
+          <section class="panel">
+            <div class="panel-head">
+              <h2 class="panel-title">Your pages</h2>
+            </div>
+            <p class="panel-note">
+              Every build starts at <strong style="color: var(--chrome-light)">£400</strong> for a
+              sharp single-page site. Need more room? Add pages below.
+            </p>
+
+            <div class="slider-wrap">
+              <div class="slider-top">
+                <div>
+                  <span class="slider-value"><span id="pageCount">1</span><small id="pageWord">page</small></span>
+                </div>
+                <div class="slider-cost" id="pageCost">Included</div>
+              </div>
+              <input
+                id="pages"
+                class="range"
+                type="range"
+                min="1"
+                max="10"
+                step="1"
+                value="1"
+                aria-label="Number of pages"
+                aria-describedby="pageCost"
+              />
+              <div class="ticks">
+                <span>1</span><span>3</span><span>5</span><span>7</span><span>10+</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Features -->
+          <section class="panel">
+            <div class="panel-head">
+              <h2 class="panel-title">Add features</h2>
+            </div>
+            <p class="panel-note">Tap to add. Each one bolts onto your one-time build cost.</p>
+
+            <div class="feats" id="feats">
+              <button type="button" class="feat" aria-pressed="false" data-price="150" data-key="SEO optimisation">
+                <span class="feat-check" aria-hidden="true"></span>
+                <span class="feat-body">
+                  <span class="feat-name">SEO optimisation</span>
+                  <span class="feat-desc">Rank when locals search Google</span>
+                </span>
+                <span class="feat-price">+£150</span>
+              </button>
+
+              <button type="button" class="feat" aria-pressed="false" data-price="200" data-key="Booking & appointments">
+                <span class="feat-check" aria-hidden="true"></span>
+                <span class="feat-body">
+                  <span class="feat-name">Booking &amp; appointments</span>
+                  <span class="feat-desc">Let customers book you 24/7</span>
+                </span>
+                <span class="feat-price">+£200</span>
+              </button>
+
+              <button type="button" class="feat" aria-pressed="false" data-price="300" data-key="Online shop">
+                <span class="feat-check" aria-hidden="true"></span>
+                <span class="feat-body">
+                  <span class="feat-name">Online shop</span>
+                  <span class="feat-desc">Sell products &amp; take payments</span>
+                </span>
+                <span class="feat-price">+£300</span>
+              </button>
+
+              <button type="button" class="feat" aria-pressed="false" data-price="60" data-key="Photo gallery">
+                <span class="feat-check" aria-hidden="true"></span>
+                <span class="feat-body">
+                  <span class="feat-name">Photo gallery</span>
+                  <span class="feat-desc">Show off your best work</span>
+                </span>
+                <span class="feat-price">+£60</span>
+              </button>
+
+              <button type="button" class="feat" aria-pressed="false" data-price="90" data-key="Blog / news">
+                <span class="feat-check" aria-hidden="true"></span>
+                <span class="feat-body">
+                  <span class="feat-name">Blog / news</span>
+                  <span class="feat-desc">Post updates &amp; lift your SEO</span>
+                </span>
+                <span class="feat-price">+£90</span>
+              </button>
+
+              <button type="button" class="feat" aria-pressed="false" data-price="120" data-key="Copywriting">
+                <span class="feat-check" aria-hidden="true"></span>
+                <span class="feat-body">
+                  <span class="feat-name">Copywriting</span>
+                  <span class="feat-desc">We write the words for you</span>
+                </span>
+                <span class="feat-price">+£120</span>
+              </button>
+
+              <button type="button" class="feat" aria-pressed="false" data-price="150" data-key="Logo & branding">
+                <span class="feat-check" aria-hidden="true"></span>
+                <span class="feat-body">
+                  <span class="feat-name">Logo &amp; branding</span>
+                  <span class="feat-desc">Fresh logo &amp; brand colours</span>
+                </span>
+                <span class="feat-price">+£150</span>
+              </button>
+
+              <button type="button" class="feat" aria-pressed="false" data-price="80" data-key="Google Business setup">
+                <span class="feat-check" aria-hidden="true"></span>
+                <span class="feat-body">
+                  <span class="feat-name">Google Business setup</span>
+                  <span class="feat-desc">Get on the map &amp; in Maps</span>
+                </span>
+                <span class="feat-price">+£80</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- Care plan -->
+          <section class="panel">
+            <div class="panel-head">
+              <h2 class="panel-title">Monthly care plan</h2>
+            </div>
+            <p class="panel-note">
+              Hosting, security &amp; revisions — so you never think about your site again. Cancel
+              anytime with 30 days notice.
+            </p>
+
+            <div class="plans" id="plans" role="radiogroup" aria-label="Monthly care plan">
+              <button type="button" class="plan" role="radio" aria-checked="false" data-price="20" data-key="Basic">
+                <span class="plan-name">BASIC</span>
+                <span class="plan-price">£20<small>/mo</small></span>
+                <span class="plan-desc">Hosting, security &amp; SSL, kept online 24/7.</span>
+              </button>
+
+              <button type="button" class="plan is-active" role="radio" aria-checked="true" data-price="30" data-key="Standard">
+                <span class="plan-pop">POPULAR</span>
+                <span class="plan-name">STANDARD</span>
+                <span class="plan-price">£30<small>/mo</small></span>
+                <span class="plan-desc">Everything in Basic + small revisions &amp; priority support.</span>
+              </button>
+
+              <button type="button" class="plan" role="radio" aria-checked="false" data-price="40" data-key="Premium">
+                <span class="plan-name">PREMIUM</span>
+                <span class="plan-price">£40<small>/mo</small></span>
+                <span class="plan-desc">Everything in Standard + large revisions &amp; same-week turnaround.</span>
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <!-- ============ SUMMARY ============ -->
+        <aside class="summary">
+          <div class="summary-card">
+            <div class="glow" aria-hidden="true"></div>
+            <p class="eyebrow" style="margin: 0">Your package</p>
+            <ul class="lines" id="lines"></ul>
+
+            <div class="totals">
+              <div class="total-row">
+                <span class="label">One-time build</span>
+              </div>
+              <div class="total-row">
+                <span class="big text-chrome" id="buildTotal">£400</span>
+              </div>
+              <div class="total-row sub">
+                <span>Then</span>
+                <span><span class="val" id="monthlyTotal">£30</span>/month</span>
+              </div>
+            </div>
+
+            <a class="btn-chrome cta" id="cta" href="#">Get my fixed quote →</a>
+            <p class="fineprint">
+              This is a guide price to help you plan — your final quote is confirmed in writing, free
+              and with no obligation. We reply within 24 hours.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <div class="wrap row">
+        <span>© <span id="year">2026</span> SitePilots — Web design in Surrey.</span>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="mailto:hello@sitepilots.co.uk">Email us</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var BASE = 400; // includes the first page
+        var EXTRA_PAGE = 75; // each page after the first
+        var EMAIL = "hello@sitepilots.co.uk";
+
+        var pagesEl = document.getElementById("pages");
+        var pageCountEl = document.getElementById("pageCount");
+        var pageWordEl = document.getElementById("pageWord");
+        var pageCostEl = document.getElementById("pageCost");
+        var featEls = Array.prototype.slice.call(document.querySelectorAll(".feat"));
+        var planEls = Array.prototype.slice.call(document.querySelectorAll(".plan"));
+        var linesEl = document.getElementById("lines");
+        var buildTotalEl = document.getElementById("buildTotal");
+        var monthlyTotalEl = document.getElementById("monthlyTotal");
+        var ctaEl = document.getElementById("cta");
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function gbp(n) {
+          return "£" + Number(n).toLocaleString("en-GB");
+        }
+
+        function selectedPlan() {
+          for (var i = 0; i < planEls.length; i++) {
+            if (planEls[i].classList.contains("is-active")) return planEls[i];
+          }
+          return planEls[0];
+        }
+
+        function paintSlider() {
+          var min = +pagesEl.min,
+            max = +pagesEl.max,
+            val = +pagesEl.value;
+          var pct = ((val - min) / (max - min)) * 100;
+          pagesEl.style.setProperty("--pct", pct + "%");
+        }
+
+        function recompute() {
+          var pages = +pagesEl.value;
+          var extraPages = Math.max(0, pages - 1);
+          var lines = [];
+          var build = BASE;
+
+          // pages
+          pageCountEl.textContent = pages >= 10 ? "10+" : String(pages);
+          pageWordEl.textContent = pages === 1 ? "page" : "pages";
+          lines.push({ label: "Website build (1 page)", value: gbp(BASE) });
+
+          if (extraPages > 0) {
+            var extraCost = extraPages * EXTRA_PAGE;
+            build += extraCost;
+            pageCostEl.textContent = "+" + gbp(extraCost);
+            lines.push({
+              label: extraPages + " extra " + (extraPages === 1 ? "page" : "pages") + " (×" + gbp(EXTRA_PAGE) + ")",
+              value: gbp(extraCost),
+            });
+          } else {
+            pageCostEl.textContent = "Included";
+          }
+
+          // features
+          featEls.forEach(function (el) {
+            if (el.classList.contains("is-active")) {
+              var price = +el.getAttribute("data-price");
+              build += price;
+              lines.push({ label: el.getAttribute("data-key"), value: gbp(price) });
+            }
+          });
+
+          // care plan
+          var plan = selectedPlan();
+          var monthly = +plan.getAttribute("data-price");
+
+          // render line items
+          linesEl.innerHTML = "";
+          lines.forEach(function (ln) {
+            var li = document.createElement("li");
+            var a = document.createElement("span");
+            a.textContent = ln.label;
+            var b = document.createElement("span");
+            b.textContent = ln.value;
+            li.appendChild(a);
+            li.appendChild(b);
+            linesEl.appendChild(li);
+          });
+          var careLi = document.createElement("li");
+          careLi.className = "muted";
+          careLi.innerHTML =
+            "<span>Care plan — " + plan.getAttribute("data-key") + "</span><span>" + gbp(monthly) + "/mo</span>";
+          linesEl.appendChild(careLi);
+
+          // totals
+          buildTotalEl.textContent = gbp(build);
+          buildTotalEl.setAttribute("data-text", gbp(build));
+          monthlyTotalEl.textContent = gbp(monthly);
+
+          // mailto
+          var bodyLines = [
+            "Hi SitePilots,",
+            "",
+            "I built a package on your site — here's what I'd like:",
+            "",
+          ];
+          lines.forEach(function (ln) {
+            bodyLines.push("• " + ln.label + " — " + ln.value);
+          });
+          bodyLines.push("");
+          bodyLines.push("One-time build total: " + gbp(build));
+          bodyLines.push("Care plan: " + plan.getAttribute("data-key") + " (" + gbp(monthly) + "/month)");
+          bodyLines.push("");
+          bodyLines.push("My details:");
+          bodyLines.push("Name: ");
+          bodyLines.push("Business: ");
+          bodyLines.push("Phone: ");
+          bodyLines.push("");
+          bodyLines.push("Thanks!");
+
+          var subject = "Website package enquiry — " + gbp(build) + " build + " + gbp(monthly) + "/mo";
+          ctaEl.setAttribute(
+            "href",
+            "mailto:" + EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(bodyLines.join("\n"))
+          );
+        }
+
+        // events
+        pagesEl.addEventListener("input", function () {
+          paintSlider();
+          recompute();
+        });
+
+        featEls.forEach(function (el) {
+          el.addEventListener("click", function () {
+            var active = el.classList.toggle("is-active");
+            el.setAttribute("aria-pressed", active ? "true" : "false");
+            recompute();
+          });
+        });
+
+        planEls.forEach(function (el) {
+          el.addEventListener("click", function () {
+            planEls.forEach(function (p) {
+              p.classList.remove("is-active");
+              p.setAttribute("aria-checked", "false");
+            });
+            el.classList.add("is-active");
+            el.setAttribute("aria-checked", "true");
+            recompute();
+          });
+        });
+
+        // init
+        paintSlider();
+        recompute();
+      })();
+    </script>
+  </body>
+</html>
