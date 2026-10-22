@@ -5,19 +5,34 @@
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#main-nav');
-  function closeMenu() { if (toggle && nav) { toggle.setAttribute('aria-expanded', 'false'); nav.classList.remove('is-open'); } }
-  toggle?.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); nav.classList.toggle('is-open', open); });
+  function closeMenu() { if (toggle && nav) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open menu'); nav.classList.remove('is-open'); } }
+  toggle?.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); nav.classList.toggle('is-open', open); });
   nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); } });
   document.addEventListener('click', e => { if (nav && toggle && !nav.contains(e.target) && !toggle.contains(e.target)) closeMenu(); });
-  window.matchMedia('(min-width: 801px)').addEventListener('change', closeMenu);
+  window.matchMedia('(min-width: 861px)').addEventListener('change', closeMenu);
+
+  // Header shadow once scrolled; mobile CTA bar after the hero and away from the enquiry form.
+  const header = document.querySelector('.site-header');
+  const mobileCta = document.querySelector('#mobile-cta');
+  const hero = document.querySelector('.hero');
+  const start = document.querySelector('#start');
+  let pastHero = false, atStart = false;
+  const syncCta = () => mobileCta?.classList.toggle('is-visible', pastHero && !atStart);
+  window.addEventListener('scroll', () => header?.classList.toggle('is-scrolled', window.scrollY > 8), { passive: true });
+  if ('IntersectionObserver' in window && hero && start) {
+    new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; syncCta(); }).observe(hero);
+    new IntersectionObserver(([e]) => { atStart = e.isIntersecting; syncCta(); }).observe(start);
+  }
 
   const projects = {
-    landscaping: { brand: 'green&ground', kicker: 'GARDEN DESIGN & LANDSCAPING', title: ['Room to', 'grow.'], name: 'Green & Ground', description: 'An inviting home for garden transformations. Big project photos, clear services and a simple way to enquire.' },
-    electrical: { brand: 'VOLT / ELECTRICAL', kicker: 'LOCAL ELECTRICIANS', title: ['Wired', 'properly.'], name: 'Volt Electrical', description: 'Bold, direct and easy to use. A clear introduction to your electrical services, with contact details right where customers need them.' },
-    building: { brand: 'HART & CO.', kicker: 'BUILDING & RENOVATION', title: ['Built for', 'living.'], name: 'Hart & Co. Builders', description: 'A confident showcase for building work. Space for your projects, your process and the details that help customers choose you.' }
+    electrical: { url: 'voltelectrical.co.uk', img: 'img/volt-hero.webp', brand: 'VOLT/ELECTRICAL', kicker: 'Domestic & commercial electricians', headline: 'Wired properly. First time.', button: 'Get a free quote', name: 'Volt Electrical', description: 'Bold and direct, with the phone number front and centre, clear services, trust badges and a quick quote form.', features: ['Tap-to-call header', 'Services & recent jobs', 'Quote request form'] },
+    salon: { url: 'fernhair.co.uk', img: 'img/salon-hero.webp', brand: 'Fern.', kicker: 'Hair studio · Dorking', headline: 'Hair that feels like you.', button: 'Book an appointment', name: 'Fern Hair Studio', description: 'Calm and elegant, with a clear price list, a look inside the studio and booking buttons on every screen.', features: ['Services with prices', 'Studio gallery', 'Appointment requests'] },
+    building: { url: 'hartandco.co.uk', img: 'img/hart-hero.webp', brand: 'HART & CO.', kicker: 'Extensions · Renovations · Lofts', headline: 'More space. Built properly.', button: 'Book a free survey', name: 'Hart & Co. Builders', description: 'A confident showcase for bigger projects, with room for your best work, your process and the reasons to choose you.', features: ['Project gallery', 'Fixed-price promise', 'Free survey requests'] },
+    landscaping: { url: 'greenandground.co.uk', img: 'img/garden.webp', brand: 'green&ground', kicker: 'Garden design & landscaping', headline: 'A little more outdoors.', button: 'Get a free quote', name: 'Green & Ground', description: 'An inviting home for garden transformations, with big project photos, clear services and a simple way to enquire.', features: ['Before-and-after friendly', 'Reviews up front', 'Free quote form'] }
   };
   const display = document.querySelector('#project-display');
+  const setText = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
   document.querySelectorAll('[data-trade].example-tab').forEach(button => {
     button.addEventListener('click', () => {
       const key = button.dataset.trade;
@@ -25,15 +40,10 @@
       if (!item || !display) return;
       document.querySelectorAll('.example-tab').forEach(tab => { const active = tab === button; tab.classList.toggle('is-active', active); tab.setAttribute('aria-pressed', String(active)); });
       display.dataset.trade = key;
-      document.querySelector('#project-brand').textContent = item.brand;
-      document.querySelector('#project-kicker').textContent = item.kicker;
-      const headline = document.querySelector('#project-headline');
-      headline.replaceChildren(document.createTextNode(item.title[0]), document.createElement('br'), document.createTextNode(item.title[1]));
-      document.querySelector('#project-name').textContent = item.name;
-      document.querySelector('#project-description').textContent = item.description;
-      document.querySelector('#project-link').href = `example.html?trade=${key}`;
-      const projectImage = display.querySelector('.project-image');
-      projectImage.setAttribute('aria-label', key === 'electrical' ? 'Bold orange and black electrical business typography' : 'An illustrative garden and home renovation');
+      document.getElementById('project-img').src = item.img;
+      ['url', 'brand', 'kicker', 'headline', 'button', 'name', 'description'].forEach(field => setText(`project-${field}`, item[field]));
+      document.getElementById('project-features').replaceChildren(...item.features.map(f => { const li = document.createElement('li'); li.textContent = f; return li; }));
+      document.getElementById('project-link').href = document.getElementById('project-preview').href = `example.html?site=${key}`;
     });
   });
 
@@ -47,11 +57,11 @@
       const value = id => document.getElementById(id).value.trim();
       if (!value('name') || !value('business')) { const field = document.getElementById(!value('name') ? 'name' : 'business'); field.setCustomValidity('Please enter your details.'); field.reportValidity(); field.addEventListener('input', () => field.setCustomValidity(''), { once: true }); return; }
       const details = { name: value('name'), business: value('business'), email: value('email'), trade: value('trade'), brief: value('brief') };
-      enquiryText = `Hello SitePilots,\n\nI'm interested in a £69 website build.\n\nName: ${details.name}\nBusiness: ${details.business}\nEmail: ${details.email}\nTrade: ${details.trade}\n\nWhat I need:\n${details.brief || 'I would like to discuss the website with you.'}\n\nPlease confirm the scope, delivery date and any domain or hosting costs before payment.\n\nThanks,\n${details.name}`;
-      document.getElementById('email-draft').href = `mailto:${email}?subject=${encodeURIComponent('£69 website enquiry — ' + details.business)}&body=${encodeURIComponent(enquiryText)}`;
+      enquiryText = `Hello SitePilots,\n\nI'm interested in a £99 website build.\n\nName: ${details.name}\nBusiness: ${details.business}\nEmail: ${details.email}\nType of business: ${details.trade}\n\nWhat I need:\n${details.brief || 'I would like to discuss the website with you.'}\n\nPlease confirm the scope, delivery date and any domain or hosting costs before payment.\n\nThanks,\n${details.name}`;
+      document.getElementById('email-draft').href = `mailto:${email}?subject=${encodeURIComponent('£99 website enquiry: ' + details.business)}&body=${encodeURIComponent(enquiryText)}`;
       const summary = document.getElementById('enquiry-summary');
       summary.replaceChildren();
-      [['Business', details.business], ['Trade', details.trade], ['Reply to', details.email]].forEach(([label, content]) => { const term = document.createElement('dt'); const definition = document.createElement('dd'); term.textContent = label; definition.textContent = content; summary.append(term, definition); });
+      [['Business', details.business], ['Business type', details.trade], ['Reply to', details.email]].forEach(([label, content]) => { const term = document.createElement('dt'); const definition = document.createElement('dd'); term.textContent = label; definition.textContent = content; summary.append(term, definition); });
       form.hidden = true;
       ready.hidden = false;
       document.getElementById('copy-status').textContent = '';
