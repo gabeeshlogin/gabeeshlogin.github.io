@@ -61,3 +61,78 @@ h1{font-size:clamp(42px,5.4vw,76px)}h2{font-size:clamp(32px,3.6vw,50px)}
 @media(max-width:1360px){.home-book{margin:0 40px}}
 @media(max-width:760px){h1{font-size:40px}.hero h1{font-size:clamp(36px,9.5vw,52px)}.button{font-size:14px;padding:13px 18px}.home-book{grid-template-columns:1fr;gap:24px;margin:0 20px;padding:50px 0}.home-book-copy{position:static}.site-header nav a:last-child{border-radius:999px}.review-card blockquote{font-size:23px}}
 footer .brand small{color:#b9c0ad}
+/* Christmas: an extension of Jo's poster */
+.xmas-page{--xm-night:#170d09;--xm-wood:#2a170e;--xm-cream:#f7ecd6;--xm-gold:#d9b46a;--xm-red:#9e1c17;--xm-holly:#2f6b3a;background:var(--xm-night);color:var(--xm-cream)}
+.xmas-page .site-header{background:rgba(23,13,9,.92);border-bottom:1px solid rgba(217,180,106,.25);backdrop-filter:blur(8px)}
+.xmas-page .brand,.xmas-page .site-header nav a{color:var(--xm-cream)}
+.xmas-page .brand small{color:var(--xm-gold)}
+.xmas-page .site-header nav a:last-child{background:var(--xm-red);color:var(--xm-cream)}
+.xmas-page .nav-toggle{color:var(--xm-cream);border-color:rgba(217,180,106,.4)}
+.xmas-page .site-header nav.open{background:var(--xm-night)}
+.xmas-page .preview-bar{background:#0f0806;color:#cbb58c}
+.xmas-page footer{background:#0f0806;border-top:1px solid rgba(217,180,106,.2)}
+.xmas-page .mobile-actions{background:var(--xm-night)}.xmas-page .mobile-actions a:first-child{color:var(--xm-cream)}.xmas-page .mobile-actions a:last-child{background:var(--xm-red)}
+.xm-script{font-family:'Great Vibes',cursive;font-weight:400;letter-spacing:0;line-height:.95;color:var(--xm-cream);font-size:clamp(76px,9vw,138px);margin:0 0 10px;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.xm-script-sm{font-size:clamp(52px,6vw,84px);margin-bottom:4px}
+.xm-kicker{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;text-transform:uppercase;letter-spacing:.28em;font-size:15px;color:var(--xm-cream);margin:0 0 6px}
+.xm-italic{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:23px;line-height:1.4;color:#efdcb8;max-width:30ch;margin-bottom:18px}
+.xm-rule{display:flex;align-items:center;gap:12px;max-width:300px;margin:12px 0 22px;color:var(--xm-gold)}
+.xm-rule span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--xm-gold),transparent)}
+.xm-rule i{font-style:normal;font-size:14px}
+/* hero */
+.xm-hero{position:relative;isolation:isolate;overflow:hidden;background:var(--xm-night)}
+.xm-backdrop{position:absolute;inset:-60px;width:calc(100% + 120px);height:calc(100% + 120px);object-fit:cover;filter:blur(30px) saturate(1.2) brightness(.8);opacity:.7;z-index:-3}
+.xm-hero:after{content:'';position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 28% 45%,rgba(23,13,9,.55),rgba(23,13,9,.92) 70%),linear-gradient(180deg,transparent 70%,var(--xm-night))}
+.xm-lights{position:absolute;inset:0;z-index:-1;pointer-events:none;background:
+radial-gradient(circle at 6% 18%,rgba(255,206,120,.55) 0 3px,transparent 14px),radial-gradient(circle at 14% 62%,rgba(255,196,110,.4) 0 4px,transparent 18px),radial-gradient(circle at 22% 88%,rgba(255,214,140,.45) 0 3px,transparent 12px),radial-gradient(circle at 47% 12%,rgba(255,200,120,.35) 0 2px,transparent 10px),radial-gradient(circle at 56% 80%,rgba(255,206,120,.35) 0 4px,transparent 20px),radial-gradient(circle at 93% 10%,rgba(255,214,140,.55) 0 3px,transparent 14px),radial-gradient(circle at 97% 46%,rgba(255,196,110,.45) 0 5px,transparent 22px),radial-gradient(circle at 88% 92%,rgba(255,206,120,.4) 0 3px,transparent 16px);animation:xm-twinkle 5s ease-in-out infinite alternate}
+@keyframes xm-twinkle{from{opacity:.6}to{opacity:1}}
+.xm-inner{max-width:1200px;margin:0 auto;padding:70px 0 90px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,420px);gap:70px;align-items:center}
+.xm-lead{font-size:18px;line-height:1.65;color:#e6d4b2;max-width:44ch}
+.xm-small{font-size:15px;color:#cdb892;margin-top:22px}
+.xm-small a,.xm-notes a{color:var(--xm-gold)}
+.phone{white-space:nowrap}
+.xm-ribbon{position:relative;display:inline-block;margin-top:14px;padding:16px 46px;background:linear-gradient(180deg,#b3221b,#8c1712);color:var(--xm-cream);text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:600;font-size:24px;clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%);box-shadow:inset 0 0 0 2px rgba(217,180,106,.5);transition:filter .2s}
+.xm-ribbon:hover{filter:brightness(1.15)}
+.xm-ribbon:focus-visible{outline:3px solid var(--xm-gold);outline-offset:6px}
+.xm-poster{transform:rotate(1.5deg)}
+.xm-poster img{width:100%;border:6px solid var(--xm-cream);box-shadow:0 0 0 1px var(--xm-gold),0 30px 70px rgba(0,0,0,.6),0 0 90px rgba(255,190,100,.15)}
+/* booking */
+.xm-book{position:relative;isolation:isolate;overflow:hidden;padding:80px 24px 110px;background:var(--xm-night)}
+.xm-book:before{content:'';position:absolute;inset:-60px;z-index:-3;background:url(christmas-poster.webp) center 85%/cover;filter:blur(26px) saturate(1.25) brightness(.75);opacity:.75}
+.xm-book:after{content:'';position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,var(--xm-night) 0%,rgba(23,13,9,.55) 22%,rgba(23,13,9,.6) 70%,var(--xm-night) 100%),radial-gradient(ellipse at 70% 55%,rgba(255,190,100,.12),transparent 60%)}
+.xm-lights-2{background:radial-gradient(circle at 4% 30%,rgba(255,206,120,.55) 0 3px,transparent 14px),radial-gradient(circle at 10% 75%,rgba(255,196,110,.45) 0 4px,transparent 18px),radial-gradient(circle at 30% 95%,rgba(255,214,140,.4) 0 3px,transparent 12px),radial-gradient(circle at 50% 8%,rgba(255,200,120,.4) 0 3px,transparent 12px),radial-gradient(circle at 95% 22%,rgba(255,214,140,.55) 0 4px,transparent 16px),radial-gradient(circle at 98% 68%,rgba(255,196,110,.45) 0 5px,transparent 22px),radial-gradient(circle at 78% 96%,rgba(255,206,120,.4) 0 3px,transparent 14px);animation-delay:-2.5s}
+.xm-book-head{text-align:center;display:flex;flex-direction:column;align-items:center}
+.xm-book-head .xm-rule{margin:14px auto 0;width:300px}
+.holly{width:64px;height:28px;margin-bottom:6px}
+.holly-sm{width:44px;height:20px;margin:0 0 8px}
+.xm-book-grid{max-width:1100px;margin:50px auto 0;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:50px;align-items:start}
+.xm-notes{display:grid;gap:18px}
+.xm-notes>div{padding:22px 24px;background:rgba(23,13,9,.55);border:1px solid rgba(217,180,106,.35);box-shadow:inset 0 0 0 4px rgba(23,13,9,.4),inset 0 0 0 5px rgba(217,180,106,.18);backdrop-filter:blur(6px)}
+.xm-notes h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:26px;color:var(--xm-cream);margin-bottom:6px}
+.xm-notes p{color:#e2cfab;margin:0}
+.xm-card{position:relative;background:#fbf3e3;color:var(--ink);padding:26px 22px 18px;border:1px solid var(--xm-gold);outline:1px solid var(--xm-gold);outline-offset:-9px;box-shadow:0 25px 60px rgba(0,0,0,.55),0 0 80px rgba(255,190,100,.18)}
+.xm-card:before{content:'';position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:64px;height:28px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 28'%3E%3Cpath d='M30 14c-6-9-16-11-26-8 4 2 3 6 7 6-3 2-1 6-5 8 9 3 18 1 24-6z' fill='%232f6b3a'/%3E%3Cpath d='M34 14c6-9 16-11 26-8-4 2-3 6-7 6 3 2 1 6 5 8-9 3-18 1-24-6z' fill='%23285d33'/%3E%3Ccircle cx='28' cy='18' r='4' fill='%23c4261d'/%3E%3Ccircle cx='36' cy='18' r='4' fill='%23b01f17'/%3E%3Ccircle cx='32' cy='12' r='4' fill='%23d0352a'/%3E%3C/svg%3E") center/contain no-repeat}
+.xm-card-title{font-family:'Great Vibes',cursive;font-size:42px;line-height:1;text-align:center;color:var(--xm-red);margin:6px 0 10px}
+.xm-card .booking-widget{margin:0;min-height:420px;position:relative}
+.xm-card-sub{text-align:center;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:20px;color:#6b4a2e;margin:-4px 0 14px}
+.xm-fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;min-height:400px;padding:30px 20px;background:radial-gradient(circle at 50% 40%,rgba(217,180,106,.18),transparent 65%)}
+.booking-widget:has(iframe) .xm-fallback{display:none}
+.xm-fallback-line{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:600;color:#2a1a10;margin:0}
+.xm-steps{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.xm-steps span{display:flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid rgba(158,28,23,.35);background:#fff8ea;font-size:15px;color:#3a2618}
+.xm-steps b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--xm-red);color:#fbf3e3;font-size:13px}
+.xm-ribbon-sm{font-size:21px;padding:14px 40px;margin-top:4px}
+.xm-fallback-note{margin:0;color:#6b5a48;font-size:15px}
+.xm-fallback-note a{color:var(--xm-red)}
+/* homepage strip */
+.xmas-strip{position:relative;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;background:radial-gradient(circle at 8% 50%,rgba(255,200,120,.25),transparent 25%),radial-gradient(circle at 92% 40%,rgba(255,200,120,.22),transparent 22%),var(--xm-night,#170d09);color:#f7ecd6;text-decoration:none;padding:18px 20px;border-top:1px solid rgba(217,180,106,.35);border-bottom:1px solid rgba(217,180,106,.35)}
+.xmas-strip strong{font-family:'Great Vibes',cursive;font-weight:400;font-size:38px;line-height:1;color:#f7ecd6}
+.xmas-strip em{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:21px;color:#e6d4b2}
+.xmas-strip span{display:inline-block;background:#9e1c17;color:#f7ecd6;padding:9px 20px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:600;font-size:18px;clip-path:polygon(0 0,100% 0,94% 50%,100% 100%,0 100%,6% 50%)}
+.xmas-strip:hover span{filter:brightness(1.15)}
+@media(max-width:1280px){.xm-inner{margin:0 40px}}
+@media(max-width:860px){.xm-inner{grid-template-columns:1fr;gap:40px;margin:0 20px;padding:40px 0 60px}.xm-poster{max-width:340px;justify-self:center}.xm-book-grid{grid-template-columns:1fr;gap:36px}.xm-book{padding:56px 20px 70px}.xm-ribbon{font-size:20px;padding:14px 34px}.xm-italic{font-size:20px}.xmas-strip strong{font-size:32px}.xmas-strip em{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.xm-lights{animation:none}}
+.brand>span{font-size:32px;letter-spacing:-.5px}
+@media(max-width:1100px){.site-header nav{gap:18px}.site-header nav a{font-size:14px}}
+@media(max-width:760px){.brand>span{font-size:24px}}
