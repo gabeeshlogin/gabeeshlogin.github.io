@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UK Sky Travel | Flights, Umrah, visas and hotels on Streatham High Road</title>
+<meta name="description" content="UK Sky Travel, 193 Streatham High Road. Air tickets, Hajj and Umrah, hotel bookings, visa help and money transfer. Walk in or message us.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#2F7FCC;
+  --sky-deep:#1B5E9E;
+  --pale:#E7F0F9;
+  --ink:#13263B;
+  --muted:#4D5E70;
+  --line:#D3DEEA;
+  --white:#FFFFFF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.6 "Hanken Grotesk",system-ui,sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{margin:0;line-height:1.05;letter-spacing:-.015em}
+
+.preview{background:var(--ink);color:#b7c4d2;font-size:13px}
+.preview .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:7px;padding-bottom:7px}
+.preview a{color:#fff}
+
+/* shop fascia */
+.fascia{background:var(--sky);color:#fff;border-bottom:8px solid var(--sky-deep)}
+.fascia .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:26px;padding-bottom:26px}
+.fascia .name{font-weight:900;font-size:clamp(34px,6vw,64px);letter-spacing:.01em;line-height:1}
+.fascia .name small{display:block;font-weight:600;font-size:clamp(14px,1.6vw,18px);letter-spacing:.02em;margin-top:8px;opacity:.9}
+.fascia .num{text-align:right;font-weight:800;font-size:clamp(18px,2.2vw,26px);text-decoration:none;white-space:nowrap}
+.fascia .num span{display:block;font-weight:500;font-size:14px;opacity:.85}
+@media (max-width:620px){.fascia .num{display:none}}
+
+/* intro */
+.intro{padding:60px 0 70px}
+.intro .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+.intro h1{font-size:clamp(36px,4.8vw,60px);font-weight:800}
+.intro p{font-size:19px;color:var(--muted);max-width:30em;margin:20px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:9px;font:700 16px/1 "Hanken Grotesk",sans-serif;padding:15px 22px;border-radius:4px;text-decoration:none;border:2px solid var(--ink)}
+.btn svg{width:19px;height:19px}
+.btn-solid{background:var(--ink);color:#fff}
+.btn-solid:hover{background:var(--sky-deep);border-color:var(--sky-deep)}
+.btn-plain:hover{background:var(--pale)}
+.intro figure{margin:0;position:relative}
+.intro figure img{border-radius:6px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.intro figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+@media (max-width:860px){.intro .wrap{grid-template-columns:1fr;gap:34px}.intro{padding:40px 0 54px}}
+
+/* counter menu */
+.counter{background:var(--pale);padding:76px 0}
+.counter h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;margin-bottom:8px}
+.counter .sub{color:var(--muted);margin:0 0 34px;max-width:34em}
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
+.menu div{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:14px;padding:22px 0;border-bottom:2px dotted #9fb6cd}
+.menu h3{font-size:24px;font-weight:800}
+.menu p{grid-column:1/-1;margin:2px 0 0;color:var(--muted)}
+.menu a{font-weight:700;color:var(--sky-deep);text-decoration:none;white-space:nowrap}
+.menu a:hover{text-decoration:underline}
+.menu .wide{grid-column:1/-1}
+@media (max-width:760px){.menu{grid-template-columns:1fr}}
+
+/* umrah feature */
+.umrah{display:grid;grid-template-columns:1fr 1fr;min-height:460px;max-height:560px;overflow:hidden}
+@media (max-width:860px){.umrah{max-height:none}}
+.umrah img{width:100%;height:100%;object-fit:cover}
+.umrah .text{background:var(--ink);color:#d7e2ee;padding:64px clamp(20px,5vw,72px);display:flex;flex-direction:column;justify-content:center}
+.umrah h2{color:#fff;font-size:clamp(30px,3.4vw,42px);font-weight:800;margin-bottom:16px}
+.umrah p{margin:0 0 24px;max-width:30em}
+.umrah .btn{border-color:#fff;color:#fff;align-self:flex-start}
+.umrah .btn:hover{background:#fff;color:var(--ink)}
+@media (max-width:860px){.umrah{grid-template-columns:1fr}.umrah img{height:280px}}
+
+/* visit */
+.visit{padding:76px 0}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.visit h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;margin-bottom:18px}
+.addr{font-size:22px;font-weight:600;margin:0 0 20px}
+.hours{border-collapse:collapse;width:100%;max-width:360px;margin-bottom:24px}
+.hours td{padding:7px 0;border-bottom:1px solid var(--line)}
+.hours td+td{text-align:right}
+.hours tr.today td{font-weight:800;color:var(--sky-deep)}
+.contact-lines{list-style:none;margin:0;padding:0}
+.contact-lines li{margin-bottom:8px}
+.contact-lines a{font-weight:700}
+.map{border:0;width:100%;height:100%;min-height:360px;border-radius:6px}
+@media (max-width:860px){.visit .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--sky-deep);color:#d8e6f4;font-size:14px;padding:24px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:30;display:flex;align-items:center;gap:8px;background:#1FA855;color:#fff;font-weight:700;padding:13px 18px;border-radius:40px;text-decoration:none;box-shadow:0 10px 24px -10px rgba(0,0,0,.45)}
+.wa-float svg{width:22px;height:22px}
+@media (max-width:640px){.wa-float span{display:none}.wa-float{padding:14px}}
+</style>
+</head>
+<body>
+
+<div class="preview"><div class="wrap"><span>Website preview for UK Sky Travel, made by SitePilots</span><a href="http://www.ukskytravel.co.uk/">Current website</a></div></div>
+
+<header class="fascia">
+  <div class="wrap">
+    <div class="name">UK SKY TRAVEL<small>193 Streatham High Road, London SW16</small></div>
+    <a class="num" href="tel:+447961823272"><span>Call or WhatsApp</span>07961 823272</a>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="wrap">
+      <div>
+        <h1>Tickets, Umrah, visas and hotels, sorted at the counter.</h1>
+        <p>Pop into the shop on Streatham High Road, or send us a message with where you're going. We'll find the flight, book the hotel and help with the visa, all in one place.</p>
+        <div class="btns">
+          <a class="btn btn-solid" href="https://wa.me/447961823272?text=Hello%2C%20I%27d%20like%20a%20quote" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+            Message us on WhatsApp
+          </a>
+          <a class="btn btn-plain" href="#visit">Opening hours</a>
+        </div>
+      </div>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1775214593108-5d577e88d219?auto=format&fit=crop&w=1200&q=72" alt="An aircraft wing seen through the window at sunset">
+      </figure>
+    </div>
+  </section>
+
+  <section class="counter" aria-labelledby="counter-h">
+    <div class="wrap">
+      <h2 id="counter-h">What we can do for you</h2>
+      <p class="sub">Everything below can be started in the shop, by phone or on WhatsApp.</p>
+      <div class="menu">
+        <div><h3>Air tickets</h3><a href="https://wa.me/447961823272?text=Flight%20quote%20please">Get a fare</a><p>Flights worldwide, one-way or return, for one person or the whole family.</p></div>
+        <div><h3>Hajj and Umrah</h3><a href="https://wa.me/447961823272?text=Umrah%20package%20please">Ask about dates</a><p>Packages with flights, hotels in Makkah and Madinah, and transfers.</p></div>
+        <div><h3>Hotel bookings</h3><a href="https://wa.me/447961823272?text=Hotel%20booking%20please">Book a hotel</a><p>Somewhere to stay at the other end, booked alongside your flight or on its own.</p></div>
+        <div><h3>Visa help</h3><a href="https://wa.me/447961823272?text=Visa%20help%20please">Ask what you need</a><p>We'll tell you what the visa needs and help you get the application right.</p></div>
+        <div class="wide"><h3>Money transfer</h3><a href="https://wa.me/447961823272?text=Money%20transfer%20question">Ask in the shop</a><p>Send money to family abroad, handled at the counter.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="umrah">
+    <img src="https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?auto=format&fit=crop&w=1400&q=72" alt="Pilgrims around the Kaaba in Makkah" loading="lazy">
+    <div class="text">
+      <h2>Planning Umrah or Hajj?</h2>
+      <p>Tell us when you'd like to travel and who's coming. We'll put together the flights, hotels and transfers, and talk you through the visa before you book anything.</p>
+      <a class="btn" href="https://wa.me/447961823272?text=Umrah%20package%20please" target="_blank" rel="noopener">Ask about Umrah dates</a>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div>
+        <h2>Visit the shop</h2>
+        <p class="addr">193 Streatham High Road<br>London SW16 6EG</p>
+        <table class="hours" aria-label="Opening hours">
+          <tr data-d="1"><td>Monday</td><td>10am to 6pm</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>10am to 6pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>10am to 6pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>10am to 6pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>10am to 6pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>10:30am to 3pm</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <ul class="contact-lines">
+          <li>Mobile and WhatsApp: <a href="tel:+447961823272">07961 823272</a></li>
+          <li>Shop: <a href="tel:+442086771859">020 8677 1859</a></li>
+          <li>Email: <a href="mailto:info@ukskytravel.co.uk">info@ukskytravel.co.uk</a></li>
+        </ul>
+      </div>
+      <iframe class="map" title="Map of UK Sky Travel, 193 Streatham High Road" loading="lazy" src="https://maps.google.com/maps?q=193%20Streatham%20High%20Road%2C%20London%20SW16%206EG&z=16&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>UK Sky Travel Ltd, 193 Streatham High Road, London SW16 6EG</span>
+    <span>Flights, Hajj and Umrah, hotels, visas and money transfer</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/447961823272" target="_blank" rel="noopener" aria-label="Chat with UK Sky Travel on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+  var d=new Date().getDay(),r=document.querySelector('.hours tr[data-d="'+d+'"]');if(r)r.className='today';
+</script>
+</body>
+</html>
