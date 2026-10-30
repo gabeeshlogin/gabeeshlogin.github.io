@@ -420,3 +420,11 @@ button { cursor: pointer; }
 @media (max-width: 860px) { .lp-list { grid-template-columns: 1fr; } .lp-example { grid-template-columns: 1fr; gap: 24px; } }
 .trade-strip li a { border-bottom: 2px solid var(--blue-line); } .trade-strip li a:hover { color: var(--blue); border-color: var(--blue); }
 .hero-proof { margin-top: 18px; font-size: 14px; }
+/* WhatsApp */
+.wa-float { position: fixed; z-index: 31; right: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px 12px 14px; border-radius: 999px; background: #25d366; color: #0b3d1f; font-weight: 800; font-size: 15px; box-shadow: 0 10px 24px -10px rgb(0 0 0 / .35); }
+.wa-float svg, .wa-button svg { width: 22px; height: 22px; }
+.wa-float:hover { background: #1fbe5b; }
+.wa-button { margin-top: 24px; background: #25d366; color: #0b3d1f; display: inline-flex; gap: 10px; }
+.wa-button:hover { background: #1fbe5b; color: #0b3d1f; }
+.wa-link { font-size: 15px; margin-top: 6px; }
+@media (max-width: 860px) { .wa-float span { display: none; } .wa-float { padding: 14px; bottom: 84px; right: 16px; } }
