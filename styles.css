@@ -384,3 +384,11 @@ button { cursor: pointer; }
   .mobile-cta strong { color: var(--blue); font-size: 20px; }
   .mobile-cta .button { min-height: 46px; padding-inline: 24px; }
 }
+
+/* Section for businesses that were sent a preview */
+.preview-section { background: var(--blue-soft); border-block: 1px solid var(--blue-line); }
+.preview-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+.preview-copy p { margin-top: 18px; font-size: 18px; max-width: 520px; }
+.preview-copy .preview-sign { color: var(--ink-2); font-weight: 600; font-size: 16px; }
+.preview-list { background: var(--white); border: 1px solid var(--blue-line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+@media (max-width: 860px) { .preview-grid { grid-template-columns: 1fr; gap: 28px; } }
