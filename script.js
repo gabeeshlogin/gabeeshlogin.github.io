@@ -81,8 +81,7 @@
     if (config.whopCheckoutUrl) {
       const url = new URL(config.whopCheckoutUrl);
       if (url.protocol === 'https:' && (url.hostname === 'whop.com' || url.hostname.endsWith('.whop.com'))) {
-        const checkout = document.getElementById('checkout-link');
-        if (checkout) { checkout.href = url.href; document.getElementById('checkout-area').hidden = false; }
+        document.querySelectorAll('[data-checkout]').forEach((link) => { link.href = url.href; });
       }
     }
   } catch { /* Keep the working enquiry flow when a checkout URL is invalid. */ }
