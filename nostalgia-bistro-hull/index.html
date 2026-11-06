@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nostalgia Bistro | Greek Café, Wine Bar and Bistro on Chanterlands Avenue, Hull</title>
+<meta name="description" content="Nostalgia Bistro, 171 Chanterlands Avenue, Hull. Coffee and cake by day, Greek meze, wine and cocktails by night. Rated 4.9 on Google.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..800,0..100&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --day:#f5efe3; --dayInk:#24211b; --night:#16150f; --nightInk:#f1e9d8;
+  --bg:var(--day); --ink:var(--dayInk);
+  --terra:#c4532d; --mute:#7c7466; --line:rgba(36,33,27,.16);
+  --serif:'Fraunces',Georgia,serif; --sans:'Familjen Grotesk',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--day);color:var(--dayInk);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.preview{background:#111821;color:#c3ccd6;font:400 13px/1.4 system-ui,sans-serif;position:relative;z-index:60}
+.preview .wrap{display:flex;justify-content:space-between;gap:12px;padding:7px 0}
+.preview a{color:#fff}
+
+header.top{position:sticky;top:0;z-index:50;transition:background .4s,color .4s,border-color .4s;background:rgba(245,239,227,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent}
+header.top.scrolled{border-color:var(--line)}
+header.top.dark{background:rgba(22,21,15,.82);color:var(--nightInk);border-color:rgba(255,255,255,.08)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font:600 26px/1 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 60;text-decoration:none;letter-spacing:-.01em}
+.logo small{font:500 12px/1 var(--sans);margin-left:8px;opacity:.6;letter-spacing:.02em}
+nav.links{display:flex;gap:26px;font-weight:500;font-size:15px}
+nav.links a{text-decoration:none;opacity:.85}
+nav.links a:hover{opacity:1;color:var(--terra)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:12px 20px;border-radius:6px;transition:transform .2s,filter .2s}
+.btn:hover{filter:brightness(1.08)}
+.btn:active{transform:scale(.97)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.hcall .sm{display:none}
+@media (max-width:860px){nav.links{display:none}}
+@media (max-width:520px){.hcall .lg{display:none}.hcall .sm{display:inline}.logo small{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 96px);display:flex;align-items:flex-end;padding:40px 0 56px;overflow:hidden;transition:background .8s,color .8s}
+.hero.isnight{background:var(--night);color:var(--nightInk)}
+.hero .sky{position:absolute;inset:0;pointer-events:none}
+.hero .orb{position:absolute;width:clamp(120px,18vw,240px);aspect-ratio:1;border-radius:50%;right:8%;top:12%;background:radial-gradient(circle at 40% 40%,#ffd9a0,#f0a44a 60%,#e07b2e);box-shadow:0 0 120px 30px rgba(240,164,74,.35);transition:transform 1.2s cubic-bezier(.3,.8,.2,1),background .8s,box-shadow .8s}
+.hero.isnight .orb{background:radial-gradient(circle at 60% 35%,#fffbea,#e9e0c4 60%,#c9bd98);box-shadow:0 0 90px 10px rgba(255,248,220,.18);transform:translate(-30%,10%) scale(.7)}
+.lights{position:absolute;left:0;right:0;top:0;height:120px;opacity:0;transition:opacity .8s}
+.hero.isnight .lights{opacity:1}
+.lights i{position:absolute;width:7px;height:7px;border-radius:50%;background:#ffd58a;box-shadow:0 0 12px 3px rgba(255,200,110,.7);animation:tw 2.8s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.35}}
+.lights svg{position:absolute;inset:0;width:100%;height:100%}
+.hero .inner{position:relative}
+.toggle{display:inline-flex;background:rgba(36,33,27,.08);border-radius:999px;padding:4px;margin-bottom:26px;position:relative}
+.hero.isnight .toggle{background:rgba(255,255,255,.08)}
+.toggle button{all:unset;cursor:pointer;font:600 14px/1 var(--sans);padding:10px 16px;border-radius:999px;position:relative;z-index:1;transition:color .3s}
+.toggle .pill{position:absolute;top:4px;bottom:4px;left:4px;border-radius:999px;background:var(--dayInk);transition:transform .45s cubic-bezier(.3,.8,.2,1),width .45s,background .45s}
+.toggle button[aria-pressed=true]{color:#fff}
+.hero.isnight .toggle .pill{background:var(--terra)}
+h1.word{font:300 clamp(84px,17vw,250px)/.86 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 144;letter-spacing:-.035em;margin-left:-.04em}
+h1.word .l{display:inline-block;opacity:0;transform:translateY(40px) rotate(4deg);animation:in 1s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes in{to{opacity:1;transform:none}}
+.hero .row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:end;margin-top:26px}
+.swap{position:relative;min-height:3.2em;font-size:clamp(19px,2.2vw,25px);line-height:1.4;max-width:30em}
+.swap p{position:absolute;inset:0;transition:opacity .5s,transform .5s}
+.swap p.off{opacity:0;transform:translateY(10px);pointer-events:none}
+.status{font:500 14px/1.3 var(--sans);margin-top:14px;display:flex;align-items:center;gap:8px;opacity:.85}
+.status i{width:8px;height:8px;border-radius:50%;background:#999}
+.status.open i{background:#3a9d5d;box-shadow:0 0 0 4px rgba(58,157,93,.18)}
+.hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
+@media (max-width:760px){.hero .row{grid-template-columns:1fr}.swap{min-height:4.6em}.proof .wrap{grid-template-columns:1fr}}
+
+/* proof */
+.proof{padding:80px 0 30px}
+.proof .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,70px);align-items:center}
+.score{font:300 clamp(96px,13vw,170px)/.8 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 144;letter-spacing:-.04em}
+.score sup{font:600 15px/1 var(--sans);letter-spacing:0;vertical-align:top;margin-left:10px;display:inline-block;margin-top:.6em;color:var(--mute)}
+.proof blockquote{font:400 clamp(22px,2.6vw,32px)/1.3 var(--serif);font-variation-settings:"SOFT" 50,"opsz" 40;max-width:24em}
+.proof cite{display:block;font:500 14px/1.4 var(--sans);font-style:normal;color:var(--mute);margin-top:14px}
+
+@media (max-width:760px){.proof .wrap{grid-template-columns:1fr}}
+/* filoxenia */
+.filo{padding:90px 0}
+.filo .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
+.greek{font:400 clamp(52px,8vw,118px)/1 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 144;color:var(--terra);min-height:1.1em;letter-spacing:-.02em}
+.greek .cur{display:inline-block;width:.06em;height:.8em;background:var(--terra);margin-left:.04em;vertical-align:-.05em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.filo .say{font:500 15px/1.4 var(--sans);color:var(--mute);margin-top:12px}
+.filo h2{font:500 clamp(30px,3.6vw,46px)/1.08 var(--serif);font-variation-settings:"SOFT" 80,"opsz" 60;margin-bottom:18px;letter-spacing:-.01em}
+.filo p{color:#4b463d;margin-bottom:14px}
+.meander{height:16px;margin:38px 0 0;background:
+  linear-gradient(var(--terra),var(--terra)) 0 0/100% 2px no-repeat,
+  linear-gradient(var(--terra),var(--terra)) 0 100%/100% 2px no-repeat;position:relative;overflow:hidden}
+.meander svg{position:absolute;inset:0;width:100%;height:100%}
+.meander path{stroke:var(--terra);stroke-width:2;fill:none;stroke-dasharray:4000;stroke-dashoffset:4000;transition:stroke-dashoffset 2.4s cubic-bezier(.3,.7,.2,1)}
+.meander.on path{stroke-dashoffset:0}
+@media (max-width:860px){.filo .wrap{grid-template-columns:1fr}}
+
+/* day to night scrolly */
+.day{position:relative;height:420vh}
+.day .stick{transition:color .3s;position:sticky;top:64px;height:calc(100vh - 64px);overflow:hidden;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:clamp(20px,5vw,70px);padding:0 max(20px,calc((100% - 1180px)/2))}
+.day .stage{position:relative;height:min(70vh,560px);display:grid;place-items:center}
+.arc{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.arc path{fill:none;stroke:currentColor;stroke-opacity:.18;stroke-width:1.5;stroke-dasharray:3 6}
+.sunmoon{position:absolute;left:0;top:0;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#ffd9a0,#f0a44a 60%,#e07b2e);box-shadow:0 0 50px 12px rgba(240,164,74,.4);will-change:transform}
+.clockbig{font:300 clamp(70px,10vw,140px)/1 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 144;letter-spacing:-.04em;font-feature-settings:"tnum";position:relative;z-index:1;text-align:center}
+.clockbig small{display:block;font:500 15px/1.4 var(--sans);letter-spacing:0;opacity:.7;margin-top:8px}
+.panels{position:relative;height:min(64vh,520px)}
+.panel{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(30px);transition:opacity .55s,transform .55s}
+.panel.on{opacity:1;transform:none}
+.panel .when{font:600 14px/1 var(--sans);color:var(--terra);margin-bottom:14px}
+.panel h3{font:400 clamp(36px,4.6vw,62px)/1.02 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 100;letter-spacing:-.02em;margin-bottom:18px}
+.panel p{max-width:28em;opacity:.85}
+.panel ul{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.panel li{font:500 14px/1 var(--sans);padding:9px 13px;border-radius:999px;box-shadow:inset 0 0 0 1px currentColor;opacity:.9}
+.panel q{display:block;font:italic 400 18px/1.45 var(--serif);margin-top:22px;max-width:30em;opacity:.9;quotes:"\201C" "\201D"}
+.panel q + span{display:block;font:500 13px/1.3 var(--sans);opacity:.6;margin-top:8px}
+.progress{position:absolute;left:max(20px,calc((100% - 1180px)/2));right:max(20px,calc((100% - 1180px)/2));bottom:26px;height:2px;background:currentColor;opacity:.15}
+.progress b{position:absolute;left:0;top:0;bottom:0;background:var(--terra);width:0}
+@media (max-width:860px){
+  .day{height:460vh}
+  .day .stick{grid-template-columns:1fr;grid-template-rows:auto 1fr;align-content:center;gap:0;padding-top:10px}
+  .day .stage{height:30vh}
+  .clockbig{font-size:64px}.clockbig small{font-size:13px}
+  .panels{height:52vh}
+  .panel h3{font-size:34px}
+}
+
+/* what's on */
+.on-sec{padding:110px 0 90px;background:var(--night);color:var(--nightInk)}
+.on-sec h2{font:300 clamp(46px,6.5vw,92px)/.95 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 144;letter-spacing:-.03em;max-width:10em}
+.on-sec .lead{max-width:34em;margin-top:18px;opacity:.8}
+.evts{margin-top:46px;border-top:1px solid rgba(255,255,255,.14)}
+.evt{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.14);position:relative;overflow:hidden;cursor:default}
+.evt h3{font:400 clamp(26px,3.4vw,44px)/1.05 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 80;transition:transform .5s cubic-bezier(.2,.8,.2,1),color .3s}
+.evt p{font:500 14px/1.4 var(--sans);opacity:.65;max-width:26em;text-align:right}
+.evt::before{content:"";position:absolute;inset:0;background:var(--terra);transform:translateY(101%);transition:transform .5s cubic-bezier(.2,.8,.2,1);z-index:-1}
+.evt{z-index:0}
+.evt:hover::before{transform:none}
+.evt:hover h3{transform:translateX(16px)}
+.evt:hover p{opacity:1}
+.on-sec .fb{margin-top:34px;font:500 15px/1.4 var(--sans)}
+.on-sec .fb a{color:#ffb08f}
+@media (max-width:760px){.evt{grid-template-columns:1fr}.evt p{text-align:left}}
+
+/* welcome */
+.welcome{padding:100px 0}
+.welcome .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px)}
+.welcome h2{font:400 clamp(38px,4.8vw,64px)/1 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 100;letter-spacing:-.02em}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.tags span{font:500 16px/1 var(--sans);padding:14px 18px;border-radius:999px;background:#ebe3d3}
+.tags span:nth-child(3n+1){background:#e7d6c8}
+.welcome .r p{color:#4b463d;margin-bottom:16px}
+@media (max-width:860px){.welcome .wrap{grid-template-columns:1fr}}
+
+/* reviews */
+.revs{padding:30px 0 110px}
+.revs h2{font:400 clamp(38px,4.8vw,64px)/1 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 100;letter-spacing:-.02em;margin-bottom:36px}
+.rv{display:grid;grid-template-columns:repeat(12,1fr);gap:26px}
+.rv figure{padding:26px 26px 22px;border-radius:4px;background:#fffaf0;box-shadow:0 0 0 1px var(--line)}
+.rv figure:nth-child(1){grid-column:1/8;background:var(--terra);color:#fff;box-shadow:none}
+.rv figure:nth-child(1) blockquote{font-size:clamp(22px,2.4vw,30px)}
+.rv figure:nth-child(2){grid-column:8/13;margin-top:50px}
+.rv figure:nth-child(3){grid-column:2/7}
+.rv figure:nth-child(4){grid-column:7/12;margin-top:-30px}
+.rv blockquote{font:400 19px/1.4 var(--serif);font-variation-settings:"SOFT" 60,"opsz" 30}
+.rv figcaption{font:500 13px/1.3 var(--sans);margin-top:14px;opacity:.7}
+@media (max-width:860px){.rv figure:nth-child(n){grid-column:1/-1;margin-top:0}}
+
+/* hours */
+.hours{padding:100px 0;border-top:1px solid var(--line)}
+.hours .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,80px)}
+.hours h2{font:400 clamp(38px,4.8vw,64px)/1 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 100;letter-spacing:-.02em}
+.hours .intro p{color:#4b463d;margin-top:16px;max-width:24em}
+.week{list-style:none}
+.week li{display:grid;grid-template-columns:96px 1fr 150px;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.week li.today{font-weight:700}
+.week li.today .dn::after{content:" · today";color:var(--terra);font-weight:600}
+.tl{height:12px;border-radius:6px;position:relative;background:rgba(36,33,27,.06)}
+.tl b{position:absolute;top:0;bottom:0;border-radius:6px;background:linear-gradient(90deg,#f0b25f 0,#f0b25f var(--dayEnd),#2a2820 var(--dayEnd))}
+.tl i{position:absolute;top:-5px;bottom:-5px;width:2px;background:var(--terra)}
+.week .t{text-align:right;color:#4b463d}
+.key{display:flex;gap:18px;font:500 13px/1 var(--sans);color:var(--mute);margin-top:14px}
+.key span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-2px;background:#f0b25f}
+.key span:last-child::before{background:#2a2820}
+@media (max-width:760px){.hours .wrap{grid-template-columns:1fr}.week li{grid-template-columns:62px 1fr 116px;font-size:14px}}
+
+/* find */
+.find{padding:100px 0;background:#ece4d4}
+.find .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(30px,5vw,70px)}
+.find h2{font:400 clamp(38px,4.8vw,64px)/1 var(--serif);font-variation-settings:"SOFT" 100,"opsz" 100;letter-spacing:-.02em}
+.find .addr{font:400 26px/1.3 var(--serif);margin:20px 0}
+.find dl{display:grid;gap:14px;margin:24px 0 30px}
+.find dt{font:500 12px/1 var(--sans);color:var(--mute);margin-bottom:4px}
+.find dd a{text-decoration:none;font-weight:600}
+.find dd a:hover{color:var(--terra)}
+.mapbox{border-radius:4px;overflow:hidden;min-height:400px;position:relative}
+.mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:sepia(.25) saturate(.8)}
+@media (max-width:860px){.find .wrap{grid-template-columns:1fr}}
+footer{padding:30px 0 110px;font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .soc{display:flex;gap:18px}
+
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:70;display:none;transform:translateY(130%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.callbar a{display:flex;justify-content:center;background:var(--terra);color:#fff;font-weight:700;padding:16px;border-radius:10px;text-decoration:none;box-shadow:0 14px 30px -10px rgba(196,83,45,.6)}
+.callbar.show{transform:none}
+@media (max-width:860px){.callbar{display:block}}
+
+.rise{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rise.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  h1.word .l{opacity:1;transform:none}
+  .rise{opacity:1;transform:none}
+  .meander path{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<div class="preview"><div class="wrap"><span>Website preview for Nostalgia Bistro, made by <a href="https://sitepilots.co.uk/">SitePilots</a></span></div></div>
+
+<header class="top" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#">Nostalgia<small>Chanterlands Ave</small></a>
+    <nav class="links" aria-label="Main"><a href="#day">Food &amp; drink</a><a href="#whatson">What's on</a><a href="#hours">Hours</a><a href="#find">Find us</a></nav>
+    <a class="btn hcall" href="tel:+447599177726"><span class="lg">Call 07599 177726</span><span class="sm">Call</span></a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <div class="sky" aria-hidden="true">
+    <div class="orb"></div>
+    <div class="lights" id="lights"><svg viewBox="0 0 1000 120" preserveAspectRatio="none"><path d="M0 20 Q125 90 250 30 T500 30 T750 30 T1000 25" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1"/></svg></div>
+  </div>
+  <div class="wrap inner">
+    <div class="toggle" role="group" aria-label="See Nostalgia by day or by night">
+      <span class="pill" id="pill"></span>
+      <button type="button" id="bDay" aria-pressed="true">By day</button>
+      <button type="button" id="bNight" aria-pressed="false">By night</button>
+    </div>
+    <h1 class="word" aria-label="Nostalgia"><span class="l" style="animation-delay:.05s">N</span><span class="l" style="animation-delay:.1s">o</span><span class="l" style="animation-delay:.15s">s</span><span class="l" style="animation-delay:.2s">t</span><span class="l" style="animation-delay:.25s">a</span><span class="l" style="animation-delay:.3s">l</span><span class="l" style="animation-delay:.35s">g</span><span class="l" style="animation-delay:.4s">i</span><span class="l" style="animation-delay:.45s">a</span></h1>
+    <div class="row">
+      <div>
+        <div class="swap">
+          <p id="tDay">A little bistro on Chanterlands Avenue. Proper coffee, fresh cakes and warm pastries from 9 in the morning.</p>
+          <p id="tNight" class="off">Later in the week the lights go low. Greek meze, wine and cocktails until late on Thursday, Friday and Saturday.</p>
+        </div>
+        <div class="status" id="status"><i></i><span id="statusTxt">171 Chanterlands Avenue, Hull</span></div>
+      </div>
+      <div class="ctas"><a class="btn" href="tel:+447599177726">Call to book a table</a><a class="btn line" href="#day">See the menu</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <div class="score rise">4.9<sup>Google, 144 reviews</sup></div>
+    <div class="rise">
+      <blockquote>“The service is outstanding, so friendly and welcoming, it honestly feels like visiting friends every time you go.”</blockquote>
+      <cite>Catherine Wells, Google review</cite>
+    </div>
+  </div>
+</section>
+
+<section class="filo">
+  <div class="wrap">
+    <div>
+      <div class="greek" id="greek" aria-label="φιλοξενία"></div>
+      <div class="say">filoxenia, the Greek word for treating a guest like a friend</div>
+      <div class="meander" id="meander" aria-hidden="true"><svg viewBox="0 0 1200 16" preserveAspectRatio="none"><path id="mpath" d=""/></svg></div>
+    </div>
+    <div class="rise">
+      <h2>A restobar, as the locals call it</h2>
+      <p>Nostalgia serves recipes from the Mediterranean alongside British favourites. Yiannis looks after the front, there is a drinks board and a specials board, and the drinks, laughter and good company matter as much as the food.</p>
+      <p>Come for a coffee and a pain au chocolat, stay for lunch from the specials, or come back on Friday night for meze and a glass of wine.</p>
+    </div>
+  </div>
+</section>
+
+<section class="day" id="day">
+  <div class="stick" id="stick">
+    <div class="stage">
+      <svg class="arc" id="arc" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><path id="arcPath" d="M10 280 C 90 20, 310 20, 390 280"/></svg>
+      <div class="sunmoon" id="sun" aria-hidden="true"></div>
+      <div class="clockbig"><span id="dclock">9:00</span><small id="dlabel">Doors open</small></div>
+    </div>
+    <div class="panels">
+      <div class="panel on">
+        <div class="when">From 9am</div>
+        <h3>Coffee and something warm</h3>
+        <p>Start the day properly. Good coffee, and pastries warmed up for you if you ask.</p>
+        <ul><li>Coffee</li><li>Pain au chocolat</li><li>Pastries</li></ul>
+        <q>Pain au chocolate was incredible, lovely coffee aswell.</q><span>Alastair Stewart, Google review</span>
+      </div>
+      <div class="panel">
+        <div class="when">Lunchtime</div>
+        <h3>Club sandwiches and the specials board</h3>
+        <p>British favourites next to Greek dishes from the specials board, which changes.</p>
+        <ul><li>Club sandwiches</li><li>Fries</li><li>Greek specials</li></ul>
+        <q>We got club sandwiches and they were honestly the best I’ve ever had.</q><span>Tom Clare, Google review</span>
+      </div>
+      <div class="panel">
+        <div class="when">Afternoon</div>
+        <h3>Cake, and maybe afternoon tea</h3>
+        <p>Fresh cakes every day, and afternoon tea for something a bit more special.</p>
+        <ul><li>Fresh cakes</li><li>Afternoon tea</li><li>Coffee</li></ul>
+        <q>They serve the best coffee and cake I’ve ever had</q><span>Catherine Wells, Google review</span>
+      </div>
+      <div class="panel">
+        <div class="when">Thursday to Saturday evenings</div>
+        <h3>Meze, wine and cocktails</h3>
+        <p>The lights go low and the drinks board comes out. Share some meze, order a cocktail, and stay a while.</p>
+        <ul><li>Greek meze</li><li>Falafel</li><li>Halloumi fries</li><li>Greek sausage</li><li>Wine</li><li>Cocktails</li></ul>
+        <q>I had an absolutely gorgeous Greek meal from the specials board (which was so tasty).</q><span>Stu Russell, Google review</span>
+      </div>
+    </div>
+    <div class="progress" aria-hidden="true"><b id="prog"></b></div>
+  </div>
+</section>
+
+<section class="on-sec" id="whatson">
+  <div class="wrap">
+    <h2 class="rise">There is usually something on</h2>
+    <p class="lead rise">Nostalgia is more than a place to eat. Keep an eye on the Facebook page for the next one.</p>
+    <div class="evts">
+      <div class="evt"><h3>Supper clubs</h3><p>Special evenings with food from the kitchen.</p></div>
+      <div class="evt"><h3>Sip &amp; Paint</h3><p>Greek meze, a glass of wine and a canvas.</p></div>
+      <div class="evt"><h3>Record fair pop-ups</h3><p>Vinyl to dig through over a coffee.</p></div>
+      <div class="evt"><h3>Seasonal nights</h3><p>The place gets decorated for the seasons, Halloween included.</p></div>
+    </div>
+    <p class="fb">What's on next: <a href="https://www.facebook.com/p/Nostalgia-Bistro-100057209809340/">Nostalgia Bistro on Facebook</a></p>
+  </div>
+</section>
+
+<section class="welcome">
+  <div class="wrap">
+    <h2 class="rise">Everyone's welcome</h2>
+    <div class="r rise">
+      <p>Bring the kids, bring the dog. There are books and games for children, high chairs, baby changing, step-free access and seats outside when the weather is kind.</p>
+      <div class="tags"><span>Children welcome</span><span>Dog friendly</span><span>Wheelchair accessible</span><span>Outdoor seating</span><span>Collection</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="revs">
+  <div class="wrap">
+    <h2 class="rise">What people say</h2>
+    <div class="rv">
+      <figure class="rise"><blockquote>“I'm not local but the hospitality that was offered reminded me of being in Greece”</blockquote><figcaption>celia Ye-Myint, Google review</figcaption></figure>
+      <figure class="rise"><blockquote>“Very warm welcome from the staff. They had decorated for Halloween aswell”</blockquote><figcaption>Alastair Stewart, Google review</figcaption></figure>
+      <figure class="rise"><blockquote>“Nice decorations, great food, friendly staff, would recommend the place to anyone.”</blockquote><figcaption>John Manchester, Google review</figcaption></figure>
+      <figure class="rise"><blockquote>“Service was very friendly and accommodating. Reasonable price for quality food.”</blockquote><figcaption>Tom Clare, Google review</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="hours" id="hours">
+  <div class="wrap">
+    <div class="intro">
+      <h2 class="rise">Opening hours</h2>
+      <p>Daytime café Monday to Wednesday. Open into the evening Thursday, Friday and Saturday. Closed on Sunday.</p>
+    </div>
+    <div>
+      <ul class="week" id="week"></ul>
+      <div class="key"><span>Day</span><span>Evening</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div>
+      <h2 class="rise">Find us</h2>
+      <p class="addr">171 Chanterlands Avenue,<br>Hull HU5 3TL</p>
+      <dl>
+        <div><dt>Phone</dt><dd><a href="tel:+447599177726">07599 177726</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:nostalgiabistrohull@gmail.com">nostalgiabistrohull@gmail.com</a></dd></div>
+      </dl>
+      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Nostalgia+Bistro+171+Chanterlands+Ave+Hull+HU5+3TL">Get directions</a>
+    </div>
+    <div class="mapbox"><iframe title="Map showing Nostalgia Bistro on Chanterlands Avenue" loading="lazy" src="https://maps.google.com/maps?q=Nostalgia%20bistro%2C%20171%20Chanterlands%20Ave%2C%20Hull%20HU5%203TL&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Nostalgia Bistro, 171 Chanterlands Avenue, Hull HU5 3TL</span><span class="soc"><a href="https://www.facebook.com/p/Nostalgia-Bistro-100057209809340/">Facebook</a><a href="https://www.instagram.com/nostalgia_bistro/">Instagram</a></span></div></footer>
+<div class="callbar" id="callbar"><a href="tel:+447599177726">Call to book: 07599 177726</a></div>
+
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function london(){try{var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});return{d:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday],m:(+o.hour%24)*60+(+o.minute)}}catch(e){var n=new Date();return{d:n.getDay(),m:n.getHours()*60+n.getMinutes()}}}
+  // hours: [open, close], null = closed
+  var H={0:null,1:[540,960],2:[540,960],3:[540,960],4:[540,1290],5:[540,1320],6:[540,1320]};
+  var N=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function f(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'pm':'am';h=h%12||12;return h+(mm?':'+String(mm).padStart(2,'0'):'')+ap}
+  var now=london();
+
+  // status
+  var r=H[now.d],st=document.getElementById('status'),tx=document.getElementById('statusTxt');
+  if(r&&now.m>=r[0]&&now.m<r[1]){st.classList.add('open');tx.textContent='Open now until '+f(r[1])+', 171 Chanterlands Avenue';}
+  else{var d=now.d,k=0;if(r&&now.m<r[0]){tx.textContent='Opens today at '+f(r[0]);}else{do{d=(d+1)%7;k++}while(!H[d]&&k<7);tx.textContent='Closed now, opens '+(k===1?'tomorrow':N[d])+' at '+f(H[d][0]);}}
+
+  // day / night toggle, defaults to the real time
+  var hero=document.getElementById('hero'),hdr=document.getElementById('hdr'),bD=document.getElementById('bDay'),bN=document.getElementById('bNight'),pill=document.getElementById('pill');
+  function setMode(n){hero.classList.toggle('isnight',n);bD.setAttribute('aria-pressed',!n);bN.setAttribute('aria-pressed',n);
+    var b=n?bN:bD;pill.style.width=b.offsetWidth+'px';pill.style.transform='translateX('+(b.offsetLeft-4)+'px)';
+    document.getElementById('tDay').classList.toggle('off',n);document.getElementById('tNight').classList.toggle('off',!n);syncHdr();}
+  bD.onclick=function(){setMode(false)};bN.onclick=function(){setMode(true)};
+  var lights=document.getElementById('lights');
+  for(var i=0;i<22;i++){var b=document.createElement('i'),x=i/21;b.style.left=(x*100)+'%';b.style.top=(20+Math.abs(Math.sin(x*Math.PI*4))*38)+'px';b.style.animationDelay=(i*.27%2.8)+'s';lights.appendChild(b);}
+  requestAnimationFrame(function(){setMode(now.m>=1050||now.m<360);});
+
+  // greek typing
+  var g=document.getElementById('greek'),word='φιλοξενία',typed=false;
+  function type(){if(typed)return;typed=true;if(reduce){g.textContent=word;return;}var i=0,c=document.createElement('span');c.className='cur';g.appendChild(c);(function t(){if(i<word.length){g.insertBefore(document.createTextNode(word[i++]),c);setTimeout(t,140)}})();}
+  // meander path
+  var d='M0 14',x=0;while(x<1200){d+=' V2 H'+(x+12)+' V10 H'+(x+6)+' V6 H'+(x+18)+' V14 H'+(x+24);x+=24;}
+  document.getElementById('mpath').setAttribute('d',d);
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var t=e.target;
+    if(t.classList.contains('rise'))t.classList.add('in');
+    if(t.id==='greek'){type();document.getElementById('meander').classList.add('on');}
+    io.unobserve(t);});},{threshold:.2});
+  document.querySelectorAll('.rise,#greek').forEach(function(el){io.observe(el)});
+
+  // day to night scroll scene
+  var sec=document.getElementById('day'),stick=document.getElementById('stick'),sun=document.getElementById('sun'),arcP=document.getElementById('arcPath'),arcS=document.getElementById('arc');
+  var clk=document.getElementById('dclock'),lab=document.getElementById('dlabel'),prog=document.getElementById('prog'),panels=stick.querySelectorAll('.panel');
+  var labels=[[540,'Doors open'],[720,'Lunch'],[900,'Afternoon'],[1050,'Evening, Thursday to Saturday'],[1290,'Last orders soon']];
+  var c1=[245,239,227],c2=[22,21,15],k1=[36,33,27],k2=[241,233,216];
+  function mix(a,b,t){return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
+  var L=arcP.getTotalLength();
+  function scene(){
+    var rect=sec.getBoundingClientRect(),total=sec.offsetHeight-innerHeight;
+    var p=Math.min(Math.max(-rect.top/total,0),1);
+    var mins=540+p*(1320-540);
+    var h=Math.floor(mins/60),m=Math.floor(mins%60/15)*15;clk.textContent=(h>12?h-12:h)+':'+String(m).padStart(2,'0')+(h>=12?'pm':'am');
+    var l=labels[0][1];labels.forEach(function(x){if(mins>=x[0])l=x[1]});lab.textContent=l;
+    var pt=arcP.getPointAtLength(L*p),bb=arcS.getBoundingClientRect(),sx=bb.width/400,sy=bb.height/300;
+    sun.style.transform='translate('+(pt.x*sx)+'px,'+(pt.y*sy)+'px)';
+    var night=Math.min(Math.max((p-.62)/.1,0),1);
+    var sun2=[214,140,92];stick.style.background=night<.5?mix(c1,sun2,night*2):mix(sun2,c2,(night-.5)*2);stick.style.color=night>.45?mix(k1,k2,1):mix(k1,k2,0);
+    sun.style.background=night>.5?'radial-gradient(circle at 60% 35%,#fffbea,#e9e0c4 60%,#c9bd98)':'';
+    sun.style.boxShadow=night>.5?'0 0 40px 8px rgba(255,248,220,.2)':'';
+    var idx=Math.min(panels.length-1,Math.floor(p*panels.length*.999));
+    panels.forEach(function(el,i){el.classList.toggle('on',i===idx)});
+    prog.style.width=(p*100)+'%';
+    hdrNight=(rect.top<64&&rect.bottom>64&&night>.5);syncHdr();
+  }
+  var hdrNight=false;
+  function syncHdr(){
+    var ws=document.getElementById('whatson').getBoundingClientRect();
+    var inNightSec=ws.top<64&&ws.bottom>64;
+    var heroNight=hero.classList.contains('isnight')&&hero.getBoundingClientRect().bottom>64;
+    hdr.classList.toggle('dark',hdrNight||inNightSec||heroNight);
+    hdr.classList.toggle('scrolled',scrollY>10);
+    document.getElementById('callbar').classList.toggle('show',scrollY>hero.offsetHeight*.6);
+  }
+  addEventListener('scroll',scene,{passive:true});addEventListener('resize',scene);scene();
+
+  // hours list with day/evening split at 5pm
+  var week=document.getElementById('week'),lo=480,hi=1350;
+  [1,2,3,4,5,6,0].forEach(function(dd){var li=document.createElement('li'),rr=H[dd];
+    var bar='';if(rr){var a=(rr[0]-lo)/(hi-lo)*100,w=(rr[1]-rr[0])/(hi-lo)*100,de=Math.max(0,Math.min(100,(1020-rr[0])/(rr[1]-rr[0])*100));bar='<b style="left:'+a+'%;width:'+w+'%;--dayEnd:'+de+'%"></b>';}
+    if(dd===now.d&&now.m>=lo&&now.m<=hi)bar+='<i style="left:'+((now.m-lo)/(hi-lo)*100)+'%"></i>';
+    li.innerHTML='<span class="dn">'+N[dd].slice(0,3)+'</span><span class="tl">'+bar+'</span><span class="t">'+(rr?f(rr[0])+' to '+f(rr[1]):'Closed')+'</span>';
+    if(dd===now.d)li.className='today';week.appendChild(li);});
+})();
+</script>
+</body>
+</html>
