@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Fade Collective | Barber on Birches Barn Road, Wolverhampton</title>
+<meta name="description" content="The Fade Collective, 15 Birches Barn Road, Wolverhampton WV3 7BW. Fade cuts, skin fades and steam hot towel shaves. Rated 4.8 on Google from 52 reviews. Book online on Booksy.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#eeede8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&family=Martian+Mono:wdth,wght@75..112.5,100..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#eeede8; --paper2:#e3e1d9; --ink:#0f0f0e; --ink2:#3b3a36; --mute:#74726b; --line:#cdcac0;
+  --volt:#d4ff2e;
+  --sans:'Anybody',system-ui,sans-serif; --mono:'Martian Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);font-stretch:100%;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block}
+button{font:inherit;color:inherit}
+.wrap{width:min(1220px,100% - 40px);margin-inline:auto}
+main{overflow-x:clip}
+
+/* preview strip */
+.preview{background:#111821;color:#c3ccd6;font:400 13px/1.4 system-ui,sans-serif;position:relative;z-index:60}
+.preview .wrap{display:flex;justify-content:space-between;gap:12px;padding:7px 0}
+.preview a{color:#fff}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:rgba(238,237,232,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.top.scrolled{border-color:var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mark svg{width:26px;height:26px}
+.mark b{font:800 19px/1 var(--sans);font-stretch:70%;letter-spacing:.005em}
+nav.links{display:flex;gap:28px;font-size:15px;font-weight:500}
+nav.links a{text-decoration:none;background:linear-gradient(var(--volt),var(--volt)) 0 100%/0 40% no-repeat;transition:background-size .25s}
+nav.links a:hover{background-size:100% 40%}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700;font-size:15px;padding:13px 20px;border-radius:999px;transition:transform .2s,background .2s,color .2s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn.volt{background:var(--volt);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.volt:hover{background:var(--ink);color:var(--volt)}
+.btn.ink:hover{background:var(--volt);color:var(--ink)}
+.btn.plain{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.plain:hover{background:var(--ink);color:var(--paper)}
+.btn svg{width:16px;height:16px}
+@media (max-width:880px){nav.links{display:none}}
+.hbook .sm{display:none}
+@media (max-width:560px){.hbook .lg{display:none}.hbook .sm{display:inline}.mark b{font-size:17px}}
+
+/* hero */
+.hero{padding:clamp(28px,5vw,56px) 0 clamp(40px,6vw,70px);position:relative}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:30px clamp(30px,5vw,70px);align-items:end}
+.meta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 22px;font:400 12.5px/1.4 var(--mono);color:var(--ink2)}
+@media (max-width:560px){.meta{font-size:11px;flex-direction:column}}
+.status{display:inline-flex;align-items:center;gap:9px}
+.status i{width:10px;height:10px;border-radius:50%;background:var(--line);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.status.open i{background:var(--volt);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.35)}}
+h1.title{display:flex;flex-direction:column;align-items:flex-start;line-height:1;width:max-content;max-width:100%}
+h1.title .the{font:700 clamp(22px,2.6vw,36px)/1 var(--sans);font-stretch:60%;margin-bottom:.15em;margin-left:.06em}
+.fadeword{position:relative;display:block;font-family:var(--mono);font-size:clamp(104px,20vw,262px);line-height:.86;letter-spacing:-.02em;font-variation-settings:"wght" 800,"wdth" 112.5;user-select:none;cursor:ns-resize;touch-action:pan-y}
+.fadeword .sizer{visibility:hidden;display:block}
+.fadeword .s{position:absolute;inset:0;white-space:nowrap}
+h1.title .coll{display:block;width:max-content;white-space:nowrap;font-weight:800;font-stretch:118%;line-height:.9;margin-top:.1em;letter-spacing:-.01em;font-size:clamp(70px,13vw,170px)}
+.hero .side{padding-bottom:.6em;max-width:30em}
+.hero .side p{font-size:clamp(17px,1.6vw,20px);line-height:1.5;color:var(--ink2)}
+.hero .side p b{color:var(--ink);font-weight:700}
+.ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.hero .side .hint{margin-top:22px;font:400 12px/1.4 var(--mono);color:var(--mute);display:flex;gap:10px;align-items:center}
+.hero .side .hint svg{width:22px;height:22px;flex:none}
+@media (max-width:980px){.hero .wrap{grid-template-columns:1fr}.hero .side{padding-bottom:0}}
+
+/* rating strip */
+.strip{border-block:1.5px solid var(--ink);background:var(--paper)}
+.strip .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:center;padding:20px 0}
+.rate{display:flex;align-items:baseline;gap:14px}
+.rate .n{font:800 clamp(46px,5.4vw,70px)/1 var(--mono);font-feature-settings:"tnum"}
+.rate .of{font:400 13px/1.35 var(--mono);color:var(--ink2)}
+.strip q{font:500 clamp(18px,2vw,24px)/1.3 var(--sans);quotes:"\201C" "\201D"}
+.strip cite{display:block;font:400 12px/1.4 var(--mono);font-style:normal;color:var(--mute);margin-top:6px}
+.strip a.more{font:400 12.5px/1.4 var(--mono);text-decoration-thickness:1px;text-underline-offset:3px}
+@media (max-width:880px){.strip .wrap{grid-template-columns:1fr;gap:14px}}
+
+/* pick your fade */
+.picker{padding:clamp(70px,9vw,120px) 0 clamp(70px,8vw,110px)}
+.picker .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,90px);align-items:center}
+.headstage{position:relative;background:var(--paper2);border-radius:28px 28px 28px 4px;padding:clamp(18px,3vw,36px) clamp(18px,3vw,36px) 0;overflow:hidden}
+.headstage svg{width:100%;height:auto;touch-action:none;cursor:ns-resize}
+.headstage .scale{position:absolute;left:14px;top:30px;bottom:40px;width:10px;background:repeating-linear-gradient(to bottom,var(--ink2) 0 1px,transparent 1px 12px);opacity:.35}
+.headstage .cap{position:absolute;left:clamp(18px,3vw,36px);bottom:16px;font:400 11px/1.3 var(--mono);color:var(--mute);background:var(--paper2);padding:4px 0}
+h2.sec{font-family:var(--sans);font-size:clamp(44px,6.4vw,92px);line-height:.9;font-stretch:55%;letter-spacing:-.01em;font-weight:200;transition:font-weight 1.3s cubic-bezier(.2,.8,.2,1)}
+h2.sec.in{font-weight:880}
+.picker .txt>p{color:var(--ink2);margin:18px 0 28px;max-width:30em}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);background:var(--paper2);border-radius:999px;padding:5px;position:relative;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.seg .pill{position:absolute;top:5px;bottom:5px;left:5px;width:calc((100% - 10px)/4);background:var(--ink);border-radius:999px;transition:transform .5s cubic-bezier(.3,1.3,.5,1)}
+.seg button{position:relative;z-index:1;background:none;border:0;padding:12px 6px;font:600 15px/1 var(--sans);cursor:pointer;border-radius:999px;transition:color .3s}
+.seg button[aria-checked="true"]{color:var(--volt)}
+.seg button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.fdesc{margin-top:26px;min-height:9.5em;border-left:4px solid var(--volt);padding-left:20px}
+.fdesc h3{font:800 28px/1.1 var(--sans);font-stretch:70%}
+.fdesc p{color:var(--ink2);margin-top:8px;max-width:30em}
+.fdesc q{display:block;margin-top:12px;font:500 17px/1.45 var(--sans);quotes:"\201C" "\201D"}
+.fdesc small{display:block;font:400 11.5px/1.4 var(--mono);color:var(--mute);margin-top:4px}
+.fdesc .in{animation:swap .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes swap{from{opacity:0;transform:translateY(8px)}}
+.picker .ctas{margin-top:26px}
+@media (max-width:880px){.picker .wrap{grid-template-columns:1fr;gap:0}.picker .txt{display:contents}.picker h2.sec{order:1}.picker .txt>p{order:2}.headstage{order:3;margin-bottom:16px}.headstage svg{width:88%;margin-inline:auto}.seg{order:4}.fdesc{order:5}.picker .ctas{order:6}.seg button{font-size:14px;padding:12px 2px}.fdesc{min-height:0}}
+
+/* steam */
+.steam{background:var(--ink);color:var(--paper);padding:clamp(90px,11vw,150px) 0;position:relative;overflow:hidden}
+.steam .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px clamp(30px,6vw,90px);align-items:end;position:relative;z-index:1}
+.steam h2.sec{color:var(--paper)}
+.steam .txt p{color:#bdbab1;margin-top:22px;max-width:28em}
+.steam figure{border-top:1.5px solid var(--volt);padding-top:22px}
+.steam q{display:block;font:300 clamp(24px,2.7vw,36px)/1.22 var(--sans);font-stretch:85%;quotes:"\201C" "\201D"}
+.steam q b{font-weight:800;color:var(--volt)}
+.steam figcaption{font:400 12px/1.4 var(--mono);color:#8f8c84;margin-top:16px}
+.wisps{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.5}
+.wisps path{fill:none;stroke:#f5f3ec;stroke-linecap:round;opacity:0}
+.steam.on .wisps path{animation:rise var(--d,7s) ease-in-out var(--del,0s) infinite}
+@keyframes rise{0%{opacity:0;transform:translateY(80px) scaleX(.9)}30%{opacity:.6}70%{opacity:.3}100%{opacity:0;transform:translateY(-260px) scaleX(1.25)}}
+@media (max-width:880px){.steam .wrap{grid-template-columns:1fr}}
+
+/* hours */
+.hours{padding:clamp(90px,11vw,140px) 0 clamp(60px,8vw,100px)}
+.hours .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,6vw,90px);align-items:start}
+.hours .intro p{color:var(--ink2);margin-top:18px;max-width:24em}
+.clock{margin-top:28px;font:700 clamp(38px,4.6vw,58px)/1 var(--mono);font-feature-settings:"tnum"}
+.clock small{display:block;font:400 12.5px/1.4 var(--mono);color:var(--ink2);margin-top:10px;font-weight:400}
+.week{display:grid;grid-template-columns:44px repeat(7,minmax(0,1fr));gap:0 clamp(4px,1vw,10px)}
+.axis{position:relative;height:var(--h)}
+.axis span{position:absolute;right:6px;font:400 10.5px/1 var(--mono);color:var(--mute);transform:translateY(-50%)}
+.col{display:flex;flex-direction:column}
+.col .track{position:relative;height:var(--h);border-radius:6px;background:repeating-linear-gradient(to bottom,transparent 0 calc(var(--h)/10 - 1px),var(--line) calc(var(--h)/10 - 1px) calc(var(--h)/10))}
+.col .blk{position:absolute;left:0;right:0;background:var(--ink);border-radius:6px;transform:scaleY(0);transform-origin:top;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.week.on .blk{transform:none}
+.col.closed .track{background:repeating-linear-gradient(135deg,transparent 0 7px,var(--line) 7px 8.5px);box-shadow:inset 0 0 0 1px var(--line)}
+.col.closed .track::after{content:"Closed";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-90deg);font:400 11px/1 var(--mono);color:var(--mute);background:var(--paper);padding:3px 6px}
+.col.today .blk{background:var(--volt);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.col .nowl{position:absolute;left:-6px;right:-6px;height:2px;background:var(--ink);z-index:2}
+.col .nowl::after{content:"now";position:absolute;right:0;top:-16px;font:600 10px/1 var(--mono)}
+.col b{display:block;text-align:center;margin-top:12px;font-weight:700;font-size:15px}
+.col span.t{display:block;text-align:center;font:400 10.5px/1.35 var(--mono);color:var(--mute)}
+.col.today b::after{content:"";display:block;width:6px;height:6px;border-radius:50%;background:var(--ink);margin:4px auto 0}
+.week{--h:320px}
+.hnote{font:400 11.5px/1.5 var(--mono);color:var(--mute);margin-top:22px}
+@media (max-width:880px){.hours .wrap{grid-template-columns:1fr}.week{--h:240px;grid-template-columns:34px repeat(7,minmax(0,1fr))}.col b{font-size:13px}.col span.t{font-size:9px}.axis span{font-size:9.5px;right:4px}}
+
+/* instagram */
+.ig{padding:0 0 clamp(70px,9vw,110px)}
+.ig a.card{display:grid;grid-template-columns:auto 1fr auto;gap:20px 30px;align-items:center;text-decoration:none;background:var(--volt);border-radius:4px 40px 4px 4px;padding:clamp(22px,3vw,34px) clamp(22px,4vw,44px);box-shadow:inset 0 0 0 1.5px var(--ink);transition:border-radius .5s cubic-bezier(.2,.8,.2,1)}
+.ig a.card:hover{border-radius:40px 4px 40px 4px}
+.ig svg.cam{width:46px;height:46px}
+.ig b{display:block;font:800 clamp(24px,3vw,38px)/1.05 var(--sans);font-stretch:65%}
+.ig span{font:400 13px/1.4 var(--mono)}
+.ig .arr{width:54px;height:54px;border-radius:50%;background:var(--ink);display:grid;place-items:center;transition:transform .35s}
+.ig .arr svg{width:22px;height:22px;stroke:var(--volt)}
+.ig a.card:hover .arr{transform:rotate(-45deg)}
+@media (max-width:600px){.ig a.card{grid-template-columns:1fr auto}.ig svg.cam{display:none}}
+
+/* find */
+.find{padding:0 0 clamp(90px,11vw,140px)}
+.find .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,5vw,70px);align-items:stretch}
+.find .addr{font:800 clamp(38px,4.6vw,62px)/.95 var(--sans);font-stretch:58%;margin:20px 0 26px}
+.find dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;font:400 13px/1.4 var(--mono);margin-bottom:30px}
+.find dt{color:var(--mute)}
+.find dd a{text-decoration:none;border-bottom:1.5px solid var(--volt)}
+.find dd a:hover{background:var(--volt)}
+.mapbox{position:relative;min-height:420px;border-radius:4px;overflow:hidden;box-shadow:inset 0 0 0 1.5px var(--ink);background:var(--paper2)}
+.mapbox iframe{position:absolute;inset:1.5px;width:calc(100% - 3px);height:calc(100% - 3px);border:0;filter:grayscale(1) contrast(1.08)}
+@media (max-width:880px){.find .wrap{grid-template-columns:1fr}.mapbox{min-height:320px}}
+
+footer{border-top:1.5px solid var(--ink);padding:28px 0 40px;font:400 12.5px/1.6 var(--mono);color:var(--ink2)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
+footer .soc{display:flex;gap:18px}
+
+/* mobile action bar */
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:70;display:none;grid-template-columns:1fr auto;gap:8px;transform:translateY(140%);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.callbar a{display:flex;justify-content:center;align-items:center;gap:8px;font-weight:800;font-size:16px;padding:16px 20px;border-radius:999px;text-decoration:none;box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
+.callbar a.b{background:var(--volt);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink),0 14px 30px -12px rgba(0,0,0,.5)}
+.callbar a.c{background:var(--ink);color:var(--paper);box-shadow:inset 0 0 0 1.5px var(--paper),0 14px 30px -12px rgba(0,0,0,.5)}
+.callbar svg{width:17px;height:17px}
+.callbar.show{transform:none}
+@media (max-width:880px){.callbar{display:grid}footer{padding-bottom:110px}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  h2.sec{font-weight:880}
+  .blk{transform:none!important}
+  .wisps path{opacity:.3}
+}
+</style>
+</head>
+<body>
+<div class="preview"><div class="wrap"><span>Website preview for The Fade Collective, made by <a href="https://sitepilots.co.uk/">SitePilots</a></span></div></div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="The Fade Collective home">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="2" y="3" width="22" height="5" rx="1" fill="#0f0f0e"/><rect x="2" y="11" width="22" height="3.2" rx="1" fill="#0f0f0e"/><rect x="2" y="17" width="22" height="1.8" rx=".9" fill="#0f0f0e"/><rect x="2" y="21.6" width="22" height=".9" rx=".45" fill="#0f0f0e"/></svg>
+      <b>The Fade Collective</b>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#fades">Fades</a><a href="#steam">Hot towel shave</a><a href="#hours">Hours</a><a href="#find">Find us</a>
+    </nav>
+    <a class="btn volt hbook" href="https://booksy.com/en-gb/147776_the-fade-collective_barber_1329709_wolverhampton"><span class="lg">Book on Booksy</span><span class="sm">Book</span></a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="meta"><span>15 Birches Barn Road, Wolverhampton WV3 7BW</span><span class="status" id="status"><i></i><span id="statusTxt">Tuesday to Saturday</span></span></div>
+    <h1 class="title" aria-label="The Fade Collective">
+      <span class="the" aria-hidden="true">The</span>
+      <span class="fadeword" id="fadeword" aria-hidden="true"><span class="sizer">FADE</span></span>
+      <span class="coll" id="coll" aria-hidden="true">Collective</span>
+    </h1>
+    <div class="side">
+      <p>A barber on Birches Barn Road for <b>fades, skin fades and steam hot towel shaves</b>. Open late, until 9pm on Fridays and Saturdays, and you can book your chair online.</p>
+      <div class="ctas"><a class="btn volt" href="https://booksy.com/en-gb/147776_the-fade-collective_barber_1329709_wolverhampton">Book on Booksy</a><a class="btn plain" href="tel:+447359637064">Call 07359 637064</a></div>
+      <p class="hint" id="hint"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M11 2v18M6 7l5-5 5 5M6 15l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>Scroll, or drag the word, to move the fade.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="strip" aria-label="Google rating">
+  <div class="wrap">
+    <div class="rate" id="rate"><span class="n" id="rnum">4.8</span><span class="of">on Google<br><span id="rcount">52</span> reviews</span></div>
+    <div><q>Super friendly service and great attention to detail!!</q><cite>Google review</cite></div>
+    <a class="more" href="https://www.google.com/maps/search/?api=1&query=The+Fade+Collective+15+Birches+Barn+Rd+Wolverhampton+WV3+7BW">Read the reviews</a>
+  </div>
+</section>
+
+<section class="picker" id="fades">
+  <div class="wrap">
+    <div class="headstage">
+      <div class="scale" aria-hidden="true"></div>
+      <svg id="head" viewBox="0 0 400 470" role="img" aria-labelledby="headT">
+        <title id="headT">Back of a head showing where the fade starts</title>
+        <defs>
+          <linearGradient id="gHair" gradientUnits="userSpaceOnUse" x1="0" y1="44" x2="0" y2="350">
+            <stop id="h0" offset="0" stop-color="#fff"/><stop id="h1" offset=".5" stop-color="#fff"/><stop id="h2" offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="gDots" gradientUnits="userSpaceOnUse" x1="0" y1="44" x2="0" y2="350">
+            <stop offset="0" stop-color="#fff"/><stop id="d1" offset=".5" stop-color="#fff"/><stop id="d2" offset="1" stop-color="#fff" stop-opacity=".9"/>
+          </linearGradient>
+          <mask id="mHair" maskUnits="userSpaceOnUse" x="0" y="0" width="400" height="470"><rect width="400" height="470" fill="url(#gHair)"/></mask>
+          <mask id="mDots" maskUnits="userSpaceOnUse" x="0" y="0" width="400" height="470"><rect width="400" height="470" fill="url(#gDots)"/></mask>
+          <pattern id="pDots" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><circle cx="2" cy="2" r="1.15" fill="#0f0f0e"/><circle cx="5.5" cy="5" r=".8" fill="#0f0f0e"/></pattern>
+          <pattern id="pStrand" width="9" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(8)"><path d="M2 1v9M6.5 4v9" stroke="#3b3a36" stroke-width="1" stroke-linecap="round"/></pattern>
+          <clipPath id="cHead"><path d="M70 196C70 110 124 44 200 44s130 66 130 152c0 36-8 66-24 94-10 16-24 30-38 40-22 14-44 18-68 18s-46-4-68-18c-14-10-28-24-38-40-16-28-24-58-24-94z"/></clipPath>
+        </defs>
+        <path d="M24 470c20-50 92-62 134-78 4-22 2-42-2-62h88c-4 20-6 40-2 62 42 16 114 28 134 78z" fill="#d6d2c7" stroke="#0f0f0e" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M200 52c78 0 124 64 124 144 0 66-22 108-54 136-20 16-44 24-70 24s-50-8-70-24c-32-28-54-70-54-136 0-80 46-144 124-144z" fill="#e8e5dc" stroke="#0f0f0e" stroke-width="2.5"/>
+        <g clip-path="url(#cHead)">
+          <rect width="400" height="470" fill="url(#pDots)" mask="url(#mDots)"/>
+          <g mask="url(#mHair)"><rect width="400" height="470" fill="#0f0f0e"/><rect width="400" height="470" fill="url(#pStrand)" opacity=".7"/></g>
+        </g>
+        <path d="M86 186c-26-12-38 12-34 38 4 26 16 44 38 42" fill="#e8e5dc" stroke="#0f0f0e" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M314 186c26-12 38 12 34 38-4 26-16 44-38 42" fill="#e8e5dc" stroke="#0f0f0e" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M72 210c-3 0-5-2-5-6M76 236" fill="none" stroke="#0f0f0e" stroke-width="2"/>
+        <path d="M168 376c10 6 54 6 64 0" fill="none" stroke="#0f0f0e" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+        <g id="fline">
+          <line x1="40" x2="360" y1="0" y2="0" stroke="#0f0f0e" stroke-width="5" stroke-linecap="round"/>
+          <line x1="40" x2="360" y1="0" y2="0" stroke="#d4ff2e" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 7"/>
+          <g transform="translate(300 -15)"><rect width="96" height="30" rx="15" fill="#0f0f0e"/><text x="48" y="19.5" text-anchor="middle" font-family="Martian Mono, monospace" font-size="11" fill="#d4ff2e" id="flabel">mid fade</text></g>
+        </g>
+      </svg>
+      <p class="cap">Drag the line, or pick a fade</p>
+    </div>
+    <div class="txt">
+      <h2 class="sec">Pick your fade</h2>
+      <p>Fades are what most people come here for. If you’re not sure what to ask for, this is the quick version. Tap one and watch the line move.</p>
+      <div class="seg" role="radiogroup" aria-label="Fade height" id="seg">
+        <span class="pill" id="pill" aria-hidden="true"></span>
+        <button role="radio" aria-checked="false" data-f="low">Low</button>
+        <button role="radio" aria-checked="true" data-f="mid">Mid</button>
+        <button role="radio" aria-checked="false" data-f="high">High</button>
+        <button role="radio" aria-checked="false" data-f="skin">Skin</button>
+      </div>
+      <div class="fdesc" id="fdesc" aria-live="polite"></div>
+      <div class="ctas"><a class="btn volt" href="https://booksy.com/en-gb/147776_the-fade-collective_barber_1329709_wolverhampton">Book a fade on Booksy</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="steam" id="steam">
+  <svg class="wisps" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs><filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9"/></filter></defs><g filter="url(#soft)">
+    <path style="--d:7.5s;--del:-3.4s" stroke-width="22" d="M180 620c-40-80 50-120 10-200s40-120 0-200"/>
+    <path style="--d:9s;--del:-2.2s" stroke-width="14" d="M320 640c30-90-50-110-10-200s-30-130 20-210"/>
+    <path style="--d:8s;--del:-4s" stroke-width="30" d="M520 640c-50-70 40-130 0-210s50-110 10-190"/>
+    <path style="--d:10s;--del:-1.2s" stroke-width="16" d="M760 640c40-80-40-120 0-200s-40-120 0-200"/>
+    <path style="--d:8.5s;--del:-6.1s" stroke-width="26" d="M960 640c-30-90 50-110 10-200s30-130-20-210"/>
+    <path style="--d:11s;--del:-5.5s" stroke-width="12" d="M1100 640c30-80-30-120 0-200s-30-110 0-190"/></g>
+  </svg>
+  <div class="wrap">
+    <div class="txt">
+      <h2 class="sec">Steam, then a hot towel shave</h2>
+      <p>Add a steam and hot towel shave to your cut, or come in for one on its own. Ask when you book, or call 07359 637064.</p>
+    </div>
+    <figure>
+      <q>I go once a month for fade cut and steam / hot towel shave which is <b>so relaxing.</b></q>
+      <figcaption>Google review</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="hours" id="hours">
+  <div class="wrap">
+    <div class="intro">
+      <h2 class="sec">Late cuts</h2>
+      <p>Open until 8:30pm Tuesday to Thursday and 9pm on Fridays and Saturdays, so you can come after work. Closed Sundays and Mondays.</p>
+      <div class="clock" id="clock">--:--<small id="clockNote">Wolverhampton time</small></div>
+    </div>
+    <div>
+      <div class="week" id="week"></div>
+      <p class="hnote">Hours from the shop’s Google listing. Live availability is on Booksy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ig">
+  <div class="wrap">
+    <a class="card" href="https://www.instagram.com/the.fade.collective/">
+      <svg class="cam" viewBox="0 0 24 24" fill="none" stroke="#0f0f0e" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="#0f0f0e" stroke="none"/></svg>
+      <div><b>Anand posts his latest fades on Instagram</b><span>@the.fade.collective</span></div>
+      <span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div>
+      <h2 class="sec">Find us</h2>
+      <p class="addr">15 Birches Barn Road, Wolverhampton WV3 7BW</p>
+      <dl>
+        <dt>Book</dt><dd><a href="https://booksy.com/en-gb/147776_the-fade-collective_barber_1329709_wolverhampton">Booksy</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+447359637064">07359 637064</a></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/the.fade.collective/">@the.fade.collective</a></dd>
+      </dl>
+      <div class="ctas"><a class="btn ink" href="https://www.google.com/maps/dir/?api=1&destination=15+Birches+Barn+Rd+Wolverhampton+WV3+7BW">Get directions</a><a class="btn volt" href="https://booksy.com/en-gb/147776_the-fade-collective_barber_1329709_wolverhampton">Book on Booksy</a></div>
+    </div>
+    <div class="mapbox"><iframe title="Map showing The Fade Collective on Birches Barn Road, Wolverhampton" loading="lazy" src="https://maps.google.com/maps?q=The%20Fade%20Collective%2C%2015%20Birches%20Barn%20Rd%2C%20Wolverhampton%20WV3%207BW&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>The Fade Collective, 15 Birches Barn Road, Wolverhampton WV3 7BW</span>
+    <span class="soc"><a href="https://www.instagram.com/the.fade.collective/">Instagram</a><a href="https://booksy.com/en-gb/147776_the-fade-collective_barber_1329709_wolverhampton">Booksy</a></span>
+  </div>
+</footer>
+
+<div class="callbar" id="callbar"><a class="b" href="https://booksy.com/en-gb/147776_the-fade-collective_barber_1329709_wolverhampton">Book on Booksy</a><a class="c" href="tel:+447359637064" aria-label="Call 07359 637064"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call</a></div>
+
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- the fading word ---------- */
+  var fw=document.getElementById('fadeword'),N=28,strips=[],WMIN=100,WMAX=800;
+  for(var i=0;i<N;i++){
+    var s=document.createElement('span');s.className='s';s.textContent='FADE';
+    var a=(i/N*100)-.5,b=(100-(i+1)/N*100)-.5;
+    s.style.clipPath='inset('+Math.max(a,0)+'% 0 '+Math.max(b,0)+'% 0)';
+    fw.appendChild(s);strips.push({el:s,c:(i+.5)/N,w:-1});
+  }
+  var f=reduce?.62:1.25,ft=.62,dragY=null,soft=.62;
+  function sm(x){x=Math.min(Math.max(x,0),1);return x*x*(3-2*x);}
+  function paint(){
+    for(var i=0;i<N;i++){
+      var st=strips[i],w=Math.round(WMIN+(WMAX-WMIN)*sm((f-st.c)/soft+.5));
+      if(w!==st.w){st.w=w;st.el.style.fontVariationSettings='"wght" '+w+',"wdth" 112.5';}
+    }
+  }
+  paint();
+  function heroP(){var r=fw.getBoundingClientRect();return Math.min(Math.max(-(r.top-140)/(innerHeight*.7),0),1);}
+  if(!reduce){
+    var t0=performance.now();
+    (function loop(now){
+      var intro=Math.min((now-t0)/1600,1);
+      var target=dragY!=null?dragY:ft-heroP()*1.05;
+      if(intro<1){var e=1-Math.pow(1-intro,3);f=1.25+(target-1.25)*e;}
+      else f+=(target-f)*.12;
+      paint();requestAnimationFrame(loop);
+    })(t0);
+    function yOf(e){var r=fw.getBoundingClientRect();return Math.min(Math.max((e.clientY-r.top)/r.height,-.2),1.2);}
+    fw.addEventListener('pointerdown',function(e){dragY=yOf(e);fw.setPointerCapture(e.pointerId);});
+    fw.addEventListener('pointermove',function(e){if(dragY!=null)dragY=yOf(e);else if(e.pointerType==='mouse'){ft=Math.min(Math.max(yOf(e),.05),1.1);}});
+    function end(){if(dragY!=null){ft=dragY;dragY=null;}}
+    fw.addEventListener('pointerup',end);fw.addEventListener('pointercancel',end);
+  }
+
+  /* fit "Collective" to the width of FADE */
+  var coll=document.getElementById('coll');
+  function fit(){
+    var w=fw.querySelector('.sizer').getBoundingClientRect().width;
+    coll.style.fontSize='100px';var cw=coll.scrollWidth||coll.getBoundingClientRect().width;
+    coll.style.fontSize=(100*w/cw*.995)+'px';
+  }
+  coll.style.display='inline-block';
+  fit();addEventListener('resize',fit);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+
+  /* ---------- pick your fade ---------- */
+  var F={
+    low:{y:270,skin:false,label:'low fade',h:'Low fade',p:'Starts just above the ears and follows the neckline round. Keeps more weight on the sides, so it reads clean without looking drastic.'},
+    mid:{y:200,skin:false,label:'mid fade',h:'Mid fade',p:'Starts about halfway up the sides, around the temples. The one most people picture when they say “a fade”.'},
+    high:{y:128,skin:false,label:'high fade',h:'High fade',p:'Starts up near the top of the head, so the sides are short almost all the way up. Big contrast with the length you keep on top.'},
+    skin:{y:210,skin:true,label:'skin fade',h:'Skin fade',p:'Blended right down to bare skin at the bottom. It can start low, mid or high, and it needs a steady hand to keep the blend smooth.',q:'Got a skin fade here, great guy and good prices… will be back'}
+  };
+  var cur='mid',ys=reduce?200:330,yt=200,sk=0,skt=0,dragging=false;
+  var h1=document.getElementById('h1'),d1=document.getElementById('d1'),d2=document.getElementById('d2'),fl=document.getElementById('fline'),flabel=document.getElementById('flabel');
+  var svg=document.getElementById('head'),seg=document.getElementById('seg'),pill=document.getElementById('pill'),desc=document.getElementById('fdesc');
+  var btns=[].slice.call(seg.querySelectorAll('button'));
+  function drawHead(){
+    var o=(ys-44)/306;o=Math.min(Math.max(o,0),.98);
+    h1.setAttribute('offset',o.toFixed(3));
+    d1.setAttribute('offset',Math.min(o+.04,.99).toFixed(3));
+    d2.setAttribute('stop-opacity',(.9*(1-sk)).toFixed(3));
+    fl.setAttribute('transform','translate(0 '+ys.toFixed(1)+')');
+  }
+  function select(k,fromDrag){
+    cur=k;var d=F[k];
+    btns.forEach(function(b,i){var on=b.dataset.f===k;b.setAttribute('aria-checked',on);b.tabIndex=on?0:-1;if(on)pill.style.transform='translateX('+(i*100)+'%)';});
+    if(!fromDrag)yt=d.y;skt=d.skin?1:0;flabel.textContent=d.label;
+    desc.innerHTML='<div class="in"><h3>'+d.h+'</h3><p>'+d.p+'</p>'+(d.q?'<q>'+d.q+'</q><small>Google review</small>':'')+'</div>';
+    if(reduce){ys=yt;sk=skt;drawHead();}
+  }
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){select(b.dataset.f);});
+    b.addEventListener('keydown',function(e){
+      var dir=e.key==='ArrowRight'||e.key==='ArrowDown'?1:e.key==='ArrowLeft'||e.key==='ArrowUp'?-1:0;
+      if(!dir)return;e.preventDefault();var n=btns[(i+dir+btns.length)%btns.length];n.focus();select(n.dataset.f);
+    });
+  });
+  function svgY(e){var r=svg.getBoundingClientRect();return (e.clientY-r.top)/r.height*470;}
+  svg.addEventListener('pointerdown',function(e){dragging=true;svg.setPointerCapture(e.pointerId);yt=Math.min(Math.max(svgY(e),110),290);});
+  svg.addEventListener('pointermove',function(e){if(!dragging)return;yt=Math.min(Math.max(svgY(e),110),290);
+    var best='mid',bd=1e9;['low','mid','high'].forEach(function(k){var dd=Math.abs(F[k].y-yt);if(dd<bd){bd=dd;best=k;}});
+    if(cur!=='skin'&&best!==cur)select(best,true);
+  });
+  function up(){if(!dragging)return;dragging=false;if(cur!=='skin')yt=F[cur].y;}
+  svg.addEventListener('pointerup',up);svg.addEventListener('pointercancel',up);
+  select('mid');
+  var headOn=false;
+  if(!reduce){
+    (function hl(){if(headOn){ys+=(yt-ys)*.11;sk+=(skt-sk)*.08;drawHead();}requestAnimationFrame(hl);})();
+  }
+  drawHead();
+  addEventListener('resize',function(){var i=btns.findIndex(function(b){return b.dataset.f===cur;});pill.style.transform='translateX('+(i*100)+'%)';});
+
+  /* ---------- hours ---------- */
+  var HRS={2:[690,1230],3:[690,1230],4:[690,1230],5:[690,1260],6:[690,1260]};
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],order=[1,2,3,4,5,6,0];
+  var LO=660,HI=1260;
+  function fmt(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'pm':'am';h=h%12||12;return h+(mm?':'+String(mm).padStart(2,'0'):'')+ap;}
+  function london(){
+    try{var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),o={};
+      p.forEach(function(x){o[x.type]=x.value;});
+      return {d:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday],h:+o.hour%24,m:+o.minute};
+    }catch(e){var n=new Date();return {d:n.getDay(),h:n.getHours(),m:n.getMinutes()};}
+  }
+  var week=document.getElementById('week');
+  var ax='<div class="axis">';[660,780,900,1020,1140,1260].forEach(function(m){ax+='<span style="top:'+((m-LO)/(HI-LO)*100)+'%">'+fmt(m)+'</span>';});
+  week.innerHTML=ax+'</div>';
+  order.forEach(function(d,k){
+    var r=HRS[d],c=document.createElement('div');c.className='col'+(r?'':' closed');c.dataset.d=d;
+    var inner='<div class="track">';
+    if(r)inner+='<div class="blk" style="top:'+((r[0]-LO)/(HI-LO)*100)+'%;height:'+((r[1]-r[0])/(HI-LO)*100)+'%;transition-delay:'+(k*.07)+'s"></div>';
+    inner+='</div><b>'+names[d].slice(0,3)+'</b><span class="t">'+(r?'11:30<br>'+fmt(r[1]):'closed<br>&nbsp;')+'</span>';
+    c.innerHTML=inner;week.appendChild(c);
+  });
+  function nextOpen(t){
+    for(var k=0;k<8;k++){var d=(t.d+k)%7,r=HRS[d];if(!r)continue;var mins=t.h*60+t.m;if(k===0&&mins>=r[0])continue;
+      return (k===0?'today':k===1?'tomorrow':names[d])+' at '+fmt(r[0]);}
+  }
+  function tick(){
+    var t=london(),mins=t.h*60+t.m,r=HRS[t.d],open=!!r&&mins>=r[0]&&mins<r[1];
+    document.getElementById('status').classList.toggle('open',open);
+    var msg=open?'Open now, until '+fmt(r[1]):'Closed now, opens '+nextOpen(t);
+    document.getElementById('statusTxt').textContent=msg;
+    document.getElementById('clock').firstChild.nodeValue=String(t.h).padStart(2,'0')+':'+String(t.m).padStart(2,'0');
+    document.getElementById('clockNote').textContent=open?'Open now in Wolverhampton. Last orders are on Booksy.':msg+'.';
+    [].forEach.call(week.querySelectorAll('.col'),function(c){
+      var isT=+c.dataset.d===t.d;c.classList.toggle('today',isT);
+      var tr=c.querySelector('.track'),n=tr.querySelector('.nowl');
+      if(isT&&mins>=LO&&mins<=HI){if(!n){n=document.createElement('i');n.className='nowl';tr.appendChild(n);}n.style.top=((mins-LO)/(HI-LO)*100)+'%';}
+      else if(n)n.remove();
+    });
+  }
+  tick();setInterval(tick,20000);
+
+  /* ---------- header + action bar ---------- */
+  var hdr=document.querySelector('header.top'),cb=document.getElementById('callbar'),hero=document.querySelector('.hero');
+  function onS(){hdr.classList.toggle('scrolled',scrollY>10);cb.classList.toggle('show',scrollY>hero.offsetHeight*.6);}
+  addEventListener('scroll',onS,{passive:true});onS();
+
+  /* ---------- count-up ---------- */
+  function countUp(){
+    var a=document.getElementById('rnum'),b=document.getElementById('rcount'),s=null;
+    if(reduce)return;
+    (function f2(ts){if(!s)s=ts;var p=Math.min((ts-s)/1300,1),e=1-Math.pow(1-p,3);a.textContent=(4.8*e).toFixed(1);b.textContent=Math.round(52*e);if(p<1)requestAnimationFrame(f2);})(performance.now());
+  }
+  if(!reduce){document.getElementById('rnum').textContent='0.0';document.getElementById('rcount').textContent='0';}
+
+  /* ---------- observers ---------- */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    var el=e.target;
+    if(el.classList.contains('steam')){el.classList.toggle('on',e.isIntersecting);return;}
+    if(el.id==='head'){headOn=e.isIntersecting;return;}
+    if(!e.isIntersecting)return;
+    if(el.classList.contains('sec'))el.classList.add('in');
+    if(el.id==='rate')countUp();
+    if(el.id==='week')el.classList.add('on');
+    io.unobserve(el);
+  });},{threshold:0,rootMargin:'0px 0px -12% 0px'});
+  document.querySelectorAll('h2.sec,#rate,#week,.steam,#head').forEach(function(el){io.observe(el);});
+  if(reduce)document.querySelectorAll('h2.sec').forEach(function(el){el.classList.add('in');});
+})();
+</script>
+</body>
+</html>
