@@ -178,6 +178,7 @@ function doPost(e) {
     // staff actions below
     if (!pinOk_(d.pin)) return json_({ ok: false, error: 'pin' });
     if (d.a === 'list') return json_(list_(d.date));
+    if (d.a === 'upcoming') return json_(upcoming_());
     if (d.a === 'set') return json_(setStatus_(d));
     if (d.a === 'add') return json_(staffAdd_(d));
     if (d.a === 'move') return json_(move_(d));
@@ -240,6 +241,15 @@ function pinOk_(pin) {
   var ok = String(pin || '') !== '' && String(pin) === PropertiesService.getScriptProperties().getProperty('STAFF_PIN');
   if (!ok) cache.put('pinfails', String(fails + 1), 600);
   return ok;
+}
+function upcoming_() {
+  var now = nowLondon_();
+  var rows = rows_().filter(function (r) { return r.date >= now.date && (r.status === 'confirmed' || r.status === 'seated'); }).map(function (r) {
+    return { id: r.id, date: r.date, nice: nice_(r.date), time: r.time, size: +r.size, name: r.name, email: r.email, phone: r.phone, notes: r.notes, tables: r.tables, status: r.status, source: r.source, leftAt: r.leftAt, created: r.created };
+  }).sort(function (a, b) { return (a.date + a.time) < (b.date + b.time) ? -1 : 1; });
+  var cl = closures_(), up = [];
+  Object.keys(cl).sort().forEach(function (k) { if (k >= now.date) up.push({ date: k, note: cl[k] }); });
+  return { ok: true, upcoming: true, date: now.date, now: now, tables: CFG.tables, duration: CFG.duration, closures: up, bookings: rows.slice(0, 300) };
 }
 function list_(date) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date || '')) date = nowLondon_().date;
