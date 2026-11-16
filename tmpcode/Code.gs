@@ -322,7 +322,18 @@ function notify_(b, kind) {
   if (ph && key) {
     try { UrlFetchApp.fetch('https://api.callmebot.com/whatsapp.php?phone=' + encodeURIComponent(ph) + '&text=' + encodeURIComponent(msg) + '&apikey=' + encodeURIComponent(key), { muteHttpExceptions: true }); } catch (e) { console.error(e); }
   }
+  whatsapp_(msg);
 }
+/* TextMeBot: script properties TEXTMEBOT_KEY and TEXTMEBOT_TO (number in international format, e.g. +447700900123) */
+function whatsapp_(msg) {
+  var pr = PropertiesService.getScriptProperties(), k = pr.getProperty('TEXTMEBOT_KEY'), to = pr.getProperty('TEXTMEBOT_TO');
+  if (!k || !to) return 'not set up';
+  try {
+    var r = UrlFetchApp.fetch('https://api.textmebot.com/send.php?recipient=' + encodeURIComponent(to) + '&apikey=' + encodeURIComponent(k) + '&text=' + encodeURIComponent(msg), { muteHttpExceptions: true });
+    return r.getResponseCode() + ' ' + r.getContentText().slice(0, 200);
+  } catch (e) { console.error(e); return String(e); }
+}
+function testWhatsApp() { console.log(whatsapp_('Carlo Italia bookings: WhatsApp alerts are working. You will get a message like this for every new booking.')); }
 
 /* run once from the editor to check email works */
 function testNotify() { notify_({ id: 'TEST', name: 'Test booking', size: 2, date: nowLondon_().date, time: '19:00', tables: 'T3', phone: '0000', notes: 'Ignore, just a test' }, 'new'); }
