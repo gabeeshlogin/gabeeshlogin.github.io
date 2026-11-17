@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Halden Electrical | Electrician in Reigate &amp; Redhill</title>
+<meta name="description" content="Example website by SitePilots. Halden Electrical is a fictional electrician used to show what we build.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#efede6;--ink:#111110;--mute:#6b6862;--line:#d6d2c7;--hot:#ff4a1c;--card:#f8f7f3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.55 Archivo,system-ui,sans-serif;font-stretch:100%;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.w{max-width:1240px;margin:0 auto;padding:0 28px}
+.x{font-stretch:125%;font-weight:900;letter-spacing:-.045em;line-height:.88;text-transform:uppercase}
+.mono{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.02em}
+.pv{background:var(--ink);color:#bdb9b0;font-size:12.5px;padding:7px 0}.pv a{color:#fff;text-decoration:underline}
+/* header */
+header{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1.5px solid var(--ink)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
+.mark{display:flex;align-items:center;gap:10px}
+.mark b{font-stretch:125%;font-weight:900;font-size:19px;letter-spacing:-.04em}
+.mark i{width:22px;height:22px;background:var(--hot);clip-path:polygon(55% 0,10% 58%,45% 58%,35% 100%,90% 40%,55% 40%)}
+nav{display:flex;gap:30px;font-weight:600;font-size:15px}
+nav a:hover{color:var(--hot)}
+.call{display:inline-flex;align-items:center;gap:10px;background:var(--hot);color:#fff;font-weight:800;padding:11px 18px;border-radius:999px;font-size:15px}
+.call span{opacity:.85;font-weight:600}
+/* hero */
+.hero{position:relative;padding:54px 0 0;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;opacity:.55;mask-image:linear-gradient(#000 40%,transparent)}
+.hero .w{position:relative}
+.live{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border-radius:999px;padding:8px 16px 8px 12px;font-weight:600;font-size:14px}
+.live i{width:9px;height:9px;border-radius:50%;background:#46e07a;box-shadow:0 0 0 0 rgba(70,224,122,.6);animation:p 2s infinite}
+@keyframes p{70%{box-shadow:0 0 0 9px rgba(70,224,122,0)}100%{box-shadow:0 0 0 0 rgba(70,224,122,0)}}
+h1{font-size:clamp(58px,10.4vw,156px);margin:26px 0 30px}
+h1 em{font-style:normal;color:var(--hot)}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;padding-bottom:56px}
+.lede{font-size:20px;line-height:1.45;max-width:30em}
+.lede b{font-weight:700}
+.hb{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;padding:16px 24px;border-radius:14px;font-size:16px;border:1.5px solid var(--ink)}
+.btn.k{background:var(--ink);color:#fff}
+.rate{justify-self:end;text-align:right}
+.rate b{font-stretch:125%;font-weight:900;font-size:76px;letter-spacing:-.05em;line-height:1}
+.rate .st{color:var(--hot);font-size:20px;letter-spacing:3px}
+.rate small{display:block;color:var(--mute);font-size:14px}
+/* ticker */
+.tick{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);background:var(--hot);color:#fff;overflow:hidden;white-space:nowrap}
+.tick div{display:inline-block;padding:14px 0;animation:t 28s linear infinite;font-stretch:125%;font-weight:900;font-size:20px;letter-spacing:-.02em;text-transform:uppercase}
+.tick span{margin:0 26px}
+@keyframes t{to{transform:translateX(-50%)}}
+/* prices */
+section{padding:96px 0}
+.sh{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:40px}
+.sh h2{font-size:clamp(40px,5.4vw,78px)}
+.sh p{color:var(--mute);font-size:17px;max-width:30em;justify-self:end}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink);background:var(--card)}
+.pr{padding:28px 26px 26px;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);display:flex;flex-direction:column;gap:10px;min-height:230px;transition:background .2s}
+.pr:nth-child(3n){border-right:0}.pr:nth-last-child(-n+3){border-bottom:0}
+.pr:hover{background:#fff}
+.pr .mono{color:var(--mute)}
+.pr h3{font-stretch:112%;font-weight:800;font-size:23px;letter-spacing:-.025em;line-height:1.1}
+.pr p{color:var(--mute);font-size:15px;flex:1}
+.pr .amt{font-stretch:125%;font-weight:900;font-size:40px;letter-spacing:-.05em;line-height:1}
+.pr .amt small{font-size:14px;font-stretch:100%;font-weight:600;letter-spacing:0;color:var(--mute);margin-right:6px}
+/* quote */
+.quote{background:var(--ink);color:#fff}
+.qg{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px}
+.quote h2{font-size:clamp(44px,6vw,92px)}
+.quote h2 em{font-style:normal;color:var(--hot)}
+.steps{margin-top:34px;display:grid;gap:18px;color:#cfcbc2;font-size:17px}
+.steps div{display:grid;grid-template-columns:48px 1fr;align-items:baseline}
+.steps b{font-family:'JetBrains Mono',monospace;color:var(--hot);font-weight:500}
+form{background:#1d1c1a;border:1px solid #33312d;border-radius:22px;padding:30px}
+.fl{font-weight:700;font-size:15px;margin-bottom:12px;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chips label{cursor:pointer}
+.chips input{position:absolute;opacity:0}
+.chips span{display:inline-block;border:1.5px solid #4a4741;border-radius:999px;padding:9px 16px;font-size:15px;font-weight:600;color:#e4e0d6;transition:.15s}
+.chips input:checked+span{background:var(--hot);border-color:var(--hot);color:#fff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+input[type=text],input[type=tel],textarea{width:100%;font:inherit;color:#fff;background:#111110;border:1.5px solid #3a3833;border-radius:12px;padding:14px 16px}
+input:focus,textarea:focus{outline:none;border-color:var(--hot)}
+textarea{margin-bottom:16px;resize:vertical}
+.send{width:100%;background:var(--hot);color:#fff;border:0;border-radius:14px;padding:17px;font:800 17px Archivo;cursor:pointer}
+.fine{color:#8f8b82;font-size:13px;margin-top:12px;text-align:center}
+/* areas */
+.areas{display:flex;flex-wrap:wrap;gap:6px 28px;font-stretch:125%;font-weight:900;font-size:clamp(28px,4.4vw,62px);letter-spacing:-.045em;line-height:1.08;text-transform:uppercase}
+.areas span{color:#bcb8ad}
+.areas span.on{color:var(--ink)}
+.areas span.on:after{content:"•";color:var(--hot);margin-left:18px}
+/* reviews */
+.rv{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px}
+.r{background:var(--card);border:1.5px solid var(--ink);border-radius:20px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.r:first-child{background:var(--ink);color:#fff}
+.r q{font-size:18px;line-height:1.45;quotes:none}
+.r:first-child q{font-stretch:112%;font-weight:700;font-size:25px;line-height:1.25;letter-spacing:-.02em}
+.r .who{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--mute)}
+.r:first-child .who{color:#bdb9b0}
+.r .who b{color:inherit;font-weight:700}
+.st2{color:var(--hot);letter-spacing:2px}
+footer{border-top:1.5px solid var(--ink);padding:40px 0 110px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;font-size:15px}
+.fg .x{font-size:44px}
+.fg p{color:var(--mute)}
+.mb{display:none}
+@media(max-width:900px){
+ nav{display:none}
+ .w{padding:0 20px}
+ .hd{height:60px}.call span{display:none}.call{padding:10px 16px}
+ .hero{padding-top:30px}
+ h1{font-size:15.6vw;margin:20px 0 22px}
+ .hg{grid-template-columns:1fr;gap:26px;padding-bottom:36px}
+ .lede{font-size:17.5px}
+ .rate{justify-self:start;text-align:left;display:flex;align-items:flex-end;gap:14px;border-top:1.5px solid var(--ink);padding-top:18px;width:100%}
+ .rate b{font-size:54px}
+ .rate small{padding-bottom:8px}
+ .hb .btn{flex:1;white-space:nowrap;padding:16px 14px}
+ section{padding:64px 0}
+ .sh{grid-template-columns:1fr;gap:12px}.sh p{justify-self:start}
+ .prices{grid-template-columns:1fr}
+ .pr{border-right:0!important;border-bottom:1.5px solid var(--ink)!important;min-height:0}.pr:last-child{border-bottom:0!important}
+ .qg{grid-template-columns:1fr;gap:34px}
+ form{padding:22px}.two{grid-template-columns:1fr}
+ .rv{grid-template-columns:1fr}
+ .fg{grid-template-columns:1fr}
+ .mb{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:20;gap:10px}
+ .mb a{flex:1;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="pv"><div class="w">Example website by <a href="https://sitepilots.co.uk">SitePilots</a>. Halden Electrical is a made-up business.</div></div>
+<header><div class="w hd">
+ <a class="mark" href="#"><i></i><b>HALDEN</b></a>
+ <nav><a href="#prices">Prices</a><a href="#quote">Get a quote</a><a href="#areas">Areas</a><a href="#reviews">Reviews</a></nav>
+ <a class="call" href="#quote">Call <span>01737 000 000</span></a>
+</div></header>
+
+<section class="hero" style="padding-bottom:0">
+ <div class="w">
+  <span class="live"><i></i><span id="slots">2 slots left this week</span></span>
+  <h1 class="x">Sparks<br>fixed. <em>Same<br>week.</em></h1>
+  <div class="hg">
+   <div>
+    <p class="lede">Rewires, fuse boards, EV chargers and fault finding across <b>Reigate, Redhill and Banstead</b>. Fixed prices up front, tidy work, and a certificate for every job.</p>
+    <div class="hb"><a class="btn k" href="#quote">Get a free quote</a><a class="btn" href="#prices">See prices</a></div>
+   </div>
+   <div class="rate"><div><span class="st">★★★★★</span><br><b>4.9</b></div><small>from 186 Google reviews</small></div>
+  </div>
+ </div>
+ <div class="tick"><div><span>Fuse boards</span><span style="opacity:.55">/</span><span>EV chargers</span><span style="opacity:.55">/</span><span>Full rewires</span><span style="opacity:.55">/</span><span>EICR certificates</span><span style="opacity:.55">/</span><span>Garden lighting</span><span style="opacity:.55">/</span><span>Fault finding</span><span style="opacity:.55">/</span><span>Fuse boards</span><span style="opacity:.55">/</span><span>EV chargers</span><span style="opacity:.55">/</span><span>Full rewires</span><span style="opacity:.55">/</span><span>EICR certificates</span><span style="opacity:.55">/</span><span>Garden lighting</span><span style="opacity:.55">/</span><span>Fault finding</span><span style="opacity:.55">/</span></div></div>
+</section>
+
+<section id="prices"><div class="w">
+ <div class="sh"><h2 class="x">Prices,<br>up front</h2><p>No “we’ll see when we get there”. These are our standard prices, and we’ll confirm yours in writing before we start.</p></div>
+ <div class="prices">
+  <div class="pr"><span class="mono">01 · CALL-OUT</span><h3>Fault finding</h3><p>Tripping switch, dead sockets, flickering lights. First hour on site.</p><div class="amt"><small>from</small>£75</div></div>
+  <div class="pr"><span class="mono">02 · SAFETY</span><h3>EICR certificate</h3><p>Full electrical safety check for landlords, sales and peace of mind.</p><div class="amt"><small>from</small>£140</div></div>
+  <div class="pr"><span class="mono">03 · UPGRADE</span><h3>New fuse board</h3><p>Modern consumer unit with RCBO protection, fitted in a day.</p><div class="amt"><small>from</small>£595</div></div>
+  <div class="pr"><span class="mono">04 · CAR</span><h3>EV charger fitted</h3><p>7kW home charger, supplied and installed, app set up before we leave.</p><div class="amt"><small>from</small>£895</div></div>
+  <div class="pr"><span class="mono">05 · OUTSIDE</span><h3>Garden &amp; outdoor</h3><p>Outdoor sockets, path lights and power to the garden office.</p><div class="amt"><small>from</small>£180</div></div>
+  <div class="pr"><span class="mono">06 · BIG JOBS</span><h3>Full rewire</h3><p>Three-bed house, planned room by room so you can stay living in it.</p><div class="amt"><small>from</small>£4,800</div></div>
+ </div>
+</div></section>
+
+<section class="quote" id="quote"><div class="w qg">
+ <div>
+  <h2 class="x">Quote in<br><em>2 hours.</em></h2>
+  <div class="steps">
+   <div><b>01</b><span>Tell us what needs doing. A photo helps.</span></div>
+   <div><b>02</b><span>We reply with a fixed price, usually within two hours.</span></div>
+   <div><b>03</b><span>Pick a slot that suits you. We turn up when we say.</span></div>
+  </div>
+ </div>
+ <form onsubmit="event.preventDefault();this.querySelector('.send').textContent='Thanks, we’ll be in touch soon ✓'">
+  <span class="fl">What’s the job?</span>
+  <div class="chips">
+   <label><input type="radio" name="j" checked><span>Something’s stopped working</span></label>
+   <label><input type="radio" name="j"><span>Fuse board</span></label>
+   <label><input type="radio" name="j"><span>EV charger</span></label>
+   <label><input type="radio" name="j"><span>Lights &amp; sockets</span></label>
+   <label><input type="radio" name="j"><span>EICR</span></label>
+   <label><input type="radio" name="j"><span>Rewire</span></label>
+  </div>
+  <div class="two"><input type="text" placeholder="Your name"><input type="tel" placeholder="Mobile number"></div>
+  <input type="text" placeholder="Postcode" style="margin-bottom:12px">
+  <textarea rows="3" placeholder="Anything else we should know?"></textarea>
+  <button class="send">Get my quote</button>
+  <p class="fine">No call centre. Your message goes straight to the electrician.</p>
+ </form>
+</div></section>
+
+<section id="areas"><div class="w">
+ <div class="sh"><h2 class="x">Where<br>we work</h2><p>Based in Reigate. Usually with you in under 30 minutes.</p></div>
+ <div class="areas"><span class="on">Reigate</span><span class="on">Redhill</span><span class="on">Banstead</span><span>Merstham</span><span>Horley</span><span>Tadworth</span><span>Kingswood</span><span>Dorking</span><span>Epsom</span></div>
+</div></section>
+
+<section id="reviews" style="padding-top:0"><div class="w">
+ <div class="sh"><h2 class="x">186 five-star<br>reviews</h2><p>A few of our favourites.</p></div>
+ <div class="rv">
+  <div class="r"><q>Turned up at 8am like he said, swapped the whole fuse board by lunchtime and left the cupboard cleaner than he found it.</q><div class="who"><b>Fuse board, Reigate</b><span class="st2">★★★★★</span></div></div>
+  <div class="r"><q>Price on the website was the price on the invoice. Rare.</q><div class="who"><b>EV charger, Banstead</b><span class="st2">★★★★★</span></div></div>
+  <div class="r"><q>Found the fault in twenty minutes after two other electricians gave up.</q><div class="who"><b>Fault finding, Redhill</b><span class="st2">★★★★★</span></div></div>
+ </div>
+</div></section>
+
+<footer><div class="w fg">
+ <div><div class="x">Halden</div><p style="margin-top:12px">Example website by SitePilots, made in Surrey.</p></div>
+ <div><b>Hours</b><p>Mon to Fri 7:30am to 6pm<br>Sat 8am to 1pm</p></div>
+ <div><b>Get in touch</b><p>01737 000 000<br>hello@example.com</p></div>
+</div></footer>
+<div class="mb"><a class="btn k" href="#quote">Free quote</a><a class="btn" style="background:var(--paper)" href="#prices">Prices</a></div>
+<script>
+const d=new Date().getDay();const n=d===5?1:d===6||d===0?4:2;document.getElementById('slots').textContent=n+(n===1?' slot':' slots')+' left this week';
+</script>
+</body>
+</html>
