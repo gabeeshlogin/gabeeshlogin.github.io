@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luxe Escape Co | Luxury Travel Inspiration &amp; Experiences</title>
+<meta name="description" content="Discover beautiful destinations, exceptional hotels and unforgettable experiences with Luxe Escape Co. Your inspiration for travelling beautifully.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Luxe Escape Co">
+<meta property="og:description" content="Escape the ordinary. Experience the extraordinary.">
+<meta property="og:image" content="img/hero-positano.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-positano.jpg">
+<style>
+:root{
+  --ivory:#EAE4D9; --paper:#F4F0E8; --champagne:#B7A58A; --sage:#8A927E; --sage-text:#6c7562; --olive:#303B36; --charcoal:#282725;
+  --ink-soft:#5b5852; --rule:rgba(40,39,37,.16);
+  --serif:'Cormorant Garamond', 'Times New Roman', serif; --sans:'Montserrat', system-ui, sans-serif;
+  --gut:clamp(20px,5vw,72px); --max:1320px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--charcoal);font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.serif{font-family:var(--serif)}
+.caps{font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:400}
+.link{display:inline-block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:400;text-decoration:none;padding-bottom:6px;border-bottom:1px solid currentColor;transition:opacity .2s}
+.link:hover{opacity:.65}
+.btn{display:inline-block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:400;text-decoration:none;padding:16px 30px;border:1px solid currentColor;transition:background .25s,color .25s}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;color:#fff;transition:background .35s,color .35s,box-shadow .35s}
+header .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:92px;max-width:1500px;margin:0 auto;padding:0 var(--gut);transition:height .35s}
+header nav{display:flex;gap:34px}
+header nav.r{justify-content:flex-end}
+header nav a{font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;font-weight:400;opacity:.92}
+header nav a:hover{opacity:.6}
+.mark{font-family:var(--serif);font-weight:400;font-size:25px;letter-spacing:.32em;text-transform:uppercase;text-decoration:none;white-space:nowrap;padding-left:.32em}
+header.solid{background:rgba(244,240,232,.97);color:var(--charcoal);box-shadow:0 1px 0 var(--rule)}
+header.solid .bar{height:70px}
+.burger{display:none;background:none;border:0;color:inherit;cursor:pointer;width:44px;height:44px;justify-self:end}
+.burger span{display:block;width:24px;height:1px;background:currentColor;margin:6px auto}
+.drawer{position:fixed;inset:0;background:var(--olive);color:var(--ivory);z-index:60;display:flex;flex-direction:column;justify-content:center;padding:0 32px;transform:translateY(-100%);transition:transform .45s ease}
+.drawer.open{transform:none}
+.drawer a{font-family:var(--serif);font-size:38px;font-weight:300;text-decoration:none;line-height:1.5}
+.drawer .x{position:absolute;top:24px;right:24px;background:none;border:0;color:inherit;font-size:13px;letter-spacing:.24em;text-transform:uppercase;font-family:var(--sans);cursor:pointer}
+
+/* hero */
+.hero{position:relative;height:100vh;min-height:620px;overflow:hidden;color:#fff;background:#1d1f1c}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform:scale(1.06);animation:settle 2.6s cubic-bezier(.2,.6,.2,1) forwards}
+@keyframes settle{to{transform:scale(1)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,22,20,.5) 0%,rgba(20,22,20,0) 26%,rgba(20,22,20,.05) 42%,rgba(20,22,20,.72) 100%),linear-gradient(90deg,rgba(20,22,20,.55) 0%,rgba(20,22,20,.15) 55%,rgba(20,22,20,0) 75%)}
+.hero .copy{position:absolute;z-index:2;left:0;right:0;bottom:clamp(48px,9vh,96px)}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(44px,5.8vw,86px);line-height:1.02;letter-spacing:-.005em}
+.hero h1 b{font-weight:300;display:block}
+.hero h1 span{display:block;color:#e7dccb}
+.hero .lede{max-width:430px;margin-top:26px;font-size:15px;color:rgba(255,255,255,.88)}
+.hero .ctas{display:flex;gap:30px;align-items:center;margin-top:34px;flex-wrap:wrap}
+.hero .btn{border-color:rgba(255,255,255,.8)}
+.hero .btn:hover{background:#fff;color:var(--charcoal)}
+.hero .cap{position:absolute;z-index:2;right:var(--gut);bottom:28px;font-family:var(--serif);font-style:italic;font-size:15px;color:rgba(255,255,255,.75)}
+
+/* intro */
+.intro{padding:clamp(90px,13vw,170px) 0 clamp(80px,10vw,130px)}
+.intro .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,7vw,110px);align-items:end}
+.intro h2{font-family:var(--serif);font-weight:300;font-size:clamp(38px,5vw,68px);line-height:1.04}
+.intro h2 em{font-style:italic;color:var(--sage-text)}
+.intro .moments{margin-top:40px;font-family:var(--serif);font-size:clamp(20px,1.9vw,25px);line-height:1.55;color:var(--ink-soft);max-width:34ch}
+.intro .side p{max-width:38ch;margin-bottom:28px}
+.intro figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+figcaption{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink-soft);margin-top:12px}
+
+/* cover story */
+.story{background:var(--olive);color:var(--ivory);padding:clamp(80px,10vw,140px) 0;overflow:hidden}
+.story .grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(40px,6vw,90px);align-items:center}
+.story .pics{position:relative;padding-bottom:16%}
+.story .pics .main{width:100%;aspect-ratio:3/2;object-fit:cover}
+.story .pics .inset{position:absolute;right:-6%;bottom:0;width:44%;aspect-ratio:4/5;object-fit:cover;border:10px solid var(--olive)}
+.story .kicker{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--champagne)}
+.story h2{font-family:var(--serif);font-weight:300;font-size:clamp(40px,4.6vw,64px);line-height:1.02;margin:14px 0 26px}
+.story .dek{font-family:var(--serif);font-size:22px;line-height:1.5;color:#d9d2c4;margin-bottom:22px}
+.story p{color:#c9c3b6;max-width:46ch}
+.story p.first:first-letter{float:left;font-family:var(--serif);font-size:74px;line-height:.82;padding:6px 10px 0 0;color:var(--champagne)}
+.story .link{margin-top:34px;color:var(--ivory)}
+
+/* destinations */
+.dest{padding:clamp(90px,11vw,150px) 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:clamp(36px,5vw,64px);flex-wrap:wrap}
+.head h2{font-family:var(--serif);font-weight:300;font-size:clamp(38px,4.6vw,62px);line-height:1.02;max-width:14ch}
+.head p{max-width:42ch;color:var(--ink-soft)}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(14px,1.6vw,24px)}
+.tile{position:relative;text-decoration:none;display:block}
+.tile .ph{overflow:hidden}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.6,.2,1)}
+.tile:hover img{transform:scale(1.04)}
+.tile h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1;margin-top:16px}
+.tile p{font-size:14px;color:var(--ink-soft);max-width:36ch;margin-top:6px}
+.t-me{grid-column:1/8;grid-row:span 2}
+.t-me .ph{height:calc(100% - 118px);min-height:520px}
+.t-io{grid-column:8/13}.t-io .ph{aspect-ratio:4/3}
+.t-eu{grid-column:8/13}.t-eu .ph{aspect-ratio:4/3}
+.t-as{grid-column:1/6;margin-top:24px}.t-as .ph{aspect-ratio:5/4}
+.t-cb{grid-column:6/13;margin-top:24px;display:grid;grid-template-columns:1fr;align-content:start}.t-cb .ph{aspect-ratio:16/10}
+.dest .close{margin-top:clamp(50px,6vw,80px);font-family:var(--serif);font-size:clamp(22px,2.2vw,30px);text-align:center;color:var(--ink-soft)}
+
+/* stays */
+.stays{background:var(--ivory);padding:clamp(90px,11vw,150px) 0;overflow:hidden}
+.stays .grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,6vw,90px);align-items:start}
+.stays h2{font-family:var(--serif);font-weight:300;font-size:clamp(40px,4.8vw,66px);line-height:1.02}
+.stays .sub{font-family:var(--serif);font-style:italic;font-size:23px;color:var(--sage-text);margin:18px 0 26px}
+.stays ul{list-style:none;margin:36px 0 34px;border-top:1px solid var(--rule)}
+.stays li{padding:15px 0;border-bottom:1px solid var(--rule);font-family:var(--serif);font-size:21px}
+.stays .note{font-size:13px;color:var(--ink-soft);max-width:44ch}
+.stays .pics{display:grid;grid-template-columns:1fr .62fr;gap:18px;margin-right:calc(-1 * var(--gut))}
+.stays .pics .big{grid-row:span 2;width:100%;height:100%;min-height:560px;object-fit:cover}
+.stays .pics img:not(.big){width:100%;aspect-ratio:3/4;object-fit:cover}
+
+/* experiences */
+.exp{padding:clamp(90px,11vw,150px) 0 clamp(70px,9vw,120px)}
+.exp .head h2{max-width:12ch}
+.strip{--inset:calc(max(0px,(100vw - var(--max)) / 2) + var(--gut));display:grid;grid-auto-flow:column;grid-auto-columns:clamp(250px,24vw,340px);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 0 18px;scroll-padding-left:var(--inset);scrollbar-width:thin;scrollbar-color:var(--champagne) transparent}
+.strip::-webkit-scrollbar{height:3px}.strip::-webkit-scrollbar-thumb{background:var(--champagne)}
+.card{scroll-snap-align:start}
+.card:first-child{margin-left:var(--inset)}
+.card:last-child{margin-right:var(--inset)}
+.card img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.card:nth-child(even) img{aspect-ratio:4/5;margin-top:56px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:26px;margin-top:16px;line-height:1.15}
+.card p{font-size:14px;color:var(--ink-soft);margin-top:6px}
+.exp .philo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);margin-top:clamp(60px,7vw,100px);padding-top:40px;border-top:1px solid var(--rule)}
+.exp .philo h3{font-family:var(--serif);font-weight:300;font-size:clamp(28px,3vw,40px);line-height:1.15}
+
+/* journal */
+.journal{background:var(--paper);padding:0 0 clamp(90px,11vw,150px)}
+.index{border-top:1px solid var(--charcoal)}
+.entry{display:grid;grid-template-columns:150px 170px 1fr auto;gap:clamp(18px,3vw,44px);align-items:center;padding:26px 0;border-bottom:1px solid var(--rule);text-decoration:none;transition:background .25s}
+.entry img{width:150px;aspect-ratio:1;object-fit:cover}
+.entry .cat{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--sage-text)}
+.entry h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.4vw,32px);line-height:1.12}
+.entry p{font-size:14px;color:var(--ink-soft)}
+.entry .go{font-size:11px;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap}
+.entry:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+
+/* about */
+.about{position:relative;color:#fff;overflow:hidden}
+.about .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,31,27,.86) 0%,rgba(28,31,27,.72) 62%,rgba(28,31,27,.3) 100%);z-index:1}
+.about .wrap{position:relative;z-index:2;padding-top:clamp(100px,12vw,170px);padding-bottom:clamp(100px,12vw,170px)}
+.about blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.2vw,58px);line-height:1.08;max-width:17ch}
+.about .body{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);margin-top:50px;max-width:900px}
+.about .body p{color:rgba(255,255,255,.86);margin-bottom:16px}
+.about dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;align-content:start;border-top:1px solid rgba(255,255,255,.3);padding-top:18px}
+.about dt{font-family:var(--serif);font-size:20px;color:#e7dccb}
+.about dd{font-size:14px;color:rgba(255,255,255,.8);align-self:center}
+.about .sig{font-family:var(--serif);font-style:italic;font-size:21px;margin-top:24px;color:#e7dccb}
+
+/* planning */
+.plan{padding:clamp(90px,11vw,150px) 0}
+.plan .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,110px);align-items:center}
+.plan figure img{width:100%;aspect-ratio:5/6;object-fit:cover}
+.plan h2{font-family:var(--serif);font-weight:300;font-size:clamp(38px,4.4vw,60px);line-height:1.04;margin-bottom:22px}
+.plan .open{font-family:var(--serif);font-size:23px;line-height:1.45;color:var(--ink-soft);margin-bottom:22px}
+.plan .help{columns:2;column-gap:30px;margin:30px 0;list-style:none}
+.plan .help li{padding:9px 0 9px 22px;position:relative;break-inside:avoid;font-size:14px}
+.plan .help li:before{content:"";position:absolute;left:0;top:19px;width:10px;height:1px;background:var(--champagne)}
+.plan .small{font-size:13px;color:var(--ink-soft);margin:6px 0 32px;max-width:48ch}
+.plan .btn:hover{background:var(--charcoal);color:var(--paper)}
+
+/* partners */
+.partners{background:var(--olive);color:var(--ivory);padding:clamp(90px,11vw,150px) 0}
+.partners .who{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--champagne)}
+.partners h2{font-family:var(--serif);font-weight:300;font-size:clamp(40px,4.6vw,64px);line-height:1.04;max-width:22ch;margin:14px 0 46px}
+.partners .grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,7vw,110px);margin-top:20px}
+.partners .grid > div > p{color:#c9c3b6;margin-bottom:18px;max-width:44ch}
+.offers{border-top:1px solid rgba(234,228,217,.25)}
+.offer{display:grid;grid-template-columns:1fr 1.1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(234,228,217,.25)}
+.offer h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.15}
+.offer p{font-size:14px;color:#c9c3b6}
+.partners .btn{margin-top:36px;color:var(--ivory);border-color:var(--champagne)}
+.partners .btn:hover{background:var(--champagne);color:var(--olive)}
+
+/* contact */
+.contact{padding:clamp(90px,11vw,150px) 0;background:var(--ivory)}
+.contact .grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,7vw,110px)}
+.contact h2{font-family:var(--serif);font-weight:300;font-size:clamp(40px,4.8vw,64px);line-height:1.02;margin-bottom:24px}
+.contact .ways{margin-top:34px;border-top:1px solid var(--rule)}
+.contact .ways div{padding:18px 0;border-bottom:1px solid var(--rule)}
+.contact .ways h3{font-family:var(--serif);font-weight:400;font-size:22px}
+.contact .ways p{font-size:14px;color:var(--ink-soft)}
+.contact .direct{margin-top:30px;font-size:14px}
+.contact .direct a{text-underline-offset:4px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:26px 28px}
+form .full{grid-column:1/-1}
+label{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;margin-bottom:8px;color:var(--ink-soft)}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--charcoal);background:transparent;border:0;border-bottom:1px solid rgba(40,39,37,.35);padding:10px 0;border-radius:0;outline:none;transition:border-color .2s}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--charcoal) 50%),linear-gradient(135deg,var(--charcoal) 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 7px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--charcoal)}
+form button{justify-self:start;font:inherit;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:400;padding:17px 34px;background:var(--charcoal);color:var(--paper);border:1px solid var(--charcoal);cursor:pointer;transition:background .25s,color .25s}
+form button:hover{background:transparent;color:var(--charcoal)}
+form .fine{font-size:12px;color:var(--ink-soft);align-self:center}
+
+/* faq */
+.faq{padding:clamp(90px,11vw,140px) 0}
+.faq .grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,7vw,110px)}
+.faq h2{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4vw,54px);line-height:1.05}
+details{border-bottom:1px solid var(--rule)}
+details:first-child{border-top:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;font-family:var(--serif);font-size:23px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-family:var(--sans);font-weight:300;font-size:22px;color:var(--champagne);transition:transform .25s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{padding:0 0 24px;color:var(--ink-soft);max-width:60ch}
+
+/* footer */
+footer{background:var(--charcoal);color:#cfc9bd;padding:clamp(70px,9vw,110px) 0 36px}
+footer .top{text-align:center}
+footer .mark{color:var(--ivory);font-size:30px}
+footer .tag{font-family:var(--serif);font-style:italic;font-size:22px;margin-top:14px;color:var(--champagne)}
+footer .sub{font-size:14px;margin-top:6px}
+footer .nav{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 34px;margin:46px 0;padding:26px 0;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+footer .nav a{font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;font-weight:400}
+footer .nav a:hover{color:#fff}
+footer .bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;color:#9c968b}
+footer .bottom a{text-decoration:none}footer .bottom a:hover{color:#fff}
+footer .legal{display:flex;gap:22px;flex-wrap:wrap}
+footer .disclose{font-size:12px;color:#9c968b;text-align:center;max-width:620px;margin:0 auto 34px}
+
+/* toast */
+.toast{visibility:hidden;position:fixed;left:50%;bottom:26px;transform:translate(-50%,140%);background:var(--olive);color:var(--ivory);padding:16px 24px;font-size:14px;z-index:70;transition:transform .35s;max-width:calc(100% - 32px);text-align:center}
+.toast.show{visibility:visible;transform:translate(-50%,0)}
+
+/* responsive */
+@media (max-width:1040px){
+  header nav{display:none}
+  header .bar{grid-template-columns:44px 1fr 44px;height:74px}
+  header .mark{grid-column:2;justify-self:center;font-size:17px;letter-spacing:.24em;padding-left:.24em}
+  .burger{display:block;grid-column:3}
+  .intro .grid,.story .grid,.stays .grid,.plan .grid,.partners .grid,.contact .grid,.faq .grid{grid-template-columns:1fr}
+  .stays .pics{margin-right:0}
+  .story .pics .inset{right:0}
+  .entry{grid-template-columns:110px 1fr;row-gap:8px}
+  .entry img{width:110px;grid-row:span 3}
+  .entry .go{display:none}
+  .entry .cat{grid-column:2}
+}
+@media (max-width:760px){
+  body{font-size:15px}
+  .hero{height:92svh;min-height:560px}
+  .hero .cap{display:none}
+  .hero:after{background:linear-gradient(180deg,rgba(20,22,20,.45) 0%,rgba(20,22,20,.05) 25%,rgba(20,22,20,.35) 50%,rgba(20,22,20,.8) 100%)}
+  .hero .ctas{gap:22px}
+  .intro .grid{gap:44px}
+  .mosaic{grid-template-columns:1fr;gap:38px}
+  .t-me,.t-io,.t-eu,.t-as,.t-cb{grid-column:1/-1;grid-row:auto;margin-top:0}
+  .t-me .ph{height:auto;min-height:0;aspect-ratio:4/5}
+  .stays .pics{grid-template-columns:1fr 1fr}
+  .stays .pics .big{grid-column:1/-1;grid-row:auto;min-height:0;aspect-ratio:4/3}
+  .card:nth-child(even) img{margin-top:0;aspect-ratio:3/4}
+  .strip{grid-auto-columns:76vw}
+  .exp .philo,.about .body{grid-template-columns:1fr}
+  .offer{grid-template-columns:1fr;gap:6px}
+  .plan .help{columns:1}
+  form{grid-template-columns:1fr}
+  .about:before{background:linear-gradient(180deg,rgba(28,31,27,.6),rgba(28,31,27,.82))}
+  footer .bottom{justify-content:center;text-align:center}
+  footer .legal{justify-content:center}
+  footer .mark{font-size:21px;letter-spacing:.22em;padding-left:.22em}
+}
+@media (prefers-reduced-motion:reduce){.hero img{animation:none;transform:none}*{transition:none!important}}
+</style>
+<script>!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_jXK5mqldnavWMX");whop.track("page");</script>
+</head>
+<body>
+
+<header id="top">
+  <div class="bar">
+    <nav class="l" aria-label="Explore">
+      <a href="#destinations">Destinations</a>
+      <a href="#stays">Stays</a>
+      <a href="#experiences">Experiences</a>
+    </nav>
+    <a class="mark" href="#">Luxe Escape Co</a>
+    <nav class="r" aria-label="More">
+      <a href="#journal">Journal</a>
+      <a href="#about">About</a>
+      <a href="#partners">Work with us</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" id="open"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <button class="x" id="close">Close</button>
+  <a href="#destinations">Destinations</a>
+  <a href="#stays">Luxury stays</a>
+  <a href="#experiences">Experiences</a>
+  <a href="#journal">Journal</a>
+  <a href="#about">About</a>
+  <a href="#partners">Work with us</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<section class="hero">
+  <img src="img/hero-positano.jpg" alt="Positano lit up at dusk on the Amalfi Coast">
+  <div class="copy wrap">
+    <h1><b>Escape the ordinary.</b><span>Experience the extraordinary.</span></h1>
+    <p class="lede">Beautiful destinations, exceptional places to stay and experiences worth travelling for. Your next escape starts here.</p>
+    <div class="ctas">
+      <a class="btn" href="#contact">Plan your next escape</a>
+      <a class="link" href="#dubai">Read the Dubai story</a>
+    </div>
+  </div>
+  <p class="cap">Positano, the Amalfi Coast, as the lights come on</p>
+</section>
+
+<section class="intro">
+  <div class="wrap grid">
+    <div>
+      <h2>More than just a holiday. <em>It's all about the experience.</em></h2>
+      <p class="moments">The hotel with the breathtaking view. The sunset dinner overlooking the sea. The adventure you never thought you'd try. The hidden gem you can't wait to tell everyone about.</p>
+    </div>
+    <div class="side">
+      <p>We believe the best journeys are made of extraordinary moments. Luxe Escape Co celebrates the destinations, stays and experiences that make travelling so special, from beach escapes and boutique hideaways to city breaks you'll talk about for years.</p>
+      <figure>
+        <img src="img/swimmers.jpg" alt="Swimmers in clear turquoise water seen from above" loading="lazy">
+        <figcaption>A morning swim off the Amalfi Coast</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="dubai">
+  <div class="wrap grid">
+    <div class="pics">
+      <img class="main" src="img/dubai-burj.jpg" alt="The Burj Al Arab rising from a calm sea in Dubai" loading="lazy">
+      <img class="inset" src="img/dubai-dunes.jpg" alt="Footprints along a desert dune at sunset" loading="lazy">
+    </div>
+    <div>
+      <p class="kicker">The first story</p>
+      <h2>Dubai, a destination of extraordinary experiences</h2>
+      <p class="dek">Spectacular skylines, world-class hotels and golden desert at the edge of the city.</p>
+      <p class="first">From the shimmer of the Gulf at breakfast to dinner high above the lights of the Marina, Dubai offers a holiday unlike anywhere else. Whether you're after relaxation, adventure, shopping or a little indulgence, here's why it deserves a place on your wish list.</p>
+      <a class="link" href="#journal">Read the full story</a>
+    </div>
+  </div>
+</section>
+
+<section class="dest" id="destinations">
+  <div class="wrap">
+    <div class="head">
+      <h2>Discover your next destination.</h2>
+      <p>From far-flung tropical islands to vibrant cities and beautiful European hideaways, the world is full of places waiting to be discovered.</p>
+    </div>
+    <div class="mosaic">
+      <a class="tile t-me" href="#dubai">
+        <div class="ph"><img src="img/dubai-dunes.jpg" alt="Sand dunes in the Arabian desert at sunset" loading="lazy"></div>
+        <h3>Middle East</h3>
+        <p>Dubai, Abu Dhabi, Oman and beyond. Extraordinary hotels, desert adventures and unforgettable cities.</p>
+      </a>
+      <a class="tile t-io" href="#contact">
+        <div class="ph"><img src="img/mauritius.jpg" alt="Thatched parasol and two chairs on a white beach in Mauritius" loading="lazy"></div>
+        <h3>Indian Ocean</h3>
+        <p>Maldives, Mauritius and the Seychelles. Breathtaking beaches and island escapes.</p>
+      </a>
+      <a class="tile t-eu" href="#contact">
+        <div class="ph"><img src="img/santorini-dome.jpg" alt="Blue-domed church above the caldera in Santorini" loading="lazy"></div>
+        <h3>Europe</h3>
+        <p>Italy, Greece, Spain and the French Riviera. Coastlines, boutique hotels and timeless escapes.</p>
+      </a>
+      <a class="tile t-as" href="#contact">
+        <div class="ph"><img src="img/thailand.jpg" alt="Longtail boats moored in a limestone bay in Thailand" loading="lazy"></div>
+        <h3>Asia</h3>
+        <p>Bali, Thailand, Singapore and beyond. Culture, adventure and exceptional hospitality.</p>
+      </a>
+      <a class="tile t-cb" href="#contact">
+        <div class="ph"><img src="img/caribbean.jpg" alt="Palm trees silhouetted on a Caribbean beach at sunset" loading="lazy"></div>
+        <h3>Caribbean</h3>
+        <p>Beautiful islands, relaxed luxury and sunshine that lasts all winter.</p>
+      </a>
+    </div>
+    <p class="close">Wherever you're dreaming of going, let's find somewhere extraordinary.</p>
+  </div>
+</section>
+
+<section class="stays" id="stays">
+  <div class="wrap grid">
+    <div>
+      <h2>Stay somewhere extraordinary.</h2>
+      <p class="sub">Because where you stay can be just as memorable as where you go.</p>
+      <p>From five-star resorts and private villas to stylish boutique hotels and secluded retreats, these are the places we think are worth travelling for.</p>
+      <ul>
+        <li>Exceptional hospitality</li>
+        <li>Beautiful surroundings and thoughtful design</li>
+        <li>Dining you'll remember</li>
+        <li>Unique experiences on the doorstep</li>
+        <li>The little details that make all the difference</li>
+      </ul>
+      <p class="note">We only feature properties we believe are worth discovering, and every hosted, sponsored or affiliate-supported feature is clearly labelled.</p>
+    </div>
+    <div class="pics">
+      <img class="big" src="img/pool.jpg" alt="Long hotel pool lined with loungers and orange parasols" loading="lazy">
+      <img src="img/boat-beach.jpg" alt="Wooden boat beneath palms on a quiet beach" loading="lazy">
+      <img src="img/loungers.jpg" alt="White loungers beside a pool in a garden" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="exp" id="experiences">
+  <div class="wrap">
+    <div class="head">
+      <h2>Experiences worth travelling for.</h2>
+      <p>Some of life's best memories happen when you step outside your comfort zone. The right experience turns a lovely holiday into an extraordinary one.</p>
+    </div>
+  </div>
+  <div class="strip">
+    <article class="card"><img src="img/balloons.jpg" alt="Hot air balloons drifting over a misty valley at dawn" loading="lazy"><h3>Adventure &amp; adrenaline</h3><p>Dawn balloon flights, dune drives and the thrill you'll talk about all trip.</p></article>
+    <article class="card"><img src="img/resort-pool.jpg" alt="Resort pool framed by palm trees and white parasols" loading="lazy"><h3>Luxury &amp; exclusive</h3><p>Private villas, island hideaways and access most people never get.</p></article>
+    <article class="card"><img src="img/santorini-terrace.jpg" alt="Terrace table overlooking the sea at sunset in Santorini" loading="lazy"><h3>Dining &amp; romance</h3><p>Sunset tables, candlelit terraces and dinners worth dressing up for.</p></article>
+    <article class="card"><img src="img/jetty.jpg" alt="Wooden jetty stretching over turquoise water" loading="lazy"><h3>Wellness &amp; relaxation</h3><p>Spa days, quiet mornings and nowhere to be.</p></article>
+    <article class="card"><img src="img/lagoon.jpg" alt="Kayakers in a bright turquoise lagoon" loading="lazy"><h3>Family experiences</h3><p>Lagoons to paddle, reefs to snorkel and days the whole family remembers.</p></article>
+    <article class="card"><img src="img/temple.jpg" alt="Water temple surrounded by lotus ponds in Ubud, Bali" loading="lazy"><h3>Culture &amp; discovery</h3><p>Temples, markets and traditions that stay with you long after you're home.</p></article>
+  </div>
+  <div class="wrap">
+    <div class="philo">
+      <h3>We showcase experiences that offer something more than the ordinary.</h3>
+      <p>Authentic recommendations, inspiring imagery and first-hand discoveries, so you can find the experiences you genuinely want to book, not just the ones everyone else has already done.</p>
+    </div>
+  </div>
+</section>
+
+<section class="journal" id="journal">
+  <div class="wrap">
+    <div class="head">
+      <h2>Our latest discoveries.</h2>
+      <p>Destination guides, hotel spotlights and the art of travelling beautifully.</p>
+    </div>
+    <div class="index">
+      <a class="entry" href="#dubai"><img src="img/dubai-night.jpg" alt="Dubai Marina lit up at night" loading="lazy"><span class="cat">Destination guide</span><h3>The ultimate Dubai escape</h3><span class="go">Read</span></a>
+      <a class="entry" href="#stays"><img src="img/loungers.jpg" alt="Poolside loungers" loading="lazy"><span class="cat">Hotel spotlight</span><h3>Five beautiful hotels to add to your wish list</h3><span class="go">Read</span></a>
+      <a class="entry" href="#experiences"><img src="img/firedance.jpg" alt="Fire dance performance at night in Bali" loading="lazy"><span class="cat">Experiences</span><h3>Experiences worth travelling for</h3><span class="go">Read</span></a>
+      <a class="entry" href="#destinations"><img src="img/boat-beach.jpg" alt="Wooden boat under palm trees on a tropical beach" loading="lazy"><span class="cat">Beach escapes</span><h3>Where to go for your next luxury beach break</h3><span class="go">Read</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <img class="bg" src="img/terraces.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <blockquote>Great travel is about so much more than the destination.</blockquote>
+    <div class="body">
+      <div>
+        <p>Luxe Escape Co was created from a lifelong love of travel and a wish to share the world's most beautiful destinations, exceptional stays and unforgettable experiences.</p>
+        <p>After 15 years at Kuoni, I've seen first-hand what makes a holiday truly special: the people you meet, the places you discover and the memories you bring home. Luxe Escape Co brings that passion together in one place.</p>
+        <p class="sig">Welcome to Luxe Escape Co.</p>
+      </div>
+      <dl>
+        <dt>Discovery</dt><dd>There's always somewhere new to explore.</dd>
+        <dt>Quality</dt><dd>Exceptional service and attention to detail.</dd>
+        <dt>Authenticity</dt><dd>Genuine, first-hand recommendations.</dd>
+        <dt>Inspiration</dt><dd>Content that makes people dream.</dd>
+        <dt>Connection</dt><dd>Partnerships that work for everyone.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="plan" id="planning">
+  <div class="wrap grid">
+    <figure>
+      <img src="img/overwater.jpg" alt="Thatched overwater pavilion at the end of a jetty" loading="lazy">
+    </figure>
+    <div>
+      <h2>Your next escape, thoughtfully considered.</h2>
+      <p class="open">Sometimes you know exactly where you want to go. Sometimes you just know you need to get away.</p>
+      <p>A romantic getaway, a special celebration, a family holiday or a long-haul adventure. Tell us what you're dreaming of and we'll help you find it.</p>
+      <ul class="help">
+        <li>Destination inspiration</li>
+        <li>Luxury hotel recommendations</li>
+        <li>Special occasion escapes</li>
+        <li>Excursions and unique experiences</li>
+        <li>Tailored travel ideas</li>
+        <li>Memorable getaways</li>
+      </ul>
+      <p class="small">For now this is an inspiration and enquiry service rather than a booking service. Any future booking arrangements will be clearly explained.</p>
+      <a class="btn" href="#contact" data-type="Travel planning">Start planning</a>
+    </div>
+  </div>
+</section>
+
+<section class="partners" id="partners">
+  <div class="wrap">
+    <p class="who">Hotels, destinations, experiences and travel brands</p>
+    <h2>Let's create something extraordinary together.</h2>
+    <div class="grid">
+      <div>
+        <p>Luxe Escape Co connects inspiring travel brands with an audience that loves discovering beautiful destinations, unique places to stay and memorable experiences.</p>
+        <p>With 15 years in the travel industry, we understand what makes a property or destination stand out, and we want every collaboration to be more than a single post: long-term relationships that build awareness, inspire bookings and create shared value.</p>
+        <a class="btn" href="#contact" data-type="Brand partnership">Discuss a partnership</a>
+      </div>
+      <div class="offers">
+        <div class="offer"><h3>Hosted hotel stays</h3><p>Show your property through authentic destination content, photography and video.</p></div>
+        <div class="offer"><h3>Hosted experiences</h3><p>Bring excursions and activities to life through first-hand storytelling.</p></div>
+        <div class="offer"><h3>Content creation</h3><p>Photography, short-form video and promotional storytelling.</p></div>
+        <div class="offer"><h3>Sponsored destination features</h3><p>Destination guides and editorial campaigns, clearly labelled.</p></div>
+        <div class="offer"><h3>Ongoing brand partnerships</h3><p>Longer-term promotional relationships with selected travel brands.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div>
+      <h2>We'd love to hear from you.</h2>
+      <p>Dreaming about your next escape, have a destination you'd love us to feature, or interested in working together? Drop us a message.</p>
+      <div class="ways">
+        <div><h3>Travel enquiries</h3><p>Have a destination or experience in mind? Tell us what you're dreaming of.</p></div>
+        <div><h3>Brand partnerships</h3><p>Hotels, resorts, tourism boards and experience providers.</p></div>
+        <div><h3>Everything else</h3><p>Simply drop us a message.</p></div>
+      </div>
+      <p class="direct"><a href="mailto:hello@luxeescapeco.com">hello@luxeescapeco.com</a><br><a href="https://www.instagram.com/luxeescapeco/" rel="noopener">@luxeescapeco on Instagram</a></p>
+    </div>
+    <form id="enquiry">
+      <div><label for="f-name">Full name</label><input id="f-name" name="name" required autocomplete="name"></div>
+      <div><label for="f-email">Email address</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+      <div><label for="f-type">Enquiry type</label>
+        <select id="f-type" name="type">
+          <option>Travel planning</option>
+          <option>Brand partnership</option>
+          <option>General enquiry</option>
+        </select></div>
+      <div><label for="f-co">Company or brand (optional)</label><input id="f-co" name="company" autocomplete="organization"></div>
+      <div class="full"><label for="f-dest">Destination or experience (optional)</label><input id="f-dest" name="destination"></div>
+      <div class="full"><label for="f-msg">Your message</label><textarea id="f-msg" name="message" required></textarea></div>
+      <button type="submit">Submit enquiry</button>
+      <p class="fine">We'll reply personally, usually within two working days.</p>
+    </form>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap grid">
+    <h2>A few things you might like to know.</h2>
+    <div>
+      <details><summary>What is Luxe Escape Co?</summary><p>A luxury travel inspiration and discovery brand showcasing exceptional destinations, hotels, resorts and travel experiences.</p></details>
+      <details><summary>Can I book a holiday through you?</summary><p>At present the site offers travel inspiration, recommendations and links to selected travel partners. We don't currently take direct holiday bookings.</p></details>
+      <details><summary>Do you work with hotels and travel brands?</summary><p>Absolutely. We welcome collaborations with hotels, resorts, tourism boards, tour operators and experience providers.</p></details>
+      <details><summary>Do you accept hosted stays and experiences?</summary><p>Yes. We're interested in experiencing and showcasing exceptional properties and activities through authentic content and promotional partnerships.</p></details>
+      <details><summary>Are recommendations sponsored?</summary><p>Some content may be sponsored, hosted or supported by affiliate partnerships. Where it is, we say so clearly, so you can make informed decisions.</p></details>
+      <details><summary>Can you help me plan a holiday?</summary><p>We'd love to hear from anyone looking for destination inspiration, hotel recommendations and ideas for their next escape. Any additional planning services will be explained clearly before you commit to anything.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="mark" href="#">Luxe Escape Co</a>
+      <p class="tag">Escape the ordinary. Experience the extraordinary.</p>
+      <p class="sub">Beautiful destinations, exceptional stays and unforgettable experiences.</p>
+    </div>
+    <div class="nav">
+      <a href="#">Home</a><a href="#destinations">Destinations</a><a href="#stays">Luxury stays</a><a href="#experiences">Experiences</a><a href="#about">About</a><a href="#partners">Partnerships</a><a href="#contact">Contact</a>
+    </div>
+    <p class="disclose">Some features may be hosted, sponsored or supported by affiliate links. These are always clearly labelled.</p>
+    <div class="bottom">
+      <span>&copy; 2026 Luxe Escape Co. All rights reserved.</span>
+      <span class="legal"><a href="#">Affiliate disclosure</a><a href="#">Privacy</a><a href="#">Cookies</a><a href="#">Terms</a></span>
+      <a href="https://sitepilots.co.uk/">Website by SitePilots</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  function onScroll(){h.classList.toggle('solid',window.scrollY>window.innerHeight*0.72)}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var d=document.getElementById('drawer');
+  document.getElementById('open').onclick=function(){d.classList.add('open');d.setAttribute('aria-hidden','false')};
+  function shut(){d.classList.remove('open');d.setAttribute('aria-hidden','true')}
+  document.getElementById('close').onclick=shut;
+  d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',shut)});
+  document.querySelectorAll('[data-type]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('f-type').value=a.dataset.type})});
+  document.getElementById('enquiry').addEventListener('submit',function(e){
+    e.preventDefault();var f=e.target;
+    var body='Name: '+f.name.value+'\nEmail: '+f.email.value+'\nEnquiry type: '+f.type.value+(f.company.value?'\nCompany: '+f.company.value:'')+(f.destination.value?'\nDestination or experience: '+f.destination.value:'')+'\n\n'+f.message.value;
+    location.href='mailto:hello@luxeescapeco.com?subject='+encodeURIComponent(f.type.value+' enquiry from '+f.name.value)+'&body='+encodeURIComponent(body);
+    var t=document.getElementById('toast');t.textContent='Thank you. Your email is ready to send.';t.classList.add('show');setTimeout(function(){t.classList.remove('show')},4200);
+  });
+})();
+</script>
+</body>
+</html>
