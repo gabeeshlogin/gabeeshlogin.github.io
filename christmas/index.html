@@ -216,9 +216,9 @@ footer{padding:34px 0 110px;font-size:14.5px;color:var(--soft)}
    <div class="browser"><div class="bar"><i></i><i></i><i></i><span>Example site</span></div><img src="img/fold_d.jpg" alt="Fold bakery example website" width="1600" height="1000" loading="lazy"></div>
    <h3>Fold, Bakery &amp; Coffee</h3><p>Example site for a made-up bakery, showing the standard we build to.</p><small>Look around the example</small>
   </a>
-  <a class="wk" href="https://pefia.github.io/bgtservices" target="_blank" rel="noopener">
-   <div class="browser"><div class="bar"><i></i><i></i><i></i><span>Boxhill Gardening &amp; Tree Services</span></div><img src="../img/boxhill.webp" alt="Boxhill Gardening and Tree Services website" width="880" height="610" loading="lazy" style="aspect-ratio:1600/1000;object-fit:cover;object-position:top;width:100%"></div>
-   <h3>Boxhill Gardening &amp; Tree Services</h3><p>Real client. A Surrey garden and tree business, with services, recent work and quotes.</p><small>Visit the website</small>
+  <a class="wk" href="../example.html?site=landscaping" target="_blank" rel="noopener">
+   <div class="browser"><div class="bar"><i></i><i></i><i></i><span>Green &amp; Ground</span></div><img src="../img/garden.webp" alt="Green and Ground landscaping example website" width="1440" height="960" loading="lazy" style="aspect-ratio:1600/1000;object-fit:cover;object-position:top;width:100%"></div>
+   <h3>Green &amp; Ground</h3><p>Example site for a made-up landscaping business, showing the standard we build to.</p><small>Look around the example</small>
   </a>
  </div>
 </div></section>
@@ -282,7 +282,7 @@ const once={};const seen=new IntersectionObserver(es=>es.forEach(en=>{const n=en
 let left=0;addEventListener('scroll',()=>{if(!left&&scrollY>innerHeight*.8){left=1;W('xmas_scrolled_past_top')}},{passive:true});
 [['work','xmas_saw_carlo'],['price','xmas_saw_price'],['start','xmas_reached_end']].forEach(([id,n])=>{const el=document.getElementById(id);if(el){el.dataset.ev=n;seen.observe(el)}});
 let typed=0;biz.addEventListener('input',()=>{if(!typed){typed=1;W('xmas_typed_business')}});
-document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');if(!a)return;const h=a.href;if(/carloitalia\.com/.test(h))W('xmas_opened_carlo');else if(/examples\/bakery|bgtservices/.test(h))W('xmas_opened_example')},true);
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');if(!a)return;const h=a.href;if(/carloitalia\.com/.test(h))W('xmas_opened_carlo');else if(/examples\/bakery|site=landscaping/.test(h))W('xmas_opened_example')},true);
 addEventListener('scroll',()=>document.body.classList.toggle('scrolled',scrollY>650),{passive:true});
 const io=new IntersectionObserver(es=>es.forEach(en=>document.body.classList.toggle('atform',en.isIntersecting)),{threshold:.15});io.observe(document.getElementById('start'));
 </script>
