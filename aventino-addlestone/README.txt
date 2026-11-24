@@ -18,3 +18,11 @@ CONFIRM WITH THE OWNER
 - WhatsApp bookings go to 07309 469302: is that number on WhatsApp?
 - Owner/staff names and their story if they want an "about" section.
 - Their own domain name.
+
+DESIGN (v3, 24 Nov 2026)
+- Fold-style type: Cormorant Garamond + Jost. Cinematic intro, crossfading hero, parallax,
+  scroll reveals, dish-name marquee, scroll-grow pasta band, tabbed menu, count-up rating.
+- Hero slides, the pasta band and the "big tables" photo are Unsplash stock (illustrative,
+  noted in the footer): s1 1414235077428, s2 1563379926898, s3 1611270629569, fork 1556761223.
+  "At our tables" uses their real Tripadvisor photos.
+- All motion is switched off for visitors with "reduce motion" turned on.
