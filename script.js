@@ -26,10 +26,9 @@
   }
 
   const projects = {
-    electrical: { url: 'voltelectrical.co.uk', img: 'img/volt-hero.webp', brand: 'VOLT/ELECTRICAL', kicker: 'Domestic & commercial electricians', headline: 'Wired properly. First time.', button: 'Get a free quote', name: 'Volt Electrical', description: 'Bold and direct, with the phone number front and centre, clear services, trust badges and a quick quote form.', features: ['Tap-to-call header', 'Services & recent jobs', 'Quote request form'] },
-    salon: { url: 'fernhair.co.uk', img: 'img/salon-hero.webp', brand: 'Fern.', kicker: 'Hair studio · Dorking', headline: 'Hair that feels like you.', button: 'Book an appointment', name: 'Fern Hair Studio', description: 'Calm and elegant, with a clear price list, a look inside the studio and booking buttons on every screen.', features: ['Services with prices', 'Studio gallery', 'Appointment requests'] },
-    building: { url: 'hartandco.co.uk', img: 'img/hart-hero.webp', brand: 'HART & CO.', kicker: 'Extensions · Renovations · Lofts', headline: 'More space. Built properly.', button: 'Book a free survey', name: 'Hart & Co. Builders', description: 'A confident showcase for bigger projects, with room for your best work, your process and the reasons to choose you.', features: ['Project gallery', 'Fixed-price promise', 'Free survey requests'] },
-    landscaping: { url: 'greenandground.co.uk', img: 'img/garden.webp', brand: 'green&ground', kicker: 'Garden design & landscaping', headline: 'A little more outdoors.', button: 'Get a free quote', name: 'Green & Ground', description: 'An inviting home for garden transformations, with big project photos, clear services and a simple way to enquire.', features: ['Before-and-after friendly', 'Reviews up front', 'Free quote form'] }
+    bakery: { url: 'foldbakery.co.uk', img: 'img/work-fold.webp', phone: 'img/work-fold-m.webp', link: 'examples/bakery/', name: 'Fold, bakery & coffee', description: 'Quiet and premium, led by the photography. A Christmas order banner, menu, opening hours and order-ahead, all one tap away on a phone.', features: ['Seasonal order banner', 'Menu and opening hours', 'Order ahead for collection'] },
+    cafe: { url: 'ryeandember.co.uk', img: 'img/work-rye.webp', phone: 'img/work-rye-m.webp', link: 'examples/cafe/', name: 'Rye & Ember', description: 'Warm and local, built around what came out of the oven today, with opening times and order-ahead front and centre.', features: ['Today’s bakes', 'Live opening status', 'Order for collection'] },
+    electrician: { url: 'haldenelectrical.co.uk', img: 'img/work-halden.webp', phone: 'img/work-halden-m.webp', link: 'examples/electrician/', name: 'Halden Electrical', description: 'Loud and confident, with fixed prices, areas covered and a call button that never leaves the screen.', features: ['Tap-to-call everywhere', 'Fixed price list', 'Quick quote form'] }
   };
   const display = document.querySelector('#project-display');
   const setText = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
@@ -41,9 +40,10 @@
       document.querySelectorAll('.example-tab').forEach(tab => { const active = tab === button; tab.classList.toggle('is-active', active); tab.setAttribute('aria-pressed', String(active)); });
       display.dataset.trade = key;
       document.getElementById('project-img').src = item.img;
-      ['url', 'brand', 'kicker', 'headline', 'button', 'name', 'description'].forEach(field => setText(`project-${field}`, item[field]));
+      document.getElementById('project-phone').src = item.phone;
+      ['url', 'name', 'description'].forEach(field => setText(`project-${field}`, item[field]));
       document.getElementById('project-features').replaceChildren(...item.features.map(f => { const li = document.createElement('li'); li.textContent = f; return li; }));
-      document.getElementById('project-link').href = document.getElementById('project-preview').href = `example.html?site=${key}`;
+      document.getElementById('project-link').href = document.getElementById('project-preview').href = item.link;
     });
   });
 

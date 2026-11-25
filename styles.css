@@ -428,3 +428,15 @@ button { cursor: pointer; }
 .wa-button:hover { background: #1fbe5b; color: #0b3d1f; }
 .wa-link { font-size: 15px; margin-top: 6px; }
 @media (max-width: 860px) { .wa-float span { display: none; } .wa-float { padding: 14px; bottom: 84px; right: 16px; } }
+
+/* examples: real screenshots with phone */
+.project-preview{position:relative;padding:28px 28px 0}
+.project-shot{min-height:0;aspect-ratio:16/10;background:#ddd}
+.project-shot img{object-position:top}
+.project-phone{position:absolute;right:22px;bottom:18px;width:21%;max-width:150px;aspect-ratio:390/844;border-radius:22px;border:5px solid #111;background:#111;overflow:hidden;box-shadow:0 20px 40px -12px rgb(0 0 0 / .45)}
+.project-phone img{width:100%;height:100%;object-fit:cover;object-position:top}
+.project-display[data-trade=bakery] .project-preview{background:#e7e0d3}
+.project-display[data-trade=cafe] .project-preview{background:#efe2d2}
+.project-display[data-trade=electrician] .project-preview{background:#1d1f1f}
+.case-image img{aspect-ratio:16/10;object-fit:cover;object-position:top}
+@media(max-width:760px){.project-preview{padding:16px 16px 0}.project-phone{right:12px;bottom:10px;border-width:3px;border-radius:14px}}
