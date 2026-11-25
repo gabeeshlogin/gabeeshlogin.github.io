@@ -1,0 +1,3 @@
+<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><body>sending…<script>
+fetch('bf-tall.jpg').then(r=>r.blob()).then(b=>{const f=new FileReader();f.onload=()=>{window.opener&&window.opener.postMessage({bfimg:f.result},'https://www.facebook.com');document.body.textContent='sent';setTimeout(()=>window.close(),500)};f.readAsDataURL(b)});
+</script>
