@@ -440,3 +440,5 @@ button { cursor: pointer; }
 .project-display[data-trade=electrician] .project-preview{background:#1d1f1f}
 .case-image img{aspect-ratio:16/10;object-fit:cover;object-position:top}
 @media(max-width:760px){.project-preview{padding:16px 16px 0}.project-phone{right:12px;bottom:10px;border-width:3px;border-radius:14px}}
+
+.browser-real{aspect-ratio:16/10;background:#e7e0d3}.browser-real img{object-position:top}
