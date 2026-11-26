@@ -69,11 +69,29 @@ section{padding:88px 0}
 .tabs{display:flex;flex-wrap:wrap;border-bottom:2px solid var(--line)}
 .tabs button{font:600 15px 'Libre Franklin',sans-serif;background:none;border:0;border-right:2px solid var(--line);padding:16px 22px;cursor:pointer;color:var(--ink)}
 .tabs button[aria-selected=true]{background:var(--ink);color:var(--paper)}
-.panel{display:none;padding:34px 36px 40px;columns:2;column-gap:56px}
-.panel.on{display:block}
-.grp{break-inside:avoid;margin-bottom:30px}
-.grp h3{font-size:24px;display:inline-block;border-bottom:2px solid var(--line);margin-bottom:12px;padding-bottom:2px}
+.panel{display:none}
+.panel.on{display:grid;grid-template-columns:190px 1fr 290px;min-height:460px}
+.sub{border-right:2px solid var(--line);padding:22px 0;display:flex;flex-direction:column}
+.sub button{font:500 15px 'Libre Franklin',sans-serif;background:none;border:0;text-align:left;padding:9px 22px;cursor:pointer;color:var(--soft)}
+.sub button:hover{color:var(--ink)}
+.sub button[aria-selected=true]{color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.glist{padding:30px 36px 34px}
+.grp{display:none}.grp.on{display:block}
+.grp .its{columns:1}.grp .its.two{columns:2;column-gap:40px}
+.grp .it{break-inside:avoid}
+.grp h3{font-size:26px;display:inline-block;border-bottom:2px solid var(--line);margin-bottom:12px;padding-bottom:2px}
 .grp .note{font-size:13px;color:var(--soft);margin:-6px 0 10px}
+.mph{border-left:2px solid var(--line);overflow:hidden;position:relative;background:var(--ink)}
+.mph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s}
+.mph figcaption{position:absolute;left:12px;bottom:12px;background:var(--paper);border:2px solid var(--line);padding:4px 10px;font-weight:600;font-size:13px}
+.panel.one .sub{display:none}.panel.one.on{grid-template-columns:1fr 290px}
+/* kitchen strip */
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 24px 18px;scrollbar-width:thin}
+.strip figure{flex:0 0 230px;scroll-snap-align:start;border:2px solid var(--line);background:var(--card);padding:8px}
+.strip img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.strip figcaption{display:flex;justify-content:space-between;gap:8px;font-weight:600;font-size:14px;padding:8px 2px 2px}
+.strip figcaption b{font-family:'Zilla Slab',serif}
+.sbtn{display:flex;gap:8px}.sbtn button{width:44px;height:44px;border:2px solid var(--line);background:var(--card);font-size:20px;cursor:pointer;border-radius:3px}
 .it{display:flex;align-items:baseline;gap:8px;padding:5px 0}
 .it .n{font-weight:600}
 .it .d{flex:1;border-bottom:1.5px dotted #8f866f;transform:translateY(-4px);min-width:20px}
@@ -117,7 +135,14 @@ footer{padding:26px 0 90px;font-size:14px;color:var(--soft)}
  .ticket{left:10px;bottom:-34px}
  .pg{grid-template-columns:1fr 1fr}.pg figure:first-child{grid-column:1/-1;border-right:0;border-bottom:2px solid var(--line)}
  .pg img{height:300px}
- .panel{columns:1;padding:26px 20px}
+ .panel.on,.panel.one.on{display:flex;flex-direction:column;min-height:0}
+ .sub{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:2px solid var(--line);padding:6px 8px;order:1}
+ .sub button{white-space:nowrap;padding:12px 12px;flex:none}
+ .mph{order:2;border-left:0;border-bottom:2px solid var(--line);height:190px}
+ .glist{order:3;padding:22px 18px 26px}
+ .grp .its.two{columns:1}
+ .strip figure{flex-basis:200px}
+ .sbtn{display:none}
  .tabs button{padding:13px 14px;font-size:14px;flex:1 0 auto}
  .know div{border-right:0;border-bottom:2px solid var(--line)}
  section{padding:64px 0}
@@ -154,13 +179,13 @@ footer{padding:26px 0 90px;font-size:14px;color:var(--soft)}
 </div></section>
 
 <div class="plates"><div class="pg">
- <figure><img src="img/traditional.jpg" alt="The Traditional breakfast with black pudding, fried eggs, sausages, beans, tomatoes and mushrooms" loading="lazy"><figcaption>The Traditional · £10.50</figcaption></figure>
- <figure><img src="img/avocado-smash.jpg" alt="Avocado smash with poached eggs on sourdough" loading="lazy"><figcaption>Avocado smash · £10</figcaption></figure>
- <figure><img src="img/hot-chocolate.jpg" alt="Hot chocolate with marshmallows" loading="lazy"><figcaption>Hot chocolate · £3.50</figcaption></figure>
+ <figure><img src="img/p-big-one.jpg" alt="The Big One breakfast: two fried eggs, bacon, sausages, hash browns, beans, tomatoes, mushrooms and toast" loading="lazy"><figcaption>The Big One · £11.50</figcaption></figure>
+ <figure><img src="img/p-avocado.jpg" alt="Avocado smash with two poached eggs on toast" loading="lazy"><figcaption>Avocado smash · £10</figcaption></figure>
+ <figure><img src="img/p-burger.jpg" alt="Homemade beef burger with bacon and cheese, chips and salad" loading="lazy"><figcaption>Beef burger · £9</figcaption></figure>
 </div></div>
 
 <section id="menu"><div class="w">
- <div class="sh"><h2>The menu</h2><p>Swap one item on any set breakfast at no extra cost. Pork sausage and bacon can be swapped for poultry versions.</p></div>
+ <div class="sh"><h2>The menu</h2><p>Breakfast is served all day. You can change one item on any set breakfast without changing the price.</p></div>
  <div class="menu">
   <div class="tabs" role="tablist">
    <button role="tab" aria-selected="true" data-p="b">Breakfast</button>
@@ -172,6 +197,10 @@ footer{padding:26px 0 90px;font-size:14px;color:var(--soft)}
   <div class="panel on" id="p-b"></div><div class="panel" id="p-l"></div><div class="panel" id="p-d"></div><div class="panel" id="p-s"></div><div class="panel" id="p-x"></div>
  </div>
 </div></section>
+
+<section style="padding-top:0"><div class="w"><div class="sh" style="margin-bottom:22px"><h2>Straight from our kitchen</h2><div class="sbtn"><button type="button" aria-label="Scroll back" data-d="-1">←</button><button type="button" aria-label="Scroll on" data-d="1">→</button></div></div></div>
+ <div class="w" style="padding:0"><div class="strip" id="strip"></div></div>
+</section>
 
 <section class="rv"><div class="w">
  <div class="sh"><h2>What Portland Road says</h2><p><span class="stars">★★★★★</span> 4.6 from 27 Google reviews</p></div>
@@ -212,27 +241,37 @@ footer{padding:26px 0 90px;font-size:14px;color:var(--soft)}
 
 <script>
 const M={
-b:[["Set breakfast","All come with a slice of toast or sourdough",[["Full English","1 egg, 2 bacon, sausage, beans, 2 hash browns, tomatoes, mushrooms","£9.90"],["The Big One","2 eggs, 2 bacon, 2 sausages, beans, 2 hash browns, tomatoes, mushrooms","£11.50"],["Traditional","2 eggs, 2 bacon, 2 sausages, black pudding, beans, tomatoes, mushrooms","£10.50"],["Scrambled breakfast","2 scrambled eggs, 2 bacon, beans, mushrooms, salad","£9.50"],["American breakfast","1 egg, 2 bacon, sausage, 2 pancakes, 2 hash browns, maple syrup, chilli jam","£10.50"],["Chef’s special breakfast","2 eggs, halloumi, smashed avocado, beans, tomatoes, mushrooms, hummus","£11.50"],["Vegetarian","2 eggs, vegan sausage, halloumi, beans, tomatoes, mushrooms","£9.50"],["Vegan","2 vegan sausages, beans, 2 hash browns, tomatoes, mushrooms","£9.50"]]],
-["Light breakfast","",[["Porridge with fruit, honey & Greek yoghurt","","£6.00"],["Porridge with honey & toast with jam","","£4.00"],["2 toasts with jam","","£3.50"],["Beans on 2 toast","Add cheese 50p","£4.50"],["Eggs Benedict","2 poached eggs, bacon, muffin, hollandaise, salad","£9.00"],["Eggs Royale","2 poached eggs, smoked salmon, muffin, hollandaise, salad","£10.00"],["Avocado smash","2 poached eggs on toasted sourdough with lemon smashed avocado","£10.00"],["2 fried eggs, sausage, toast","","£5.50"],["2 scrambled eggs, 2 bacon, toast","","£5.50"]]],
-["Omelettes","3 eggs, served with chips & salad",[["Plain","","£7"],["Ham, cheese or mushrooms","","£8"],["Ham & cheese","","£9"],["Cheese & mushrooms","","£9"],["Ham, cheese & mushrooms","","£10"],["Spanish","Peas, peppers, onions, mushrooms, cheese","£9.50"]]],
-["Extras","",[["Egg","","£1.50"],["2 bacon or 2 turkey rashers","","£2.00"],["Cumberland or chicken sausage","","£1.50"],["Halloumi, 2 slices","","£2.50"],["Avocado","","£2.50"],["2 hash browns","","£2.00"],["2 pancakes","","£2.50"],["Chips","","£2.50"]]]],
-l:[["Sandwiches or baguettes","Hot ones come with ketchup, sriracha, garlic or barbecue sauce",[["Fried egg & bacon","Sandwich / baguette","£4.50 / £5.50"],["Fried egg, bacon & sausage","","£5.50 / £6.50"],["Fried egg, bacon, cheese, salad","","£5.50 / £6.50"],["BLT","","£4.50 / £5.50"],["Veggie sausage & fried egg","","£4.50 / £5.50"],["Ham, cheese & salad","","£4.50 / £5.50"],["Tuna mayo & sweetcorn","","£4.50 / £5.50"],["Chicken mayo & salad","","£4.50 / £5.50"],["Egg mayo & cucumber","","£4.00 / £5.00"],["Hummus, avocado & salad","","£4.50 / £5.50"]]],
-["Jacket potatoes","Served with salad",[["Tuna mayo & sweetcorn","","£8"],["Chicken mayo & sweetcorn","","£8"],["Beans & cheese","","£7.50"],["Chilli con carne & cheese","","£8.50"],["Butter, cheese, sour cream, bacon & chive","","£9"]]],
-["Burgers","Quarter pounders with chips & salad",[["Beef burger","Homemade, with cheese, bacon, pickles, fried onions, burger sauce","£9"],["Chicken burger","","£8.50"],["Veggie burger","","£8"]]],
-["Panini","Served with salad",[["Ham & cheese","","£6"],["Ham, cheese, tomato & basil pesto","","£7"],["Tuna mayo melt","","£6.50"],["Chicken mayo melt","","£6.50"],["Cheese & tomato","","£5.50"]]],
-["Salads & more","",[["Caesar salad","Grilled chicken, parmesan, croutons","£9.50"],["Tuna salad","Boiled egg, avocado, feta, sweetcorn, toast","£10"],["Greek salad","With baguette","£9"],["Nachos with chilli con carne","Salsa, guacamole & sour cream","£9"],["Rollo chicken kebab","Tortilla, grilled chicken, crispy onions, garlic sauce, sriracha","£7"],["American hot dog","","£6"]]]],
-d:[["Dinner","Ask in the café about evening times",[["Butter chicken curry","With rice & naan. Contains cashew nuts","£11"],["Lamb curry","With rice & naan","£12"],["Chilli con carne","With rice, tortilla crisps, guacamole & sour cream","£10"],["Poke bowl","Teriyaki chicken, rice, edamame, avocado, tomato, cucumber","£11"],["Chicken escalope","Breaded, with chips & salad","£11"],["Lemon salmon","With roasted potatoes & salad","£12"],["Lasagne","With chips & salad","£11"],["Lasagne","With salad & baguette","£10"],["Spaghetti Bolognese","With parmesan","£10"]]]],
-s:[["Sunday roast","Sundays only",[["Beef Sunday roast","3 slices of beef, roast potatoes, broccoli, carrots, peas, 2 Yorkshire puddings, gravy","£12"],["Chicken Sunday roast","2 chicken legs, roast potatoes, broccoli, carrots, peas, 2 Yorkshire puddings, gravy","£12"]]],
-["Kids menu","All served with a Fruit Shoot",[["Egg, chips & beans","","£5.50"],["Sausage, chips & beans","","£5.50"],["4 chicken nuggets, chips & beans","","£5.50"],["3 fish fingers, chips & beans","","£5.50"],["Frankfurter, egg, beans & toast","","£5.50"],["Hot dog","","£4"]]],
-["Desserts","",[["Chocolate fudge cake","With ice cream or double cream","£4.50"],["Ice cream sundae","","£5"],["Pancakes with ice cream & fruit","","£6"],["3 scoops with chocolate sauce","","£3.50"]]]],
-x:[["Fresh coffee","Oat and soya milk available",[["Cappuccino","","£3.50"],["Caffè latte","","£3.50"],["Flat white","","£3.50"],["Mocha","","£3.70"],["Iced latte","","£3.70"],["Americano","","£3"],["Macchiato","","£3"],["Espresso / double","","£2.50 / £2.80"]]],
-["Hot drinks","",[["English breakfast tea","","£2"],["Earl Grey","","£2.30"],["Chai latte","","£3.50"],["Hot chocolate","","£3"],["With whipped cream & marshmallows","","£3.50"],["Herbal tea","","£2.50"]]],
-["Milkshakes","Add whipped cream 20p",[["Vanilla, strawberry, chocolate, coffee or caramel","","£4.50"],["Oreo, Biscoff, Bueno, Twix or Snickers","","£5"]]],
-["Smoothies","Frozen fruit blended with apple juice",[["Strawberry Fantasy","","£5"],["Mango Dream","","£5"],["Raspberry Heaven","","£5"],["Pineapple Sunset","","£5"]]],
-["Cold drinks","",[["Still or sparkling water","","£2"],["Orange, apple or pineapple juice","","£2.50"],["Coke, Diet Coke, Sprite, Fanta","","£1.50"]]]]};
+b:[["Set breakfast","All come with 2 slices of toast or bread","p-big-one","The Big One",[["Full English","1 egg, 2 bacon, sausage, beans, 2 hash browns, tomatoes, mushrooms","£9.90"],["The Big One","2 eggs, 2 bacon, 2 sausages, beans, 2 hash browns, tomatoes, mushrooms","£11.50"],["Traditional","2 eggs, 2 bacon, 2 sausages, black pudding, beans, tomatoes, mushrooms","£10.50"],["Scrambled breakfast","2 scrambled eggs, 2 bacon, beans, mushrooms, salad","£10.00"],["American breakfast","1 egg, 2 bacon, sausage, 2 pancakes, 2 hash browns, maple syrup, chilli jam","£10.50"],["Chef’s special breakfast","2 eggs (fried or scrambled), halloumi, smashed avocado, beans, tomatoes, mushrooms, hummus","£11.50"],["Vegetarian","1 egg, vegan sausage, halloumi, beans, tomatoes, mushrooms","£10.00"],["Vegan","2 vegan sausages, beans, 2 hash browns, tomatoes, mushrooms","£10.00"]]],
+["Light breakfast","","p-royale","Eggs Royale",[["Porridge with fruit, honey & Greek yoghurt","","£6.00"],["Porridge with honey & toast with jam","","£4.00"],["2 toasts with jam","","£3.50"],["Beans on 2 toast","Add cheese 50p","£4.50"],["Eggs Benedict","2 poached eggs, bacon, muffin, hollandaise, salad","£9.00"],["Eggs Royale","2 poached eggs, smoked salmon, muffin, hollandaise, salad","£10.00"],["Avocado smash","2 poached eggs on toasted bread with lemon smashed avocado","£10.00"],["2 fried eggs, sausage, toast","","£5.50"],["2 scrambled eggs, 2 bacon, toast","","£5.50"]]],
+["Omelettes","3 eggs, served with chips & salad","p-omelette","Omelette, chips & salad",[["Plain","","£7.00"],["Ham, cheese or mushrooms","Pick one","£8.00"],["Ham & cheese","","£9.00"],["Cheese & mushrooms","","£9.00"],["Ham, cheese & mushrooms","","£10.00"],["Spanish","Ham, peppers, onions, mushrooms, cheese","£10.50"]]],
+["Extras","","p-american","American breakfast",[["1 egg","","£1.50"],["2 scrambled eggs","","£2.00"],["Sausage","","£1.50"],["Vegan sausage","","£1.50"],["Frankfurter sausage","","£1.50"],["2 bacon","","£2.50"],["Black pudding","","£1.50"],["2 hash browns","","£2.00"],["Baked beans","","£1.50"],["Halloumi, 2 slices","","£2.50"],["Salad","Lettuce, tomatoes, cucumber","£2.00"],["Fried tomatoes","","£1.50"],["Mushrooms","","£1.50"],["Avocado","","£2.50"],["Hummus","","£2.00"],["2 pancakes","","£2.50"],["2 toast or 2 slices of bread","","£1.50"],["Chips","","£2.80"],["Maple syrup","","£1.00"]]]],
+l:[["Hot sandwiches","Sandwich / baguette. With ketchup, sriracha, garlic or barbecue sauce","p-sandwich","Hot panini",[["Fried egg & bacon","","£4.50 / £5.50"],["Fried egg & sausage","","£4.50 / £5.50"],["Fried egg, bacon & sausage","","£5.50 / £6.50"],["Fried egg, bacon, cheese, lettuce, tomatoes, cucumber","","£5.50 / £6.50"],["Bacon, mushrooms, cheese","","£4.50 / £5.50"],["BLT","Bacon, lettuce, tomato","£4.50 / £5.50"],["Veggie sausage & fried egg","","£4.50 / £5.50"],["Veggie sausage, lettuce, tomato, cucumber","","£4.50 / £5.50"]]],
+["Cold sandwiches","Sandwich / baguette","p-panini","Panini & salad",[["Ham, cheese, lettuce, tomato, cucumber","","£4.50 / £5.50"],["Tuna mayo, lettuce, sweetcorn","","£4.50 / £5.50"],["Chicken mayo, lettuce, tomato, cucumber","","£4.50 / £5.50"],["Egg mayo, cress, lettuce","","£4.00 / £5.00"],["Cheese, lettuce, tomato, cucumber","","£4.00 / £5.00"],["Hummus, avocado, lettuce, tomato, cucumber","","£4.50 / £5.50"]]],
+["Toasties & panini","Panini served with salad","p-panini","Panini & salad",[["Ham & cheese toastie","","£5.00"],["Cheese toastie","","£4.50"],["Ham, cheese & tomato toastie","","£5.50"],["Ham & cheese panini","","£6.00"],["Ham, cheese, tomato & basil pesto panini","","£7.00"],["Tuna mayo melt panini","","£6.50"],["Chicken mayo melt panini","","£6.50"],["Cheese & tomato panini","","£5.50"]]],
+["Jacket potatoes","Served with salad. Add an extra filling £1.50","p-jacket","Tuna & sweetcorn jacket",[["Tuna mayo & sweetcorn","","£8"],["Chicken mayo & sweetcorn","","£8"],["Beans & cheese","","£7.50"],["Chilli con carne & cheese","","£8.50"],["Butter, cheese, sour cream, bacon & chive","","£9"],["Butter & cheese","","£7"]]],
+["Burgers","Quarter pounders with chips & salad","p-burger","Beef burger",[["Beef burger","Homemade, with lettuce, cheese, tomato, pickles, fried onions, bacon, burger sauce","£9"],["Chicken burger","Lettuce, tomato, pickles, fried onions, burger sauce","£8.50"],["Veggie burger","Lettuce, tomato, pickles, fried onions, burger sauce","£8"]]],
+["Salads & more","","p-caesar","Caesar salad",[["Caesar salad","Grilled chicken, parmesan, croutons, sauce","£9.50"],["Tuna salad","Boiled egg, avocado, cucumber, tomato, sweetcorn, feta, lettuce, sauce, toast","£10"],["Greek salad","Cucumber, tomato, pepper, red onion, olives, feta, olive oil & lemon dressing, baguette","£9"],["Nachos with chilli con carne & cheese","Salsa, guacamole & sour cream","£9"],["Rollo chicken kebab","Tortilla, grilled chicken, cabbage, lettuce, carrot, tomato, cucumber, pickles, crispy onions, garlic sauce, sriracha","£7"],["American hot dog","Baguette, frankfurter, fried onions, pickles, tomato, lettuce, ketchup, mustard, crispy onions","£6"]]]],
+d:[["Dinner","","p-butter-chicken","Butter chicken curry",[["Butter chicken curry","With rice & naan. Contains cashew nuts","£11"],["Lamb curry","With rice & naan","£12"],["Chilli con carne","With rice, tortilla crisps, guacamole & sour cream","£10"],["Poke bowl","Teriyaki chicken, rice, edamame, avocado, tomato, cucumber","£11"],["Chicken breast cutlet","With chips & salad","£11"],["Lemon salmon","With roasted potatoes & salad","£12"],["Lasagne","Beef & pork, with chips & salad","£10"],["Lasagne","Beef & pork, with salad & baguette","£9"],["Spaghetti Bolognese","Beef & pork, with parmesan","£10"]]]],
+s:[["Sunday roast","Sundays only","p-roast-beef","Beef Sunday roast",[["Beef Sunday roast","3 slices of beef, roast potatoes, broccoli, carrots, peas, 2 Yorkshire puddings, gravy","£12"],["Chicken Sunday roast","2 chicken legs, roast potatoes, broccoli, carrots, peas, 2 Yorkshire puddings, gravy","£12"]]],
+["Kids menu","","p-kids","Nuggets, chips & beans",[["Egg, chips & beans","","£5.50"],["Sausage, chips & beans","","£5.50"],["4 chicken nuggets, chips & beans","","£6"],["3 fish fingers, chips & beans","","£6"],["Frankfurter, egg, beans & toast","","£5.50"],["Hot dog","Baguette, frankfurter, pickles, ketchup, mustard","£4"]]],
+["Desserts","","p-pancakes","Pancakes with ice cream & fruit",[["Chocolate fudge cake","With ice cream or double cream","£4.50"],["Ice cream sundae","","£5"],["Pancakes with ice cream & fruit","","£6"],["Ice cream","3 scoops with chocolate sauce","£3.50"]]]],
+x:[["Fresh coffee","Add syrup (vanilla, caramel, hazelnut) 50p, whipped cream 20p, marshmallows 50p","hot-chocolate","Hot chocolate",[["Cappuccino","","£3.20"],["Caffè latte","","£3.20"],["Flat white","","£3.20"],["Mocha","","£3.40"],["Iced latte","","£3.50"],["Americano","","£3"],["Macchiato","","£2.70"],["Espresso","","£2.20"],["Double espresso","","£2.70"]]],
+["Hot drinks","","hot-chocolate","Hot chocolate",[["English breakfast tea","","£2"],["Decaf tea","","£2"],["Instant coffee","","£2.50"],["Hot chocolate","","£3"],["Hot chocolate with whipped cream & marshmallows","","£3.50"],["Chai latte","","£3"],["Herbal tea","","£2.50"]]],
+["Milkshakes","Add whipped cream 20p","p-shakes","Milkshakes",[["Vanilla, strawberry, chocolate, coffee or caramel","","£4.50"],["Oreo, Biscoff, Bueno, Twix or Snickers","","£5"]]],
+["Smoothies","Freshly frozen fruit blended with pure apple juice","p-shakes","Milkshakes",[["Strawberry, mango, blueberry or banana","","£5"]]],
+["Cold drinks","","p-sundae","Ice cream sundae",[["Still or sparkling water","","£2"],["Orange, apple or pineapple juice","Glass","£2.50"],["Coke, Diet Coke, Sprite or Fanta","","£1.50"],["Fruit Shoot","","£1.50"]]]]};
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-for(const k in M){document.getElementById('p-'+k).innerHTML=M[k].map(([h,n,its])=>`<div class="grp"><h3>${esc(h)}</h3>${n?`<p class="note">${esc(n)}</p>`:''}${its.map(([a,b,c])=>`<div class="it"><div><span class="n">${esc(a)}</span>${b?`<em>${esc(b)}</em>`:''}</div><span class="d"></span><span class="p">${c}</span></div>`).join('')}</div>`).join('')+(k==='b'||k==='d'?'<p class="small">Food may contain nuts, peanuts, milk, eggs, wheat, soya, fish, mustard, celery, sesame, sulphites, gluten or lupin. Please tell a member of staff about any allergy.</p>':'')}
+const ALG='<p class="small">Food may contain nuts, peanuts, milk, eggs, wheat, soya, fish, mustard, celery, sesame, sulphites, gluten or lupin. Please tell a member of staff about any allergy.</p>';
+for(const k in M){const P=document.getElementById('p-'+k),G=M[k];if(G.length===1)P.classList.add('one');
+ P.innerHTML=`<div class="sub" role="tablist">${G.map((g,i)=>`<button type="button" aria-selected="${i===0}" data-i="${i}">${esc(g[0])}</button>`).join('')}</div>`+
+ `<div class="glist">${G.map(([h,n,ph,cap,its],i)=>`<div class="grp${i===0?' on':''}"><h3>${esc(h)}</h3>${n?`<p class="note">${esc(n)}</p>`:''}<div class="its${its.length>8?' two':''}">${its.map(([a,b,c])=>`<div class="it"><div><span class="n">${esc(a)}</span>${b?`<em>${esc(b)}</em>`:''}</div><span class="d"></span><span class="p">${c}</span></div>`).join('')}</div>${(k==='b'||k==='d')&&i===0?ALG:''}</div>`).join('')}</div>`+
+ `<figure class="mph"><img src="img/${G[0][2]}.jpg" alt="${esc(G[0][3])}" loading="lazy"><figcaption>${esc(G[0][3])}</figcaption></figure>`;
+ P.querySelectorAll('.sub button').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;P.querySelectorAll('.sub button').forEach(x=>x.setAttribute('aria-selected',x===b));P.querySelectorAll('.grp').forEach((g,j)=>g.classList.toggle('on',j===i));const im=P.querySelector('.mph img');if(!im.src.endsWith(G[i][2]+'.jpg')){im.src='img/'+G[i][2]+'.jpg';im.alt=G[i][3]}P.querySelector('.mph figcaption').textContent=G[i][3]});
+}
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='p-'+b.dataset.p))});
+const S=[["p-traditional-2","Traditional","£10.50"],["p-chefs","Chef’s special","£11.50"],["p-royale","Eggs Royale","£10"],["p-american","American breakfast","£10.50"],["p-pancakes","Pancakes & ice cream","£6"],["p-poke","Poke bowl","£11"],["p-butter-chicken","Butter chicken curry","£11"],["p-lamb","Lamb curry","£12"],["p-nachos","Nachos","£9"],["p-chilli","Chilli con carne","£10"],["p-roast-chicken","Chicken Sunday roast","£12"],["p-lasagne","Lasagne","£10"],["p-spaghetti","Spaghetti Bolognese","£10"],["p-cutlet","Chicken cutlet","£11"],["p-kebab","Rollo chicken kebab","£7"],["p-greek","Greek salad","£9"],["p-hotdog","American hot dog","£6"],["p-benedict","Eggs Benedict","£9"],["p-porridge","Porridge with fruit","£6"],["p-sundae","Ice cream sundae","£5"],["p-fudge","Chocolate fudge cake","£4.50"]];
+const strip=document.getElementById('strip');strip.innerHTML=S.map(([f,n,p])=>`<figure><img src="img/${f}.jpg" alt="${esc(n)}" loading="lazy" width="720" height="960"><figcaption><span>${esc(n)}</span><b>${p}</b></figcaption></figure>`).join('');
+document.querySelectorAll('.sbtn button').forEach(b=>b.onclick=()=>strip.scrollBy({left:+b.dataset.d*strip.clientWidth*.8,behavior:'smooth'}));
 // hours: [open,close] in minutes, index 0 = Sunday
 const H=[[510,900],[450,900],[450,900],[450,900],[450,900],[450,900],[480,900]];
 const D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
