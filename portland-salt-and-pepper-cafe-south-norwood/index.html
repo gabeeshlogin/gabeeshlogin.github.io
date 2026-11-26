@@ -57,7 +57,7 @@ nav a.l{text-decoration:none}nav a.l:hover{text-decoration:underline;text-underl
 .pg{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:0}
 .pg figure{position:relative;border-right:2px solid var(--line);overflow:hidden}
 .pg figure:last-child{border-right:0}
-.pg img{width:100%;height:440px;object-fit:cover;transition:transform .6s ease}
+.pg img{width:100%;height:540px;object-fit:cover;transition:transform .6s ease}
 .pg figure:hover img{transform:scale(1.04)}
 .pg figcaption{position:absolute;left:14px;bottom:14px;background:var(--paper);border:2px solid var(--line);padding:6px 12px;font-weight:600;font-size:14px}
 /* menu */
@@ -82,7 +82,8 @@ section{padding:88px 0}
 .grp h3{font-size:26px;display:inline-block;border-bottom:2px solid var(--line);margin-bottom:12px;padding-bottom:2px}
 .grp .note{font-size:13px;color:var(--soft);margin:-6px 0 10px}
 .mph{border-left:2px solid var(--line);overflow:hidden;position:relative;background:var(--ink)}
-.mph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s}
+.mph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mph img.bg{display:none}
 .mph figcaption{position:absolute;left:12px;bottom:12px;background:var(--paper);border:2px solid var(--line);padding:4px 10px;font-weight:600;font-size:13px}
 .panel.one .sub{display:none}.panel.one.on{grid-template-columns:1fr 290px}
 /* kitchen strip */
@@ -134,11 +135,14 @@ footer{padding:26px 0 90px;font-size:14px;color:var(--soft)}
  .hero{padding:36px 0 70px}
  .ticket{left:10px;bottom:-34px}
  .pg{grid-template-columns:1fr 1fr}.pg figure:first-child{grid-column:1/-1;border-right:0;border-bottom:2px solid var(--line)}
- .pg img{height:300px}
+ .pg img{height:360px}
+ .pg figure:first-child img{height:420px}
  .panel.on,.panel.one.on{display:flex;flex-direction:column;min-height:0}
  .sub{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:2px solid var(--line);padding:6px 8px;order:1}
  .sub button{white-space:nowrap;padding:12px 12px;flex:none}
- .mph{order:2;border-left:0;border-bottom:2px solid var(--line);height:190px}
+ .mph{order:2;border-left:0;border-bottom:2px solid var(--line);height:250px}
+ .mph img.bg{display:block;filter:blur(16px) brightness(.8);transform:scale(1.15)}
+ .mph img.fg{object-fit:contain}
  .glist{order:3;padding:22px 18px 26px}
  .grp .its.two{columns:1}
  .strip figure{flex-basis:200px}
@@ -259,14 +263,14 @@ x:[["Fresh coffee","Add syrup (vanilla, caramel, hazelnut) 50p, whipped cream 20
 ["Hot drinks","","hot-chocolate","Hot chocolate",[["English breakfast tea","","£2"],["Decaf tea","","£2"],["Instant coffee","","£2.50"],["Hot chocolate","","£3"],["Hot chocolate with whipped cream & marshmallows","","£3.50"],["Chai latte","","£3"],["Herbal tea","","£2.50"]]],
 ["Milkshakes","Add whipped cream 20p","p-shakes","Milkshakes",[["Vanilla, strawberry, chocolate, coffee or caramel","","£4.50"],["Oreo, Biscoff, Bueno, Twix or Snickers","","£5"]]],
 ["Smoothies","Freshly frozen fruit blended with pure apple juice","p-shakes","Milkshakes",[["Strawberry, mango, blueberry or banana","","£5"]]],
-["Cold drinks","","p-sundae","Ice cream sundae",[["Still or sparkling water","","£2"],["Orange, apple or pineapple juice","Glass","£2.50"],["Coke, Diet Coke, Sprite or Fanta","","£1.50"],["Fruit Shoot","","£1.50"]]]]};
+["Cold drinks","","p-shakes","Milkshakes",[["Still or sparkling water","","£2"],["Orange, apple or pineapple juice","Glass","£2.50"],["Coke, Diet Coke, Sprite or Fanta","","£1.50"],["Fruit Shoot","","£1.50"]]]]};
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
 const ALG='<p class="small">Food may contain nuts, peanuts, milk, eggs, wheat, soya, fish, mustard, celery, sesame, sulphites, gluten or lupin. Please tell a member of staff about any allergy.</p>';
 for(const k in M){const P=document.getElementById('p-'+k),G=M[k];if(G.length===1)P.classList.add('one');
  P.innerHTML=`<div class="sub" role="tablist">${G.map((g,i)=>`<button type="button" aria-selected="${i===0}" data-i="${i}">${esc(g[0])}</button>`).join('')}</div>`+
  `<div class="glist">${G.map(([h,n,ph,cap,its],i)=>`<div class="grp${i===0?' on':''}"><h3>${esc(h)}</h3>${n?`<p class="note">${esc(n)}</p>`:''}<div class="its${its.length>8?' two':''}">${its.map(([a,b,c])=>`<div class="it"><div><span class="n">${esc(a)}</span>${b?`<em>${esc(b)}</em>`:''}</div><span class="d"></span><span class="p">${c}</span></div>`).join('')}</div>${(k==='b'||k==='d')&&i===0?ALG:''}</div>`).join('')}</div>`+
- `<figure class="mph"><img src="img/${G[0][2]}.jpg" alt="${esc(G[0][3])}" loading="lazy"><figcaption>${esc(G[0][3])}</figcaption></figure>`;
- P.querySelectorAll('.sub button').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;P.querySelectorAll('.sub button').forEach(x=>x.setAttribute('aria-selected',x===b));P.querySelectorAll('.grp').forEach((g,j)=>g.classList.toggle('on',j===i));const im=P.querySelector('.mph img');if(!im.src.endsWith(G[i][2]+'.jpg')){im.src='img/'+G[i][2]+'.jpg';im.alt=G[i][3]}P.querySelector('.mph figcaption').textContent=G[i][3]});
+ `<figure class="mph"><img class="bg" src="img/${G[0][2]}.jpg" alt="" aria-hidden="true" loading="lazy"><img class="fg" src="img/${G[0][2]}.jpg" alt="${esc(G[0][3])}" loading="lazy"><figcaption>${esc(G[0][3])}</figcaption></figure>`;
+ P.querySelectorAll('.sub button').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;P.querySelectorAll('.sub button').forEach(x=>x.setAttribute('aria-selected',x===b));P.querySelectorAll('.grp').forEach((g,j)=>g.classList.toggle('on',j===i));const im=P.querySelector('.mph img.fg'),bg=P.querySelector('.mph img.bg');if(!im.src.endsWith(G[i][2]+'.jpg')){im.src=bg.src='img/'+G[i][2]+'.jpg';im.alt=G[i][3]}P.querySelector('.mph figcaption').textContent=G[i][3]});
 }
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='p-'+b.dataset.p))});
 const S=[["p-traditional-2","Traditional","£10.50"],["p-chefs","Chef’s special","£11.50"],["p-royale","Eggs Royale","£10"],["p-american","American breakfast","£10.50"],["p-pancakes","Pancakes & ice cream","£6"],["p-poke","Poke bowl","£11"],["p-butter-chicken","Butter chicken curry","£11"],["p-lamb","Lamb curry","£12"],["p-nachos","Nachos","£9"],["p-chilli","Chilli con carne","£10"],["p-roast-chicken","Chicken Sunday roast","£12"],["p-lasagne","Lasagne","£10"],["p-spaghetti","Spaghetti Bolognese","£10"],["p-cutlet","Chicken cutlet","£11"],["p-kebab","Rollo chicken kebab","£7"],["p-greek","Greek salad","£9"],["p-hotdog","American hot dog","£6"],["p-benedict","Eggs Benedict","£9"],["p-porridge","Porridge with fruit","£6"],["p-sundae","Ice cream sundae","£5"],["p-fudge","Chocolate fudge cake","£4.50"]];
