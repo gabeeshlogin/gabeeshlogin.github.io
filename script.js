@@ -27,7 +27,6 @@
 
   const projects = {
     bakery: { url: 'foldbakery.co.uk', img: 'img/work-fold.webp', phone: 'img/work-fold-m.webp', link: 'examples/bakery/', name: 'Fold, bakery & coffee', description: 'Quiet and premium, led by the photography. A Christmas order banner, menu, opening hours and order-ahead, all one tap away on a phone.', features: ['Seasonal order banner', 'Menu and opening hours', 'Order ahead for collection'] },
-    cafe: { url: 'ryeandember.co.uk', img: 'img/work-rye.webp', phone: 'img/work-rye-m.webp', link: 'examples/cafe/', name: 'Rye & Ember', description: 'Warm and local, built around what came out of the oven today, with opening times and order-ahead front and centre.', features: ['Today’s bakes', 'Live opening status', 'Order for collection'] },
     electrician: { url: 'haldenelectrical.co.uk', img: 'img/work-halden.webp', phone: 'img/work-halden-m.webp', link: 'examples/electrician/', name: 'Halden Electrical', description: 'Loud and confident, with fixed prices, areas covered and a call button that never leaves the screen.', features: ['Tap-to-call everywhere', 'Fixed price list', 'Quick quote form'] }
   };
   const display = document.querySelector('#project-display');
